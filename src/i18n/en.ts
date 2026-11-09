@@ -283,12 +283,14 @@ export const en: Dictionary = {
     },
   },
   footer: {
+    unitAttributionPrefix: 'Web Ramah is a service product unit of ',
+    unitAttributionCompany: 'PT Kirana Informatika Indonesia.',
     tagline:
       'Corporate partner for static company profiles, high-converting landing pages, online stores, and tailored business software in Indonesia.',
     navigationTitle: 'Navigation',
     servicesTitle: 'Core Services',
     contactTitle: 'Direct Contact',
     copyright: 'All rights reserved.',
-    builtNote: 'Official Corporate Website · Web Ramah',
+    builtNote: 'Service Product Unit · PT Kirana Informatika Indonesia',
   },
 };

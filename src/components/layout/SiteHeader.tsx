@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowUpRight, Globe, Menu } from 'lucide-react';
+import { BrandWordmark } from '@/components/common/BrandWordmark';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -48,17 +49,13 @@ export function SiteHeader({ locale, currentPage }: SiteHeaderProps) {
   return (
     <TooltipProvider delayDuration={120}>
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white">
-        <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
           <a
             href={getLocalizedPath(locale, 'home')}
-            className="flex items-center text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 rounded-sm"
+            aria-label={COMPANY.legalName}
+            className="inline-flex items-center rounded-sm py-1 text-slate-950 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2"
           >
-            <span className="text-sm font-bold tracking-tight text-slate-900 sm:hidden">
-              {COMPANY.shortName}
-            </span>
-            <span className="hidden text-sm font-bold tracking-tight text-slate-900 sm:inline">
-              {COMPANY.legalName}
-            </span>
+            <BrandWordmark variant="header" />
           </a>
 
           <nav aria-label="Primary Navigation" className="hidden items-center gap-1 md:flex">
@@ -126,11 +123,11 @@ export function SiteHeader({ locale, currentPage }: SiteHeaderProps) {
               </SheetTrigger>
               <SheetContent side="right" className="w-72 border-l border-slate-200 bg-white p-0">
                 <SheetHeader className="border-b border-slate-200 p-4 text-left">
-                  <SheetTitle className="text-sm font-bold text-slate-900">
-                    {COMPANY.shortName}
+                  <SheetTitle className="leading-none">
+                    <BrandWordmark variant="drawer" />
                   </SheetTitle>
-                  <SheetDescription className="font-mono text-[11px] text-slate-500">
-                    {COMPANY.domain.replace('https://', '')}
+                  <SheetDescription className="text-[11px] font-medium text-slate-500">
+                    {dict.footer.builtNote}
                   </SheetDescription>
                 </SheetHeader>
                 <div className="flex flex-col gap-1 p-4">

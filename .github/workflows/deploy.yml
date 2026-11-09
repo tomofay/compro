@@ -46,6 +46,7 @@ jobs:
           trap 'docker rm -f webramah-ci-test >/dev/null 2>&1 || true' EXIT
           sleep 2
           curl -fsS http://127.0.0.1:18090/ | grep -q "Web Ramah"
+          curl -fsS http://127.0.0.1:18090/ | grep -q "PT Kirana Informatika Indonesia"
           curl -fsS http://127.0.0.1:18090/layanan/ | grep -q "Mulai Rp 1,8 Juta"
           curl -fsS http://127.0.0.1:18090/en/ | grep -q "Enterprise Trust"
           for img in about-studio.jpg enterprise-meeting.jpg showcase-compro.jpg showcase-landing.jpg showcase-mobile.jpg showcase-software.jpg showcase-store.jpg; do

@@ -1,6 +1,7 @@
 export const COMPANY = {
   legalName: 'Web Ramah',
   shortName: 'Web Ramah',
+  parentCompany: 'PT Kirana Informatika Indonesia',
   establishedYear: '2024',
   domain: 'https://webramah.id',
   email: 'hello@webramah.id',
@@ -22,9 +23,14 @@ export const COMPANY = {
   },
   legalRegistry: [
     {
-      code: 'ENTITY',
-      label: { id: 'Brand / Badan Usaha', en: 'Brand / Legal Entity' },
+      code: 'BRAND',
+      label: { id: 'Unit Produk Layanan', en: 'Service Product Unit' },
       value: 'Web Ramah',
+    },
+    {
+      code: 'ENTITY',
+      label: { id: 'Badan Hukum Induk', en: 'Parent Legal Entity' },
+      value: 'PT Kirana Informatika Indonesia (Perseroan Terbatas)',
     },
     {
       code: 'NIB',

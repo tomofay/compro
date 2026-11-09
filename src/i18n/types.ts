@@ -201,6 +201,8 @@ export interface Dictionary {
     };
   };
   footer: {
+    unitAttributionPrefix: string;
+    unitAttributionCompany: string;
     tagline: string;
     navigationTitle: string;
     servicesTitle: string;

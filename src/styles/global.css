@@ -63,6 +63,8 @@
   html {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-optical-sizing: auto;
     background-color: var(--background);
     color: var(--foreground);
     -webkit-font-smoothing: antialiased;
@@ -71,5 +73,15 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 }

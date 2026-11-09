@@ -283,12 +283,14 @@ export const id: Dictionary = {
     },
   },
   footer: {
+    unitAttributionPrefix: 'Web Ramah adalah unit produk layanan dari ',
+    unitAttributionCompany: 'PT Kirana Informatika Indonesia.',
     tagline:
       'Mitra pengembangan website company profile, toko online, landing page, dan software bisnis terpercaya untuk perusahaan Indonesia.',
     navigationTitle: 'Navigasi',
     servicesTitle: 'Layanan Utama',
     contactTitle: 'Kontak Langsung',
     copyright: 'Seluruh hak cipta dilindungi.',
-    builtNote: 'Website Perusahaan Resmi · Web Ramah',
+    builtNote: 'Unit Produk Layanan · PT Kirana Informatika Indonesia',
   },
 };
