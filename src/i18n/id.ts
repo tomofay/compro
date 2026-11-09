@@ -3,21 +3,21 @@ import type { Dictionary } from './types';
 export const id: Dictionary = {
   meta: {
     siteTitleSuffix: 'Web Ramah',
-    homeTitle: 'Web Ramah — Website, Toko Online & Software Bisnis',
+    homeTitle: 'Web Ramah — Jasa Pembuatan Website, Toko Online & Software Bisnis',
     homeDescription:
-      'Jasa pembuatan website company profile, landing page, toko online, dan custom software bisnis oleh Web Ramah.',
-    servicesTitle: 'Layanan Kami',
+      'Jasa pembuatan website company profile, landing page, toko online, dan custom software bisnis resmi PT Kirana Informatika Indonesia. Gratis hosting & email tahun pertama.',
+    servicesTitle: 'Harga & Paket Website Company Profile, Toko Online & Software',
     servicesDescription:
-      'Paket website company profile, landing page, toko online, custom software, dan aplikasi mobile oleh Web Ramah.',
-    portfolioTitle: 'Portofolio Karya',
+      'Paket landing page mulai Rp 1,8 juta, website company profile Rp 2,5 juta, toko online Rp 8 juta, aplikasi mobile & custom software B2B lengkap BAST.',
+    portfolioTitle: 'Portofolio Website Perusahaan, Toko Online & Sistem Bisnis',
     portfolioDescription:
-      'Implementasi website korporat, toko online, dan software bisnis oleh Web Ramah.',
-    aboutTitle: 'Tentang Perusahaan',
+      'Studi kasus implementasi portal korporat, toko online QRIS multi-gudang, aplikasi mobile Android & iOS, serta software operasional oleh Web Ramah.',
+    aboutTitle: 'Tentang Perusahaan & Legalitas PT Kirana Informatika Indonesia',
     aboutDescription:
-      'Profil, standar layanan, dan legalitas Web Ramah di bawah PT Kirana Informatika Indonesia.',
-    contactTitle: 'Konsultasi & Kontak',
+      'Profil Web Ramah sebagai unit layanan digital resmi PT Kirana Informatika Indonesia. Mendukung pengadaan B2B dengan Quotation, PO, PKS/NDA, Faktur & BAST.',
+    contactTitle: 'Konsultasi & Penawaran Pembuatan Website Perusahaan',
     contactDescription:
-      'Hubungi Web Ramah untuk penawaran website, toko online, atau software perusahaan Anda.',
+      'Buat ringkasan kebutuhan website company profile, landing page, toko online, atau custom software bersama Web Ramah langsung ke WhatsApp atau Email.',
   },
   nav: {
     home: 'Beranda',
@@ -300,11 +300,11 @@ export const id: Dictionary = {
       budgetLabel: 'Perkiraan Anggaran',
       budgetPlaceholder: 'Pilih perkiraan anggaran',
       budgetOptions: [
-        'Rp 1,8 Juta - Rp 2,5 Juta',
-        'Rp 2,5 Juta - Rp 8 Juta',
-        'Rp 8 Juta - Rp 15 Juta',
+        'Di bawah Rp 2 Juta',
+        'Rp 2 Juta - Rp 5 Juta',
+        'Rp 5 Juta - Rp 15 Juta',
         'Rp 15 Juta - Rp 40 Juta',
-        '> Rp 40 Juta',
+        'Di atas Rp 40 Juta',
         'Belum ditentukan',
       ],
       notesLabel: 'Poin Kebutuhan Fitur',

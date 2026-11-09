@@ -5,17 +5,17 @@ export type PageKey = 'home' | 'services' | 'portfolio' | 'about' | 'contact';
 export const ROUTES: Record<Locale, Record<PageKey, string>> = {
   id: {
     home: '/',
-    services: '/layanan',
-    portfolio: '/portofolio',
-    about: '/tentang',
-    contact: '/kontak',
+    services: '/layanan/',
+    portfolio: '/portofolio/',
+    about: '/tentang/',
+    contact: '/kontak/',
   },
   en: {
     home: '/en/',
-    services: '/en/services',
-    portfolio: '/en/portfolio',
-    about: '/en/about',
-    contact: '/en/contact',
+    services: '/en/services/',
+    portfolio: '/en/portfolio/',
+    about: '/en/about/',
+    contact: '/en/contact/',
   },
 };
 

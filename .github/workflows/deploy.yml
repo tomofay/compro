@@ -50,6 +50,15 @@ jobs:
           grep -Fq "PT Kirana Informatika Indonesia" /tmp/ci-home.html
           curl -fsS http://127.0.0.1:18090/layanan/ -o /tmp/ci-services.html
           grep -Fq "Mulai Rp 1,8 Juta" /tmp/ci-services.html
+          grep -Fq "Sesuai Kebutuhan" /tmp/ci-services.html
+          grep -Fq '<link rel="canonical"' /tmp/ci-home.html
+          grep -Fq 'application/ld+json' /tmp/ci-home.html
+          curl -fsS http://127.0.0.1:18090/sitemap.xml -o /tmp/ci-sitemap.xml
+          grep -Fq "https://webramah.id/layanan/" /tmp/ci-sitemap.xml
+          curl -fsS http://127.0.0.1:18090/robots.txt -o /tmp/ci-robots.txt
+          grep -Fq "Sitemap:" /tmp/ci-robots.txt
+          curl -fsS http://127.0.0.1:18090/site.webmanifest -o /tmp/ci-manifest.json
+          grep -Fq "Web Ramah" /tmp/ci-manifest.json
           curl -fsS http://127.0.0.1:18090/en/ -o /tmp/ci-en.html
           grep -Fq "Web Ramah is a service product unit of" /tmp/ci-en.html
           for img in about-studio.jpg enterprise-meeting.jpg showcase-compro.jpg showcase-landing.jpg showcase-mobile.jpg showcase-software.jpg showcase-store.jpg; do

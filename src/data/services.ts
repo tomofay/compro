@@ -191,8 +191,8 @@ export const SERVICES: ServiceItem[] = [
     image: '/images/showcase-software.jpg',
     categoryKey: 'software',
     startingPrice: {
-      id: 'Mulai Rp 15 Juta',
-      en: 'From IDR 15M',
+      id: 'Sesuai Kebutuhan',
+      en: 'Custom Quote',
     },
     timeline: {
       id: '6 - 14 Minggu',

@@ -3,21 +3,21 @@ import type { Dictionary } from './types';
 export const en: Dictionary = {
   meta: {
     siteTitleSuffix: 'Web Ramah',
-    homeTitle: 'Web Ramah — Websites, Stores & Business Software',
+    homeTitle: 'Web Ramah — Corporate Website, Online Store & Custom Software Agency',
     homeDescription:
-      'Corporate company profiles, landing pages, online stores, and custom business software by Web Ramah.',
-    servicesTitle: 'Our Services',
+      'Corporate company profile websites, landing pages, online stores, and custom business software by Web Ramah (PT Kirana Informatika Indonesia). Free 1st-year hosting included.',
+    servicesTitle: 'Website, E-Commerce & Custom Software Pricing Packages',
     servicesDescription:
-      'Corporate websites, landing pages, online stores, custom software, and mobile apps by Web Ramah.',
-    portfolioTitle: 'Portfolio',
+      'Landing pages from IDR 1.8M, company profiles IDR 2.5M, online stores IDR 8M, mobile apps & custom B2B web software with source code handover.',
+    portfolioTitle: 'Delivered Corporate Websites, Stores & Software Portfolio',
     portfolioDescription:
-      'Delivered corporate websites, online stores, and business systems by Web Ramah.',
-    aboutTitle: 'About Us',
+      'Production implementations of bilingual company profiles, multi-warehouse online stores, Android & iOS apps, and custom internal systems by Web Ramah.',
+    aboutTitle: 'Company Profile & Legal Registry — PT Kirana Informatika Indonesia',
     aboutDescription:
-      'Corporate profile, service standards, and legal registration of Web Ramah.',
-    contactTitle: 'Contact Us',
+      'Official profile of Web Ramah under PT Kirana Informatika Indonesia. B2B procurement compliant with Quotations, POs, NDAs, Invoices, and formal BAST.',
+    contactTitle: 'Request a Website & Software Project Consultation',
     contactDescription:
-      'Consult with Web Ramah for your company website, online store, or custom software.',
+      'Prepare your website, online store, or custom software requirements with Web Ramah and send your consultation summary via WhatsApp or Email.',
   },
   nav: {
     home: 'Home',
@@ -300,11 +300,11 @@ export const en: Dictionary = {
       budgetLabel: 'Estimated Budget',
       budgetPlaceholder: 'Select budget range',
       budgetOptions: [
-        'IDR 1.8M - 2.5M',
-        'IDR 2.5M - 8M',
-        'IDR 8M - 15M',
+        'Under IDR 2M',
+        'IDR 2M - 5M',
+        'IDR 5M - 15M',
         'IDR 15M - 40M',
-        '> IDR 40M',
+        'Above IDR 40M',
         'Not decided yet',
       ],
       notesLabel: 'Key Feature Requirements',

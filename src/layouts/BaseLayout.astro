@@ -7,8 +7,12 @@ import { SiteHeader } from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter.astro';
 import { COMPANY } from '@/data/company';
 import {
-  getAlternateLocale,
-  getAlternatePath,
+  buildAbsoluteUrl,
+  buildStructuredData,
+  getPageOgImage,
+  resolveSiteOrigin,
+} from '@/data/seo';
+import {
   getDictionary,
   getLocalizedPath,
   type Locale,
@@ -30,9 +34,22 @@ const resolvedTitle = title
   : dict.meta.homeTitle;
 const resolvedDescription = description ?? dict.meta.homeDescription;
 
-const currentPath = getLocalizedPath(locale, currentPage);
-const alternateLocale = getAlternateLocale(locale);
-const alternatePath = getAlternatePath(locale, currentPage);
+const siteOrigin = resolveSiteOrigin(Astro.site);
+const canonicalUrl = buildAbsoluteUrl(
+  getLocalizedPath(locale, currentPage),
+  siteOrigin
+);
+const idUrl = buildAbsoluteUrl(getLocalizedPath('id', currentPage), siteOrigin);
+const enUrl = buildAbsoluteUrl(getLocalizedPath('en', currentPage), siteOrigin);
+const ogImage = getPageOgImage(currentPage, locale, siteOrigin);
+const structuredData = buildStructuredData({
+  locale,
+  currentPage,
+  title: resolvedTitle,
+  description: resolvedDescription,
+  canonicalUrl,
+  siteOrigin,
+});
 ---
 
 <!doctype html>
@@ -40,19 +57,48 @@ const alternatePath = getAlternatePath(locale, currentPage);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{resolvedTitle}</title>
+    <meta name="description" content={resolvedDescription} />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#059669" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="id" href={idUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={idUrl} />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
     <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
     <link rel="alternate icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-    <title>{resolvedTitle}</title>
-    <meta name="description" content={resolvedDescription} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={resolvedTitle} />
     <meta property="og:description" content={resolvedDescription} />
     <meta property="og:site_name" content={COMPANY.legalName} />
-    <link rel="alternate" hreflang={locale} href={currentPath} />
-    <link rel="alternate" hreflang={alternateLocale} href={alternatePath} />
+    <meta property="og:locale" content={locale === 'id' ? 'id_ID' : 'en_US'} />
+    <meta
+      property="og:locale:alternate"
+      content={locale === 'id' ? 'en_US' : 'id_ID'}
+    />
+    <meta property="og:image" content={ogImage.url} />
+    <meta property="og:image:width" content={ogImage.width} />
+    <meta property="og:image:height" content={ogImage.height} />
+    <meta property="og:image:alt" content={ogImage.alt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={resolvedTitle} />
+    <meta name="twitter:description" content={resolvedDescription} />
+    <meta name="twitter:image" content={ogImage.url} />
+    <meta name="twitter:image:alt" content={ogImage.alt} />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    />
     <script is:inline>
       if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.documentElement.classList.add('js-reveal');
