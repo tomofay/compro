@@ -1,10 +1,10 @@
 export const COMPANY = {
-  legalName: 'PT Kirana Informatika Indonesia',
-  shortName: 'Kirana Informatika',
+  legalName: 'Lamankita',
+  shortName: 'Lamankita',
   establishedYear: '2024',
-  domain: 'https://kiranainformatika.co.id',
-  email: 'hello@kiranainformatika.co.id',
-  projectsEmail: 'projects@kiranainformatika.co.id',
+  domain: 'https://lamankita.id',
+  email: 'hello@lamankita.id',
+  projectsEmail: 'projects@lamankita.id',
   phoneDisplay: '+62 21 5099 8410',
   whatsappNumber: '6281100008410',
   whatsappDisplay: '+62 811-0000-8410',
@@ -13,8 +13,8 @@ export const COMPANY = {
     en: 'South Jakarta, Indonesia',
   },
   address: {
-    id: 'Gedung Kirana Tech Hub Lt. 4, Jl. TB Simatupang Kav. 18, Jakarta Selatan 12430',
-    en: 'Kirana Tech Hub Building 4th Fl, Jl. TB Simatupang Kav. 18, South Jakarta 12430',
+    id: 'Gedung Lamankita Hub Lt. 4, Jl. TB Simatupang Kav. 18, Jakarta Selatan 12430',
+    en: 'Lamankita Hub Building 4th Fl, Jl. TB Simatupang Kav. 18, South Jakarta 12430',
   },
   operatingHours: {
     id: 'Senin - Jumat, 09:00 - 18:00 WIB',
@@ -23,8 +23,8 @@ export const COMPANY = {
   legalRegistry: [
     {
       code: 'ENTITY',
-      label: { id: 'Badan Hukum', en: 'Legal Entity' },
-      value: 'PT Kirana Informatika Indonesia (Perseroan Terbatas)',
+      label: { id: 'Brand / Badan Usaha', en: 'Brand / Legal Entity' },
+      value: 'Lamankita',
     },
     {
       code: 'NIB',

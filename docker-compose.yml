@@ -3,8 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: kirana-compro:latest
-    container_name: kirana-compro
+    image: lamankita-compro:latest
+    container_name: lamankita-compro
     restart: unless-stopped
     ports:
       - "${APP_PORT:-8090}:8080"
@@ -13,3 +13,4 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
+

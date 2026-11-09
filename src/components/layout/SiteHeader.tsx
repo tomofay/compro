@@ -130,7 +130,7 @@ export function SiteHeader({ locale, currentPage }: SiteHeaderProps) {
                     {COMPANY.shortName}
                   </SheetTitle>
                   <SheetDescription className="font-mono text-[11px] text-slate-500">
-                    {COMPANY.legalName}
+                    {COMPANY.domain.replace('https://', '')}
                   </SheetDescription>
                 </SheetHeader>
                 <div className="flex flex-col gap-1 p-4">

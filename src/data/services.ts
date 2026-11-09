@@ -33,8 +33,8 @@ export const SERVICES: ServiceItem[] = [
     image: '/images/showcase-compro.jpg',
     categoryKey: 'compro',
     startingPrice: {
-      id: 'Mulai Rp 4,5 Juta',
-      en: 'From IDR 4.5M',
+      id: 'Mulai Rp 2,5 Juta',
+      en: 'From IDR 2.5M',
     },
     timeline: {
       id: '10 - 14 Hari Kerja',
@@ -90,8 +90,8 @@ export const SERVICES: ServiceItem[] = [
     image: '/images/showcase-landing.jpg',
     categoryKey: 'landing',
     startingPrice: {
-      id: 'Mulai Rp 2,5 Juta',
-      en: 'From IDR 2.5M',
+      id: 'Mulai Rp 1,8 Juta',
+      en: 'From IDR 1.8M',
     },
     timeline: {
       id: '5 - 10 Hari Kerja',
@@ -147,8 +147,8 @@ export const SERVICES: ServiceItem[] = [
     image: '/images/showcase-store.jpg',
     categoryKey: 'store',
     startingPrice: {
-      id: 'Mulai Rp 12 Juta',
-      en: 'From IDR 12M',
+      id: 'Mulai Rp 8 Juta',
+      en: 'From IDR 8M',
     },
     timeline: {
       id: '3 - 6 Minggu',
@@ -204,8 +204,8 @@ export const SERVICES: ServiceItem[] = [
     image: '/images/showcase-software.jpg',
     categoryKey: 'software',
     startingPrice: {
-      id: 'Mulai Rp 25 Juta',
-      en: 'From IDR 25M',
+      id: 'Mulai Rp 15 Juta',
+      en: 'From IDR 15M',
     },
     timeline: {
       id: '6 - 14 Minggu',
@@ -261,8 +261,8 @@ export const SERVICES: ServiceItem[] = [
     image: '/images/showcase-mobile.jpg',
     categoryKey: 'mobile',
     startingPrice: {
-      id: 'Mulai Rp 25 Juta',
-      en: 'From IDR 25M',
+      id: 'Mulai Rp 15 Juta',
+      en: 'From IDR 15M',
     },
     timeline: {
       id: '8 - 16 Minggu',
@@ -444,12 +444,12 @@ export const SERVICE_FAQS: FaqItem[] = [
   {
     id: 'faq-04',
     question: {
-      id: 'Apakah PT Kirana Informatika Indonesia melayani administrasi B2B seperti PO, NDA, dan faktur resmi?',
-      en: 'Does PT Kirana Informatika Indonesia support B2B procurement documents such as PO, NDA, and formal invoices?',
+      id: 'Apakah Lamankita melayani administrasi B2B seperti PO, NDA, dan faktur resmi?',
+      en: 'Does Lamankita support B2B procurement documents such as PO, NDA, and formal invoices?',
     },
     answer: {
-      id: 'Tentu. Sebagai badan hukum perseroan terbatas resmi, kami mendukung pengadaan korporat lengkap dengan penawaran resmi (Quotation), Perjanjian Kerja Sama / NDA, Purchase Order (PO), dan Berita Acara Serah Terima (BAST).',
-      en: 'Yes. As an incorporated limited liability company in Indonesia, we support formal corporate procurement including official Quotations, NDAs, Purchase Orders (PO), and Handover Certificates (BAST).',
+      id: 'Tentu. Sebagai mitra penyedia solusi digital korporat berbadan hukum resmi, Lamankita mendukung pengadaan B2B lengkap dengan penawaran resmi (Quotation), Perjanjian Kerja Sama / NDA, Purchase Order (PO), faktur resmi, dan Berita Acara Serah Terima (BAST).',
+      en: 'Yes. As an incorporated digital technology partner in Indonesia, Lamankita supports formal corporate procurement including official Quotations, NDAs, Purchase Orders (PO), official invoices, and Handover Certificates (BAST).',
     },
   },
 ];

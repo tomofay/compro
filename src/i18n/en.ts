@@ -2,22 +2,22 @@ import type { Dictionary } from './types';
 
 export const en: Dictionary = {
   meta: {
-    siteTitleSuffix: 'PT Kirana Informatika Indonesia',
-    homeTitle: 'PT Kirana Informatika Indonesia — Corporate Websites, Stores & Business Software',
+    siteTitleSuffix: 'Lamankita',
+    homeTitle: 'Lamankita — Corporate Websites, Stores & Business Software',
     homeDescription:
-      'Enterprise company profile websites, high-converting landing pages, online stores, and custom business software by PT Kirana Informatika Indonesia.',
+      'Enterprise company profile websites, high-converting landing pages, online stores, and custom business software by Lamankita.',
     servicesTitle: 'Our Services',
     servicesDescription:
-      'Corporate websites, landing pages, online stores, custom software, and mobile app development by PT Kirana Informatika Indonesia.',
+      'Corporate websites, landing pages, online stores, custom software, and mobile app development by Lamankita.',
     portfolioTitle: 'Portfolio',
     portfolioDescription:
-      'Selected corporate websites, e-commerce platforms, and operational software built by PT Kirana Informatika Indonesia.',
+      'Selected corporate websites, e-commerce platforms, and operational software built by Lamankita.',
     aboutTitle: 'About Us',
     aboutDescription:
-      'Corporate profile, quality commitment, and legal entity details of PT Kirana Informatika Indonesia.',
+      'Corporate profile, quality commitment, and legal entity details of Lamankita.',
     contactTitle: 'Contact Us',
     contactDescription:
-      'Consult with PT Kirana Informatika Indonesia on your corporate website, online store, or custom software initiative.',
+      'Consult with Lamankita on your corporate website, online store, or custom software initiative.',
   },
   nav: {
     home: 'Home',
@@ -55,7 +55,7 @@ export const en: Dictionary = {
         description: 'Includes domain, SSL, managed hosting & official business email (sales@company.com) in year 1.',
       },
     ],
-    galleryCaption: 'Digital Solution Showcase by PT Kirana Informatika Indonesia',
+    galleryCaption: 'Digital Solution Showcase by Lamankita',
   },
   problemSection: {
     eyebrow: 'THE BUSINESS CHALLENGE',
@@ -95,7 +95,7 @@ export const en: Dictionary = {
   },
   comparisonSection: {
     eyebrow: 'PARTNERSHIP ADVANTAGE',
-    title: 'Why Enterprises Partner with PT Kirana Informatika Indonesia',
+    title: 'Why Enterprises Partner with Lamankita',
     subtitle:
       'Compare working with an incorporated, managed software partner versus fragmented ad-hoc development.',
     leftHeader: 'Ad-Hoc / Unstructured Approach',
@@ -106,7 +106,7 @@ export const en: Dictionary = {
       'Unclear schedules with frequent delays and zero ongoing SLA support',
       'Lack of formal corporate procurement support (PO, NDA, Handover)',
     ],
-    rightHeader: 'PT Kirana Informatika Indonesia',
+    rightHeader: 'Lamankita',
     rightTag: 'Enterprise Standard',
     rightItems: [
       'Bespoke, ultra-fast digital architecture tailored to your corporate brand',
@@ -199,12 +199,12 @@ export const en: Dictionary = {
   },
   aboutPage: {
     eyebrow: 'COMPANY PROFILE',
-    title: 'About PT Kirana Informatika Indonesia',
+    title: 'About Lamankita',
     subtitle:
       'A trusted Indonesian technology partner helping companies establish authoritative digital presence and streamlined software workflows.',
     overviewTitle: 'Focused on Clarity & Enterprise Reliability',
     overviewParagraphs: [
-      'PT Kirana Informatika Indonesia bridges the gap between executive business objectives and dependable software operations—building digital assets that look authoritative and stay professionally managed every day.',
+      'Lamankita bridges the gap between executive business objectives and dependable software operations—building digital assets that look authoritative and stay professionally managed every day.',
       'Our engagement policy keeps everything transparent: Company Profiles and Landing Pages launch turnkey with free first-year managed hosting, domain & official business email, while Online Stores, Custom Web Software, and Mobile Apps automatically include full source code handover alongside first-year cloud infrastructure.',
     ],
     principlesTitle: 'Our Quality Commitments',
@@ -260,11 +260,11 @@ export const en: Dictionary = {
       budgetLabel: 'Estimated Budget',
       budgetPlaceholder: 'Select budget range',
       budgetOptions: [
-        'IDR 2.5M - 5M',
-        'IDR 5M - 12M',
-        'IDR 12M - 25M',
-        'IDR 25M - 60M',
-        '> IDR 60M',
+        'IDR 1.8M - 2.5M',
+        'IDR 2.5M - 8M',
+        'IDR 8M - 15M',
+        'IDR 15M - 40M',
+        '> IDR 40M',
         'Not decided yet',
       ],
       notesLabel: 'Tell Us About Your Project Goals',
@@ -289,6 +289,6 @@ export const en: Dictionary = {
     servicesTitle: 'Core Services',
     contactTitle: 'Direct Contact',
     copyright: 'All rights reserved.',
-    builtNote: 'Official Corporate Website · PT Kirana Informatika Indonesia',
+    builtNote: 'Official Corporate Website · Lamankita',
   },
 };

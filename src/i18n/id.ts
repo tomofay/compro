@@ -2,22 +2,22 @@ import type { Dictionary } from './types';
 
 export const id: Dictionary = {
   meta: {
-    siteTitleSuffix: 'PT Kirana Informatika Indonesia',
-    homeTitle: 'PT Kirana Informatika Indonesia — Solusi Website, Toko Online & Software Bisnis',
+    siteTitleSuffix: 'Lamankita',
+    homeTitle: 'Lamankita — Solusi Website, Toko Online & Software Bisnis',
     homeDescription:
-      'Jasa pembuatan website company profile, landing page, toko online, dan custom software bisnis profesional oleh PT Kirana Informatika Indonesia.',
+      'Jasa pembuatan website company profile, landing page, toko online, dan custom software bisnis profesional oleh Lamankita.',
     servicesTitle: 'Layanan Kami',
     servicesDescription:
-      'Solusi pembuatan website company profile, landing page, toko online, software bisnis, dan aplikasi mobile oleh PT Kirana Informatika Indonesia.',
+      'Solusi pembuatan website company profile, landing page, toko online, software bisnis, dan aplikasi mobile oleh Lamankita.',
     portfolioTitle: 'Portofolio Karya',
     portfolioDescription:
-      'Contoh implementasi website korporat, toko online, dan aplikasi bisnis yang dibangun oleh PT Kirana Informatika Indonesia.',
+      'Contoh implementasi website korporat, toko online, dan aplikasi bisnis yang dibangun oleh Lamankita.',
     aboutTitle: 'Tentang Perusahaan',
     aboutDescription:
-      'Profil perusahaan, komitmen kualitas, dan legalitas usaha PT Kirana Informatika Indonesia.',
+      'Profil perusahaan, komitmen kualitas, dan legalitas usaha Lamankita.',
     contactTitle: 'Konsultasi & Kontak',
     contactDescription:
-      'Hubungi PT Kirana Informatika Indonesia untuk konsultasi pembuatan website, toko online, atau software bisnis perusahaan Anda.',
+      'Hubungi Lamankita untuk konsultasi pembuatan website, toko online, atau software bisnis perusahaan Anda.',
   },
   nav: {
     home: 'Beranda',
@@ -55,7 +55,7 @@ export const id: Dictionary = {
         description: 'Termasuk domain, SSL, managed hosting & akun email bisnis (sales@perusahaan.com) tahun pertama.',
       },
     ],
-    galleryCaption: 'Pratinjau Solusi Digital PT Kirana Informatika Indonesia',
+    galleryCaption: 'Pratinjau Solusi Digital Lamankita',
   },
   problemSection: {
     eyebrow: 'TANTANGAN BISNIS',
@@ -95,7 +95,7 @@ export const id: Dictionary = {
   },
   comparisonSection: {
     eyebrow: 'KEUNGGULAN KEMITRAAN',
-    title: 'Mengapa Perusahaan Memilih PT Kirana Informatika Indonesia?',
+    title: 'Mengapa Perusahaan Memilih Lamankita?',
     subtitle:
       'Bandingkan kemudahan layanan terima beres dengan infrastruktur terkelola dibandingkan pengerjaan lepas yang merepotkan saat pemeliharaan.',
     leftHeader: 'Pendekatan Kurang Terstruktur',
@@ -106,7 +106,7 @@ export const id: Dictionary = {
       'Jadwal rilis sering molor tanpa kontrak milestone maupun SLA pemeliharaan',
       'Minim dukungan dokumen pengadaan resmi (PO, NDA, BAST)',
     ],
-    rightHeader: 'PT Kirana Informatika Indonesia',
+    rightHeader: 'Lamankita',
     rightTag: 'Standar Enterprise',
     rightItems: [
       'Desain bersih dan arsitektur khusus sesuai standar perusahaan Anda',
@@ -199,12 +199,12 @@ export const id: Dictionary = {
   },
   aboutPage: {
     eyebrow: 'PROFIL PERUSAHAAN',
-    title: 'Mengenal PT Kirana Informatika Indonesia',
+    title: 'Mengenal Lamankita',
     subtitle:
       'Mitra teknologi informasi bagi perusahaan di Indonesia dalam membangun wajah digital profesional serta sistem kerja yang efisien.',
     overviewTitle: 'Fokus pada Kejelasan & Kredibilitas Bisnis',
     overviewParagraphs: [
-      'PT Kirana Informatika Indonesia hadir untuk menjembatani kebutuhan manajemen perusahaan terhadap produk digital yang tidak hanya rapi secara visual, tetapi juga tangguh serta terkelola baik setiap harinya.',
+      'Lamankita hadir untuk menjembatani kebutuhan manajemen perusahaan terhadap produk digital yang tidak hanya rapi secara visual, tetapi juga tangguh serta terkelola baik setiap harinya.',
       'Melalui skema fleksibel kami, layanan Company Profile dan Landing Page hadir terima beres lengkap dengan gratis hosting, domain & email bisnis tahun pertama—sementara proyek Toko Online, Custom Software Web, dan Aplikasi Mobile langsung mendapatkan serah terima penuh source code beserta dukungan Managed Care berkelanjutan.',
     ],
     principlesTitle: 'Komitmen Kualitas Kami',
@@ -260,11 +260,11 @@ export const id: Dictionary = {
       budgetLabel: 'Perkiraan Anggaran',
       budgetPlaceholder: 'Pilih perkiraan anggaran',
       budgetOptions: [
-        'Rp 2,5 Juta - Rp 5 Juta',
-        'Rp 5 Juta - Rp 12 Juta',
-        'Rp 12 Juta - Rp 25 Juta',
-        'Rp 25 Juta - Rp 60 Juta',
-        '> Rp 60 Juta',
+        'Rp 1,8 Juta - Rp 2,5 Juta',
+        'Rp 2,5 Juta - Rp 8 Juta',
+        'Rp 8 Juta - Rp 15 Juta',
+        'Rp 15 Juta - Rp 40 Juta',
+        '> Rp 40 Juta',
         'Belum ditentukan',
       ],
       notesLabel: 'Ceritakan Kebutuhan Proyek Anda',
@@ -289,6 +289,6 @@ export const id: Dictionary = {
     servicesTitle: 'Layanan Utama',
     contactTitle: 'Kontak Langsung',
     copyright: 'Seluruh hak cipta dilindungi.',
-    builtNote: 'Website Perusahaan Resmi · PT Kirana Informatika Indonesia',
+    builtNote: 'Website Perusahaan Resmi · Lamankita',
   },
 };
