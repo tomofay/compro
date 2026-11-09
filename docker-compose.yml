@@ -3,8 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: lamankita-compro:latest
-    container_name: lamankita-compro
+    image: webramah-compro:latest
+    container_name: webramah-compro
     restart: unless-stopped
     ports:
       - "${APP_PORT:-8090}:8080"

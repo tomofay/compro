@@ -2,22 +2,22 @@ import type { Dictionary } from './types';
 
 export const id: Dictionary = {
   meta: {
-    siteTitleSuffix: 'Lamankita',
-    homeTitle: 'Lamankita — Solusi Website, Toko Online & Software Bisnis',
+    siteTitleSuffix: 'Web Ramah',
+    homeTitle: 'Web Ramah — Solusi Website, Toko Online & Software Bisnis',
     homeDescription:
-      'Jasa pembuatan website company profile, landing page, toko online, dan custom software bisnis profesional oleh Lamankita.',
+      'Jasa pembuatan website company profile, landing page, toko online, dan custom software bisnis profesional oleh Web Ramah.',
     servicesTitle: 'Layanan Kami',
     servicesDescription:
-      'Solusi pembuatan website company profile, landing page, toko online, software bisnis, dan aplikasi mobile oleh Lamankita.',
+      'Solusi pembuatan website company profile, landing page, toko online, software bisnis, dan aplikasi mobile oleh Web Ramah.',
     portfolioTitle: 'Portofolio Karya',
     portfolioDescription:
-      'Contoh implementasi website korporat, toko online, dan aplikasi bisnis yang dibangun oleh Lamankita.',
+      'Contoh implementasi website korporat, toko online, dan aplikasi bisnis yang dibangun oleh Web Ramah.',
     aboutTitle: 'Tentang Perusahaan',
     aboutDescription:
-      'Profil perusahaan, komitmen kualitas, dan legalitas usaha Lamankita.',
+      'Profil perusahaan, komitmen kualitas, dan legalitas usaha Web Ramah.',
     contactTitle: 'Konsultasi & Kontak',
     contactDescription:
-      'Hubungi Lamankita untuk konsultasi pembuatan website, toko online, atau software bisnis perusahaan Anda.',
+      'Hubungi Web Ramah untuk konsultasi pembuatan website, toko online, atau software bisnis perusahaan Anda.',
   },
   nav: {
     home: 'Beranda',
@@ -55,7 +55,7 @@ export const id: Dictionary = {
         description: 'Termasuk domain, SSL, managed hosting & akun email bisnis (sales@perusahaan.com) tahun pertama.',
       },
     ],
-    galleryCaption: 'Pratinjau Solusi Digital Lamankita',
+    galleryCaption: 'Pratinjau Solusi Digital Web Ramah',
   },
   problemSection: {
     eyebrow: 'TANTANGAN BISNIS',
@@ -95,7 +95,7 @@ export const id: Dictionary = {
   },
   comparisonSection: {
     eyebrow: 'KEUNGGULAN KEMITRAAN',
-    title: 'Mengapa Perusahaan Memilih Lamankita?',
+    title: 'Mengapa Perusahaan Memilih Web Ramah?',
     subtitle:
       'Bandingkan kemudahan layanan terima beres dengan infrastruktur terkelola dibandingkan pengerjaan lepas yang merepotkan saat pemeliharaan.',
     leftHeader: 'Pendekatan Kurang Terstruktur',
@@ -106,7 +106,7 @@ export const id: Dictionary = {
       'Jadwal rilis sering molor tanpa kontrak milestone maupun SLA pemeliharaan',
       'Minim dukungan dokumen pengadaan resmi (PO, NDA, BAST)',
     ],
-    rightHeader: 'Lamankita',
+    rightHeader: 'Web Ramah',
     rightTag: 'Standar Enterprise',
     rightItems: [
       'Desain bersih dan arsitektur khusus sesuai standar perusahaan Anda',
@@ -199,12 +199,12 @@ export const id: Dictionary = {
   },
   aboutPage: {
     eyebrow: 'PROFIL PERUSAHAAN',
-    title: 'Mengenal Lamankita',
+    title: 'Mengenal Web Ramah',
     subtitle:
       'Mitra teknologi informasi bagi perusahaan di Indonesia dalam membangun wajah digital profesional serta sistem kerja yang efisien.',
     overviewTitle: 'Fokus pada Kejelasan & Kredibilitas Bisnis',
     overviewParagraphs: [
-      'Lamankita hadir untuk menjembatani kebutuhan manajemen perusahaan terhadap produk digital yang tidak hanya rapi secara visual, tetapi juga tangguh serta terkelola baik setiap harinya.',
+      'Web Ramah hadir untuk menjembatani kebutuhan manajemen perusahaan terhadap produk digital yang tidak hanya rapi secara visual, tetapi juga tangguh serta terkelola baik setiap harinya.',
       'Melalui skema fleksibel kami, layanan Company Profile dan Landing Page hadir terima beres lengkap dengan gratis hosting, domain & email bisnis tahun pertama—sementara proyek Toko Online, Custom Software Web, dan Aplikasi Mobile langsung mendapatkan serah terima penuh source code beserta dukungan Managed Care berkelanjutan.',
     ],
     principlesTitle: 'Komitmen Kualitas Kami',
@@ -289,6 +289,6 @@ export const id: Dictionary = {
     servicesTitle: 'Layanan Utama',
     contactTitle: 'Kontak Langsung',
     copyright: 'Seluruh hak cipta dilindungi.',
-    builtNote: 'Website Perusahaan Resmi · Lamankita',
+    builtNote: 'Website Perusahaan Resmi · Web Ramah',
   },
 };

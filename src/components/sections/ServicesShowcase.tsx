@@ -66,6 +66,9 @@ export function ServicesShowcase({ locale }: ServicesShowcaseProps) {
                   <img
                     src={activeService.image}
                     alt={activeService.title[locale]}
+                    width={1376}
+                    height={768}
+                    loading="eager"
                     className="h-full w-full object-cover"
                   />
                 </div>

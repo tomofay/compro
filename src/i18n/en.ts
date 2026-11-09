@@ -2,22 +2,22 @@ import type { Dictionary } from './types';
 
 export const en: Dictionary = {
   meta: {
-    siteTitleSuffix: 'Lamankita',
-    homeTitle: 'Lamankita — Corporate Websites, Stores & Business Software',
+    siteTitleSuffix: 'Web Ramah',
+    homeTitle: 'Web Ramah — Corporate Websites, Stores & Business Software',
     homeDescription:
-      'Enterprise company profile websites, high-converting landing pages, online stores, and custom business software by Lamankita.',
+      'Enterprise company profile websites, high-converting landing pages, online stores, and custom business software by Web Ramah.',
     servicesTitle: 'Our Services',
     servicesDescription:
-      'Corporate websites, landing pages, online stores, custom software, and mobile app development by Lamankita.',
+      'Corporate websites, landing pages, online stores, custom software, and mobile app development by Web Ramah.',
     portfolioTitle: 'Portfolio',
     portfolioDescription:
-      'Selected corporate websites, e-commerce platforms, and operational software built by Lamankita.',
+      'Selected corporate websites, e-commerce platforms, and operational software built by Web Ramah.',
     aboutTitle: 'About Us',
     aboutDescription:
-      'Corporate profile, quality commitment, and legal entity details of Lamankita.',
+      'Corporate profile, quality commitment, and legal entity details of Web Ramah.',
     contactTitle: 'Contact Us',
     contactDescription:
-      'Consult with Lamankita on your corporate website, online store, or custom software initiative.',
+      'Consult with Web Ramah on your corporate website, online store, or custom software initiative.',
   },
   nav: {
     home: 'Home',
@@ -55,7 +55,7 @@ export const en: Dictionary = {
         description: 'Includes domain, SSL, managed hosting & official business email (sales@company.com) in year 1.',
       },
     ],
-    galleryCaption: 'Digital Solution Showcase by Lamankita',
+    galleryCaption: 'Digital Solution Showcase by Web Ramah',
   },
   problemSection: {
     eyebrow: 'THE BUSINESS CHALLENGE',
@@ -95,7 +95,7 @@ export const en: Dictionary = {
   },
   comparisonSection: {
     eyebrow: 'PARTNERSHIP ADVANTAGE',
-    title: 'Why Enterprises Partner with Lamankita',
+    title: 'Why Enterprises Partner with Web Ramah',
     subtitle:
       'Compare working with an incorporated, managed software partner versus fragmented ad-hoc development.',
     leftHeader: 'Ad-Hoc / Unstructured Approach',
@@ -106,7 +106,7 @@ export const en: Dictionary = {
       'Unclear schedules with frequent delays and zero ongoing SLA support',
       'Lack of formal corporate procurement support (PO, NDA, Handover)',
     ],
-    rightHeader: 'Lamankita',
+    rightHeader: 'Web Ramah',
     rightTag: 'Enterprise Standard',
     rightItems: [
       'Bespoke, ultra-fast digital architecture tailored to your corporate brand',
@@ -199,12 +199,12 @@ export const en: Dictionary = {
   },
   aboutPage: {
     eyebrow: 'COMPANY PROFILE',
-    title: 'About Lamankita',
+    title: 'About Web Ramah',
     subtitle:
       'A trusted Indonesian technology partner helping companies establish authoritative digital presence and streamlined software workflows.',
     overviewTitle: 'Focused on Clarity & Enterprise Reliability',
     overviewParagraphs: [
-      'Lamankita bridges the gap between executive business objectives and dependable software operations—building digital assets that look authoritative and stay professionally managed every day.',
+      'Web Ramah bridges the gap between executive business objectives and dependable software operations—building digital assets that look authoritative and stay professionally managed every day.',
       'Our engagement policy keeps everything transparent: Company Profiles and Landing Pages launch turnkey with free first-year managed hosting, domain & official business email, while Online Stores, Custom Web Software, and Mobile Apps automatically include full source code handover alongside first-year cloud infrastructure.',
     ],
     principlesTitle: 'Our Quality Commitments',
@@ -289,6 +289,6 @@ export const en: Dictionary = {
     servicesTitle: 'Core Services',
     contactTitle: 'Direct Contact',
     copyright: 'All rights reserved.',
-    builtNote: 'Official Corporate Website · Lamankita',
+    builtNote: 'Official Corporate Website · Web Ramah',
   },
 };

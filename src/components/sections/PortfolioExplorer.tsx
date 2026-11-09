@@ -231,7 +231,9 @@ export function PortfolioExplorer({
                       <img
                         src={item.image}
                         alt={item.title[locale]}
-                        loading="lazy"
+                        width={1376}
+                        height={768}
+                        loading="eager"
                         className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                       />
                     </div>
@@ -380,6 +382,9 @@ export function PortfolioExplorer({
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title[locale]}
+                  width={1376}
+                  height={768}
+                  loading="eager"
                   className="h-full w-full object-cover"
                 />
               </div>

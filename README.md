@@ -1,4 +1,4 @@
-# Lamankita — Company Profile Website
+# Web Ramah — Company Profile Website
 
 Website statis bilingual (**Bahasa Indonesia** `/`, **English** `/en/`) dibangun dengan **Astro**, **React**, **Tailwind CSS v4**, dan **shadcn/ui**.
 
@@ -33,7 +33,7 @@ APP_PORT=8091
 Workflow pada `.github/workflows/deploy.yml` berjalan otomatis setiap kali ada `push` ke branch `main`:
 
 1. **`ci`:** Menjalankan `npm ci`, `npm run check`, `npm run build`, serta menguji build & respons container Docker secara terisolasi.
-2. **`deploy`:** Mengunggah source ke `~/apps/lamankita-compro` di VPS menggunakan Repository Secrets (`VPS_IP`, `VPS_USERNAME`, `VPS_KEY`), lalu membangun ulang dan menjalankan container melalui `docker compose up -d --build --remove-orphans` pada port host `8090` (mapping `8090:8080`).
+2. **`deploy`:** Mengunggah source ke `~/apps/webramah-compro` di VPS menggunakan Repository Secrets (`VPS_IP`, `VPS_USERNAME`, `VPS_KEY`), lalu membangun ulang dan menjalankan container melalui `docker compose up -d --build --remove-orphans` pada port host `8090` (mapping `8090:8080`).
 
 ### Contoh Reverse Proxy (Opsional)
 

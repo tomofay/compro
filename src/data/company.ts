@@ -1,10 +1,10 @@
 export const COMPANY = {
-  legalName: 'Lamankita',
-  shortName: 'Lamankita',
+  legalName: 'Web Ramah',
+  shortName: 'Web Ramah',
   establishedYear: '2024',
-  domain: 'https://lamankita.id',
-  email: 'hello@lamankita.id',
-  projectsEmail: 'projects@lamankita.id',
+  domain: 'https://webramah.id',
+  email: 'hello@webramah.id',
+  projectsEmail: 'projects@webramah.id',
   phoneDisplay: '+62 21 5099 8410',
   whatsappNumber: '6281100008410',
   whatsappDisplay: '+62 811-0000-8410',
@@ -13,8 +13,8 @@ export const COMPANY = {
     en: 'South Jakarta, Indonesia',
   },
   address: {
-    id: 'Gedung Lamankita Hub Lt. 4, Jl. TB Simatupang Kav. 18, Jakarta Selatan 12430',
-    en: 'Lamankita Hub Building 4th Fl, Jl. TB Simatupang Kav. 18, South Jakarta 12430',
+    id: 'Gedung Web Ramah Hub Lt. 4, Jl. TB Simatupang Kav. 18, Jakarta Selatan 12430',
+    en: 'Web Ramah Hub Building 4th Fl, Jl. TB Simatupang Kav. 18, South Jakarta 12430',
   },
   operatingHours: {
     id: 'Senin - Jumat, 09:00 - 18:00 WIB',
@@ -24,7 +24,7 @@ export const COMPANY = {
     {
       code: 'ENTITY',
       label: { id: 'Brand / Badan Usaha', en: 'Brand / Legal Entity' },
-      value: 'Lamankita',
+      value: 'Web Ramah',
     },
     {
       code: 'NIB',

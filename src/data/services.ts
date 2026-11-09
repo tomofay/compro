@@ -444,12 +444,12 @@ export const SERVICE_FAQS: FaqItem[] = [
   {
     id: 'faq-04',
     question: {
-      id: 'Apakah Lamankita melayani administrasi B2B seperti PO, NDA, dan faktur resmi?',
-      en: 'Does Lamankita support B2B procurement documents such as PO, NDA, and formal invoices?',
+      id: 'Apakah Web Ramah melayani administrasi B2B seperti PO, NDA, dan faktur resmi?',
+      en: 'Does Web Ramah support B2B procurement documents such as PO, NDA, and formal invoices?',
     },
     answer: {
-      id: 'Tentu. Sebagai mitra penyedia solusi digital korporat berbadan hukum resmi, Lamankita mendukung pengadaan B2B lengkap dengan penawaran resmi (Quotation), Perjanjian Kerja Sama / NDA, Purchase Order (PO), faktur resmi, dan Berita Acara Serah Terima (BAST).',
-      en: 'Yes. As an incorporated digital technology partner in Indonesia, Lamankita supports formal corporate procurement including official Quotations, NDAs, Purchase Orders (PO), official invoices, and Handover Certificates (BAST).',
+      id: 'Tentu. Sebagai mitra penyedia solusi digital korporat berbadan hukum resmi, Web Ramah mendukung pengadaan B2B lengkap dengan penawaran resmi (Quotation), Perjanjian Kerja Sama / NDA, Purchase Order (PO), faktur resmi, dan Berita Acara Serah Terima (BAST).',
+      en: 'Yes. As an incorporated digital technology partner in Indonesia, Web Ramah supports formal corporate procurement including official Quotations, NDAs, Purchase Orders (PO), official invoices, and Handover Certificates (BAST).',
     },
   },
 ];
