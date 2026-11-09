@@ -1,0 +1,15 @@
+services:
+  compro:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: kirana-compro:latest
+    container_name: kirana-compro
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8090}:8080"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

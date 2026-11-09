@@ -1,0 +1,134 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import TechStackMatrix from '@/components/sections/TechStackMatrix.astro';
+import CtaBanner from '@/components/sections/CtaBanner.astro';
+import { COMPANY } from '@/data/company';
+import { getDictionary, type Locale } from '@/i18n';
+import { Building2, ShieldCheck } from 'lucide-react';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = getDictionary(locale);
+---
+
+<BaseLayout
+  locale={locale}
+  currentPage="about"
+  title={dict.meta.aboutTitle}
+  description={dict.meta.aboutDescription}
+>
+  <section class="border-b border-slate-200 bg-slate-50 py-12 sm:py-16">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <p class="text-xs font-semibold tracking-wider text-emerald-700 uppercase">
+        {dict.aboutPage.eyebrow}
+      </p>
+      <h1 class="mt-2 max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+        {dict.aboutPage.title}
+      </h1>
+      <p class="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+        {dict.aboutPage.subtitle}
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white py-14">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
+        <div class="lg:col-span-6">
+          <div class="overflow-hidden rounded-md border border-slate-200 bg-slate-50">
+            <div class="aspect-video w-full overflow-hidden">
+              <img
+                src="/images/about-studio.jpg"
+                alt={COMPANY.legalName}
+                loading="eager"
+                class="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="flex items-center gap-3">
+            <div class="rounded-md border border-emerald-200 bg-emerald-50 p-2 text-emerald-700">
+              <Building2 className="h-4 w-4" aria-hidden="true" />
+            </div>
+            <h2 class="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+              {dict.aboutPage.overviewTitle}
+            </h2>
+          </div>
+          <div class="mt-4 space-y-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+            {dict.aboutPage.overviewParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <h2 class="text-xs font-semibold tracking-wider text-slate-900 uppercase">
+          {dict.aboutPage.principlesTitle}
+        </h2>
+        <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
+          {
+            dict.aboutPage.principles.map((item, idx) => (
+              <div class="rounded-md border border-slate-200 bg-slate-50 p-5">
+                <div class="font-mono text-xs font-bold text-emerald-700">
+                  {String(idx + 1).padStart(2, '0')}
+                </div>
+                <h3 class="mt-2 text-base font-semibold text-slate-900">
+                  {item.title}
+                </h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-slate-600">
+                  {item.description}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TechStackMatrix locale={locale} />
+
+  <section class="border-t border-slate-200 bg-white py-14">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="flex items-start gap-3">
+        <div class="rounded-md border border-emerald-200 bg-emerald-50 p-2 text-emerald-700">
+          <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+        </div>
+        <div>
+          <h2 class="text-xl font-bold tracking-tight text-slate-900">
+            {dict.aboutPage.legalTitle}
+          </h2>
+          <p class="mt-1 text-sm text-slate-600">
+            {dict.aboutPage.legalSubtitle}
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-6 overflow-hidden rounded-md border border-slate-200 bg-white">
+        <dl class="divide-y divide-slate-200">
+          {
+            COMPANY.legalRegistry.map((row) => (
+              <div class="grid grid-cols-1 gap-2 px-4 py-3 text-sm sm:grid-cols-12 sm:items-center">
+                <dt class="font-medium text-slate-700 sm:col-span-4">
+                  {row.label[locale]}
+                </dt>
+                <dd class="font-mono text-xs text-slate-900 sm:col-span-8 sm:text-right">
+                  {row.value}
+                </dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+      <p class="mt-3 text-xs text-slate-500">
+        {dict.aboutPage.legalNote}
+      </p>
+    </div>
+  </section>
+
+  <CtaBanner locale={locale} />
+</BaseLayout>

@@ -1,0 +1,76 @@
+---
+import { getDictionary, type Locale } from '@/i18n';
+import { AlertCircle, Layers, Store } from 'lucide-react';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = getDictionary(locale);
+const p = dict.problemSection;
+const icons = [AlertCircle, Store, Layers];
+---
+
+<section class="border-y border-slate-200 bg-slate-50 py-16">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-end">
+      <div class="lg:col-span-7">
+        <p class="text-xs font-semibold tracking-wider text-emerald-700 uppercase">
+          {p.eyebrow}
+        </p>
+        <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+          {p.titlePrefix}{' '}
+          <span class="text-emerald-600">{p.titleAccent}</span>
+        </h2>
+      </div>
+      <div class="lg:col-span-5">
+        <p class="text-sm leading-relaxed text-slate-600 sm:text-base">
+          {p.subtitle}
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
+      <div class="lg:col-span-6">
+        <figure class="overflow-hidden rounded-md border border-slate-200 bg-white">
+          <div class="aspect-video w-full overflow-hidden bg-slate-100">
+            <img
+              src="/images/enterprise-meeting.jpg"
+              alt={p.imageCaption}
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <figcaption class="border-t border-slate-200 px-4 py-2.5 text-xs text-slate-600">
+            {p.imageCaption}
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="space-y-4 lg:col-span-6">
+        {
+          p.items.map((item, idx) => {
+            const Icon = icons[idx] ?? AlertCircle;
+            return (
+              <div class="flex items-start gap-4 rounded-md border border-slate-200 bg-white p-5">
+                <div class="shrink-0 rounded-md border border-slate-200 bg-slate-100 p-2.5 text-slate-700">
+                  <Icon className="h-4 w-4" aria-hidden="true" />
+                </div>
+                <div>
+                  <h3 class="text-base font-semibold text-slate-900">
+                    {item.title}
+                  </h3>
+                  <p class="mt-1 text-sm leading-relaxed text-slate-600">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+</section>
+

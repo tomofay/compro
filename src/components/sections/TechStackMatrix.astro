@@ -1,0 +1,63 @@
+---
+import { TECH_STACK } from '@/data/techStack';
+import { getDictionary, type Locale } from '@/i18n';
+import { Database, Monitor, Server, ShieldCheck } from 'lucide-react';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = getDictionary(locale);
+---
+
+<section class="border-t border-slate-200 bg-slate-50 py-16">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="max-w-2xl">
+      <p class="text-xs font-semibold tracking-wider text-emerald-700 uppercase">
+        {dict.techStackSection.eyebrow}
+      </p>
+      <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+        {dict.techStackSection.title}
+      </h2>
+      <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
+        {dict.techStackSection.subtitle}
+      </p>
+    </div>
+
+    <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+      {
+        TECH_STACK.map((group) => (
+          <div class="rounded-md border border-slate-200 bg-white p-6">
+            <div class="flex items-center gap-3">
+              <div class="rounded-md border border-emerald-200 bg-emerald-50 p-2 text-emerald-700">
+                {group.icon === 'Monitor' && <Monitor className="h-4 w-4" aria-hidden="true" />}
+                {group.icon === 'Server' && <Server className="h-4 w-4" aria-hidden="true" />}
+                {group.icon === 'Database' && <Database className="h-4 w-4" aria-hidden="true" />}
+                {group.icon === 'ShieldCheck' && (
+                  <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+                )}
+              </div>
+              <h3 class="text-base font-semibold text-slate-900">
+                {group.title[locale]}
+              </h3>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">
+              {group.description[locale]}
+            </p>
+            <div class="mt-4 divide-y divide-slate-100 rounded-md border border-slate-200 bg-slate-50">
+              {group.items.map((tech) => (
+                <div class="flex items-center justify-between gap-4 px-3 py-2 text-xs">
+                  <span class="font-semibold text-slate-900">
+                    {tech.name}
+                  </span>
+                  <span class="text-right text-slate-600">{tech.role[locale]}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

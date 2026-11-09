@@ -1,0 +1,60 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/jetbrains-mono';
+import '@/styles/global.css';
+import { SiteHeader } from '@/components/layout/SiteHeader';
+import SiteFooter from '@/components/layout/SiteFooter.astro';
+import { COMPANY } from '@/data/company';
+import {
+  getAlternateLocale,
+  getAlternatePath,
+  getDictionary,
+  getLocalizedPath,
+  type Locale,
+  type PageKey,
+} from '@/i18n';
+
+interface Props {
+  locale: Locale;
+  currentPage: PageKey;
+  title?: string;
+  description?: string;
+}
+
+const { locale, currentPage, title, description } = Astro.props;
+const dict = getDictionary(locale);
+
+const resolvedTitle = title
+  ? `${title} | ${dict.meta.siteTitleSuffix}`
+  : dict.meta.homeTitle;
+const resolvedDescription = description ?? dict.meta.homeDescription;
+
+const currentPath = getLocalizedPath(locale, currentPage);
+const alternateLocale = getAlternateLocale(locale);
+const alternatePath = getAlternatePath(locale, currentPage);
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>{resolvedTitle}</title>
+    <meta name="description" content={resolvedDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={resolvedTitle} />
+    <meta property="og:description" content={resolvedDescription} />
+    <meta property="og:site_name" content={COMPANY.legalName} />
+    <link rel="alternate" hreflang={locale} href={currentPath} />
+    <link rel="alternate" hreflang={alternateLocale} href={alternatePath} />
+  </head>
+  <body class="flex min-h-screen flex-col bg-white text-slate-900 antialiased">
+    <SiteHeader client:load locale={locale} currentPage={currentPage} />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <SiteFooter locale={locale} />
+  </body>
+</html>
+
