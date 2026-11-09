@@ -24,13 +24,13 @@ export function BrandWordmark({
   return (
     <span
       className={cn(
-        'font-heading inline-block whitespace-nowrap leading-none tracking-[-0.04em] [word-spacing:-0.05em] select-none',
+        'font-heading inline-block whitespace-nowrap leading-none tracking-[-0.04em] [word-spacing:-0.04em] select-none',
         sizeClass,
         className
       )}
     >
-      <span className={cn('font-extrabold', leadColor)}>Web</span>{' '}
-      <span className={cn('font-bold', accentColor)}>Ramah</span>
+      <span className={cn('font-bold', leadColor)}>Web</span>{' '}
+      <span className={cn('font-semibold', accentColor)}>Ramah</span>
     </span>
   );
 }

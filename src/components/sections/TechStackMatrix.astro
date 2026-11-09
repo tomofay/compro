@@ -1,7 +1,15 @@
 ---
 import { TECH_STACK } from '@/data/techStack';
 import { getDictionary, type Locale } from '@/i18n';
-import { Database, Monitor, Server, ShieldCheck } from 'lucide-react';
+import {
+  CheckCheck,
+  CreditCard,
+  Database,
+  HardDrive,
+  Monitor,
+  Server,
+  ShieldCheck,
+} from 'lucide-react';
 
 interface Props {
   locale: Locale;
@@ -11,13 +19,13 @@ const { locale } = Astro.props;
 const dict = getDictionary(locale);
 ---
 
-<section class="border-t border-neutral-200/80 bg-[#F4F4F5] py-16 sm:py-20">
+<section id="tech-stack" class="border-t border-neutral-200 bg-[#F4F4F5] py-16 sm:py-20">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
     <div data-reveal="" class="max-w-2xl">
       <p class="text-xs font-semibold tracking-wider text-emerald-700 uppercase">
         {dict.techStackSection.eyebrow}
       </p>
-      <h2 class="font-heading mt-2 text-2xl font-bold tracking-tight text-neutral-900 sm:text-3xl">
+      <h2 class="font-heading mt-2 text-2xl font-semibold tracking-[-0.025em] text-neutral-950 sm:text-3xl">
         {dict.techStackSection.title}
       </h2>
       <p class="mt-2 text-sm text-neutral-600 sm:text-base">
@@ -31,10 +39,10 @@ const dict = getDictionary(locale);
           <div
             data-reveal=""
             style={`--reveal-delay: ${idx * 80}ms`}
-            class="rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg"
+            class="overflow-hidden rounded-xl border border-neutral-200 bg-white transition-colors duration-200 hover:border-neutral-300"
           >
-            <div class="flex items-center gap-3">
-              <div class="rounded-xl border border-emerald-100 bg-emerald-50 p-2 text-emerald-700">
+            <div class="flex items-center gap-3 border-b border-neutral-200 px-5 py-4">
+              <div class="rounded-md border border-neutral-200 bg-[#FAFAFA] p-2 text-neutral-700">
                 {group.icon === 'Monitor' && <Monitor className="h-4 w-4" aria-hidden="true" />}
                 {group.icon === 'Server' && <Server className="h-4 w-4" aria-hidden="true" />}
                 {group.icon === 'Database' && <Database className="h-4 w-4" aria-hidden="true" />}
@@ -42,17 +50,50 @@ const dict = getDictionary(locale);
                   <ShieldCheck className="h-4 w-4" aria-hidden="true" />
                 )}
               </div>
-              <h3 class="font-heading text-base font-semibold text-neutral-900">
+              <h3 class="font-heading text-[15px] font-semibold tracking-[-0.015em] text-neutral-950">
                 {group.title[locale]}
               </h3>
             </div>
-            <div class="mt-4 divide-y divide-neutral-100 rounded-xl border border-neutral-200/80 bg-neutral-50/70">
+            <div class="divide-y divide-neutral-200/75">
               {group.items.map((tech) => (
-                <div class="flex items-center justify-between gap-4 px-3.5 py-2.5 text-xs">
-                  <span class="font-semibold text-neutral-900">
-                    {tech.name}
+                <div class="flex items-center justify-between gap-4 px-5 py-3 text-xs transition-colors hover:bg-neutral-50/70">
+                  <div class="flex min-w-0 items-center gap-3">
+                    {tech.logos && tech.logos.length > 0 ? (
+                      <div class="flex shrink-0 items-center gap-1">
+                        {tech.logos.map((logo) => (
+                          <span class="inline-flex h-7 w-7 items-center justify-center rounded-md border border-neutral-200 bg-[#FAFAFA]">
+                            <img
+                              src={logo.src}
+                              alt=""
+                              width="16"
+                              height="16"
+                              loading="eager"
+                              aria-hidden="true"
+                              class="h-4 w-4 object-contain"
+                            />
+                          </span>
+                        ))}
+                      </div>
+                    ) : (
+                      <span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-neutral-200 bg-[#FAFAFA] text-neutral-700">
+                        {tech.fallbackIcon === 'CreditCard' && (
+                          <CreditCard className="h-3.5 w-3.5 text-emerald-700" aria-hidden="true" />
+                        )}
+                        {tech.fallbackIcon === 'HardDrive' && (
+                          <HardDrive className="h-3.5 w-3.5" aria-hidden="true" />
+                        )}
+                        {(!tech.fallbackIcon || tech.fallbackIcon === 'CheckCheck') && (
+                          <CheckCheck className="h-3.5 w-3.5 text-emerald-700" aria-hidden="true" />
+                        )}
+                      </span>
+                    )}
+                    <span class="font-heading truncate text-[13px] font-semibold text-neutral-900">
+                      {tech.name}
+                    </span>
+                  </div>
+                  <span class="shrink-0 text-right text-xs text-neutral-500">
+                    {tech.role[locale]}
                   </span>
-                  <span class="text-right text-neutral-600">{tech.role[locale]}</span>
                 </div>
               ))}
             </div>
