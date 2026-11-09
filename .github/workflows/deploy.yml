@@ -45,10 +45,13 @@ jobs:
           docker run -d --name webramah-ci-test -p 18090:8080 webramah-compro:ci
           trap 'docker rm -f webramah-ci-test >/dev/null 2>&1 || true' EXIT
           sleep 2
-          curl -fsS http://127.0.0.1:18090/ | grep -q "Web Ramah"
-          curl -fsS http://127.0.0.1:18090/ | grep -q "PT Kirana Informatika Indonesia"
-          curl -fsS http://127.0.0.1:18090/layanan/ | grep -q "Mulai Rp 1,8 Juta"
-          curl -fsS http://127.0.0.1:18090/en/ | grep -q "Enterprise Trust"
+          curl -fsS http://127.0.0.1:18090/ -o /tmp/ci-home.html
+          grep -Fq "Web Ramah" /tmp/ci-home.html
+          grep -Fq "PT Kirana Informatika Indonesia" /tmp/ci-home.html
+          curl -fsS http://127.0.0.1:18090/layanan/ -o /tmp/ci-services.html
+          grep -Fq "Mulai Rp 1,8 Juta" /tmp/ci-services.html
+          curl -fsS http://127.0.0.1:18090/en/ -o /tmp/ci-en.html
+          grep -Fq "Web Ramah is a service product unit of" /tmp/ci-en.html
           for img in about-studio.jpg enterprise-meeting.jpg showcase-compro.jpg showcase-landing.jpg showcase-mobile.jpg showcase-software.jpg showcase-store.jpg; do
             curl -fsSI "http://127.0.0.1:18090/images/${img}" >/dev/null
           done
