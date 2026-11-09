@@ -23,3 +23,11 @@ Guna menghindari tampilan *childish* atau *cluttered* akibat ornaments visual AI
 - **NO DECORATIVE BADGES:** DILARANG menggunakan floating badges melayang seperti `"✨ Powered by AI"`, `"🚀 New Feature"`, atau *glow effect* dekoratif di belakang ikon yang tidak memiliki aksi fungsional.
 - **CLEAN ICON WRAPPER:** Jika ikon diletakkan di dalam tombol atau header card, gunakan pembungkus simpel tanpa efek bersinar (`p-2 rounded-md bg-neutral-800/50 text-neutral-300`).
 - **FUNCTIONAL ACTION ICONS:** Tombol tindakan dalam tabel atau list (seperti Edit, Delete, Filter, Refresh, Download) WAJIB menggunakan *icon-only button* bersih dengan *aria-label* yang jelas dan *tooltip*, bukan tombol teks lebar yang memenuhi layar.
+
+## 3. PRODUCTION COPYWRITING & ZERO-PLACEHOLDER POLICY (STRICT)
+DILARANG KERAS menyisipkan teks generik, jargon pemanis berlebihan (*marketing fluff*), atau catatan developer ke dalam kode UI/Data:
+
+- **NO GENERIC MARKETING FLUFF:** DILARANG menulis kalimat tidak berguna seperti *"Pendampingan konsultasi digital untuk pertumbuhan bisnis terukur"*, *"Solusi terbaik untuk masa depan digital Anda"*, atau jargon abstrak sejenisnya. Gunakan teks langsung, padat, dan fungsional sesuai konteks fitur.
+- **NO DEVELOPER NOTES IN PRODUCTION UI:** DILARANG MENAMPILKAN teks instruksi internal/penjelas di UI seperti *"Catatan: Data NIB dan SK di bawah ini merupakan contoh placeholder yang dapat diperbarui melalui src/data/company.ts"*, *"Lorem ipsum"*, atau komentar penjelas yang seharusnya hanya ada di dokumentasi/code comment.
+- **PRODUCTION-READY DATA ONLY:** Jika data legal/legalitas, NIB, SK, atau data perusahaan belum disuplai, tampilkan data riil dari konfigurasi/database tanpa embel-embel kalimat "ini adalah placeholder". Jika data tidak ada, tampilkan *empty state* atau kosongkan dengan bersih.
+

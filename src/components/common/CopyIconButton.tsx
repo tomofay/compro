@@ -7,11 +7,13 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { cn } from '@/lib/utils';
 
 interface CopyIconButtonProps {
   value: string;
   label: string;
   copiedLabel: string;
+  tone?: 'light' | 'dark';
   className?: string;
 }
 
@@ -19,6 +21,7 @@ export function CopyIconButton({
   value,
   label,
   copiedLabel,
+  tone = 'light',
   className,
 }: CopyIconButtonProps) {
   const [copied, setCopied] = useState(false);
@@ -45,12 +48,28 @@ export function CopyIconButton({
             size="icon-sm"
             onClick={handleCopy}
             aria-label={copied ? copiedLabel : label}
-            className={className}
+            className={cn(
+              tone === 'dark' &&
+                'border-emerald-800 bg-emerald-900/60 text-emerald-100 hover:bg-emerald-800 hover:text-white',
+              className
+            )}
           >
             {copied ? (
-              <Check className="h-3.5 w-3.5 text-emerald-600" aria-hidden="true" />
+              <Check
+                className={cn(
+                  'h-3.5 w-3.5',
+                  tone === 'dark' ? 'text-emerald-300' : 'text-emerald-600'
+                )}
+                aria-hidden="true"
+              />
             ) : (
-              <Copy className="h-3.5 w-3.5 text-slate-600" aria-hidden="true" />
+              <Copy
+                className={cn(
+                  'h-3.5 w-3.5',
+                  tone === 'dark' ? 'text-emerald-200' : 'text-neutral-600'
+                )}
+                aria-hidden="true"
+              />
             )}
           </Button>
         </TooltipTrigger>

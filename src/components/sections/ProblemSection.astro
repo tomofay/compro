@@ -12,58 +12,60 @@ const p = dict.problemSection;
 const icons = [AlertCircle, Store, Layers];
 ---
 
-<section class="border-y border-slate-200 bg-slate-50 py-16">
+<section class="border-y border-neutral-200/80 bg-[#F4F4F5] py-16 sm:py-20">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-end">
-      <div class="lg:col-span-7">
+    <div data-reveal="" class="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+      <div>
         <p class="text-xs font-semibold tracking-wider text-emerald-700 uppercase">
           {p.eyebrow}
         </p>
-        <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+        <h2 class="font-heading mt-2 text-2xl font-bold tracking-tight text-neutral-900 sm:text-3xl">
           {p.titlePrefix}{' '}
           <span class="text-emerald-600">{p.titleAccent}</span>
         </h2>
       </div>
-      <div class="lg:col-span-5">
-        <p class="text-sm leading-relaxed text-slate-600 sm:text-base">
-          {p.subtitle}
-        </p>
-      </div>
+      <p class="text-sm text-neutral-600">
+        {p.subtitle}
+      </p>
     </div>
 
-    <div class="mt-10 grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
-      <div class="lg:col-span-6">
-        <figure class="overflow-hidden rounded-md border border-slate-200 bg-white">
-          <div class="aspect-video w-full overflow-hidden bg-slate-100">
+    <div class="mt-10 grid grid-cols-1 items-center gap-7 lg:grid-cols-12">
+      <div data-reveal="" style="--reveal-delay: 60ms" class="lg:col-span-6">
+        <figure class="overflow-hidden rounded-2xl border border-emerald-100 bg-white p-2 shadow-[0_12px_32px_-12px_rgba(5,150,105,0.12)]">
+          <div class="aspect-video w-full overflow-hidden rounded-xl border border-neutral-100 bg-neutral-100">
             <img
               src="/images/enterprise-meeting.jpg"
               alt={p.imageCaption}
               width="1376"
               height="768"
               loading="eager"
-              class="h-full w-full object-cover"
+              class="h-full w-full object-cover transition-transform duration-500 ease-out hover:scale-[1.02]"
             />
           </div>
-          <figcaption class="border-t border-slate-200 px-4 py-2.5 text-xs text-slate-600">
+          <figcaption class="px-2 pt-2.5 pb-1 text-xs font-medium text-neutral-600">
             {p.imageCaption}
           </figcaption>
         </figure>
       </div>
 
-      <div class="space-y-4 lg:col-span-6">
+      <div class="space-y-3.5 lg:col-span-6">
         {
           p.items.map((item, idx) => {
             const Icon = icons[idx] ?? AlertCircle;
             return (
-              <div class="flex items-start gap-4 rounded-md border border-slate-200 bg-white p-5">
-                <div class="shrink-0 rounded-md border border-slate-200 bg-slate-100 p-2.5 text-slate-700">
+              <div
+                data-reveal=""
+                style={`--reveal-delay: ${idx * 80}ms`}
+                class="flex items-start gap-3.5 rounded-2xl border border-neutral-200/80 bg-white p-5 shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg"
+              >
+                <div class="shrink-0 rounded-xl border border-emerald-100 bg-emerald-50 p-2 text-emerald-700">
                   <Icon className="h-4 w-4" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 class="text-base font-semibold text-slate-900">
+                  <h3 class="font-heading text-sm font-semibold text-neutral-900 sm:text-base">
                     {item.title}
                   </h3>
-                  <p class="mt-1 text-sm leading-relaxed text-slate-600">
+                  <p class="mt-1 text-xs leading-relaxed text-neutral-600 sm:text-sm">
                     {item.description}
                   </p>
                 </div>
@@ -75,4 +77,3 @@ const icons = [AlertCircle, Store, Layers];
     </div>
   </div>
 </section>
-

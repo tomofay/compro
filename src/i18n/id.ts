@@ -3,21 +3,21 @@ import type { Dictionary } from './types';
 export const id: Dictionary = {
   meta: {
     siteTitleSuffix: 'Web Ramah',
-    homeTitle: 'Web Ramah — Solusi Website, Toko Online & Software Bisnis',
+    homeTitle: 'Web Ramah — Website, Toko Online & Software Bisnis',
     homeDescription:
-      'Jasa pembuatan website company profile, landing page, toko online, dan custom software bisnis profesional oleh Web Ramah.',
+      'Jasa pembuatan website company profile, landing page, toko online, dan custom software bisnis oleh Web Ramah.',
     servicesTitle: 'Layanan Kami',
     servicesDescription:
-      'Solusi pembuatan website company profile, landing page, toko online, software bisnis, dan aplikasi mobile oleh Web Ramah.',
+      'Paket website company profile, landing page, toko online, custom software, dan aplikasi mobile oleh Web Ramah.',
     portfolioTitle: 'Portofolio Karya',
     portfolioDescription:
-      'Contoh implementasi website korporat, toko online, dan aplikasi bisnis yang dibangun oleh Web Ramah.',
+      'Implementasi website korporat, toko online, dan software bisnis oleh Web Ramah.',
     aboutTitle: 'Tentang Perusahaan',
     aboutDescription:
-      'Profil perusahaan, komitmen kualitas, dan legalitas usaha Web Ramah.',
+      'Profil, standar layanan, dan legalitas Web Ramah di bawah PT Kirana Informatika Indonesia.',
     contactTitle: 'Konsultasi & Kontak',
     contactDescription:
-      'Hubungi Web Ramah untuk konsultasi pembuatan website, toko online, atau software bisnis perusahaan Anda.',
+      'Hubungi Web Ramah untuk penawaran website, toko online, atau software perusahaan Anda.',
   },
   nav: {
     home: 'Beranda',
@@ -30,106 +30,153 @@ export const id: Dictionary = {
     openMenuLabel: 'Buka menu navigasi',
   },
   hero: {
-    headlinePrefix: 'Wujudkan',
-    headlineAccent: 'Website & Software Bisnis',
-    headlineSuffix: 'yang Dipercaya Klien Enterprise.',
+    headlinePrefix: 'Website &',
+    headlineAccent: 'Software Bisnis',
+    headlineSuffix: 'Siap Pakai.',
     subheadline:
-      'Dari website company profile, landing page, toko online hingga software operasional khusus—terima beres lengkap dengan gratis hosting, domain & email bisnis tahun pertama.',
+      'Paket lengkap gratis hosting, domain & email bisnis (sales@perusahaan.com) tahun ke-1.',
     primaryCta: 'Konsultasi Proyek',
     secondaryCta: 'Lihat Layanan & Harga',
     pillars: [
       {
-        title: 'Cepat & Ramah Google',
-        description: 'Struktur website ringan agar perusahaan Anda mudah ditemukan calon klien.',
+        title: 'Cepat & SEO Ready',
+        description: 'Skor performa optimal desktop & mobile.',
       },
       {
-        title: 'Tampilan Enterprise',
-        description: 'Desain profesional yang langsung membangun kepercayaan mitra B2B.',
+        title: 'Standar B2B Korporat',
+        description: 'Siap Penawaran Resmi, PO, NDA & BAST.',
       },
       {
-        title: 'Siap Transaksi & Integrasi',
-        description: 'Terhubung lancar ke pembayaran QRIS, WhatsApp, dan alur operasional.',
+        title: 'Integrasi Pembayaran',
+        description: 'Terhubung QRIS, Virtual Account & WhatsApp.',
       },
       {
-        title: 'Gratis Hosting, Domain & Email',
-        description: 'Termasuk domain, SSL, managed hosting & akun email bisnis (sales@perusahaan.com) tahun pertama.',
+        title: 'Gratis Hosting & Email Th. 1',
+        description: 'Termasuk domain, SSL & akun sales@perusahaan.com.',
       },
     ],
-    galleryCaption: 'Pratinjau Solusi Digital Web Ramah',
+    galleryCaption: 'Arahkan kursor atau klik kartu layanan untuk detail paket',
   },
   problemSection: {
-    eyebrow: 'TANTANGAN BISNIS',
-    titlePrefix: 'Punya Produk Unggul Saja Tidak Cukup.',
-    titleAccent: 'Kesan Pertama Digital Menentukan Kepercayaan.',
-    subtitle:
-      'Banyak perusahaan kehilangan peluang kerja sama bernilai besar hanya karena tampilan digitalnya kurang meyakinkan atau operasionalnya masih terpisah-pisah.',
+    eyebrow: 'TANTANGAN UTAMA',
+    titlePrefix: 'Selesaikan 3 Kendala Digital',
+    titleAccent: 'dalam Satu Sistem.',
+    subtitle: 'Ringkasan kendala operasional yang langsung ditangani.',
     items: [
       {
-        title: 'Website Terlihat Kurang Meyakinkan',
-        description:
-          'Desain yang terasa generik atau lambat diakses membuat calon mitra korporat ragu saat melakukan evaluasi vendor.',
+        title: 'Website Generik & Lambat',
+        description: 'Menurunkan kepercayaan klien B2B saat evaluasi vendor.',
       },
       {
-        title: 'Ketergantungan Penuh pada Platform Lain',
-        description:
-          'Berjualan hanya lewat marketplace membuat margin tergerus biaya komisi dan Anda tidak memiliki data pelanggan sendiri.',
+        title: 'Terikat Komisi Marketplace',
+        description: 'Margin penjualan terpotong dan data pelanggan terkunci.',
       },
       {
-        title: 'Operasional Masih Manual & Tersebar',
-        description:
-          'Pencatatan order, stok gudang, dan laporan penjualan yang tercecer di banyak file memperlambat keputusan manajemen.',
+        title: 'Rekap Stok & Order Manual',
+        description: 'Data operasional tersebar di banyak spreadsheet terpisah.',
       },
     ],
-    imageCaption: 'Pendampingan konsultasi digital untuk pertumbuhan bisnis terukur.',
+    imageCaption: 'Sesi pemetaan alur fitur bersama tim Web Ramah.',
   },
   servicesSection: {
-    eyebrow: 'SOLUSI TERPADU',
-    title: 'Pilih Solusi yang Tepat untuk Kebutuhan Bisnis Anda',
-    subtitle:
-      'Setiap layanan dirancang dengan tampilan berstandar tinggi dan sudah termasuk gratis hosting, domain serta email bisnis tahun pertama.',
-    viewDetailsLabel: 'Detail Layanan',
+    eyebrow: 'PILIHAN SOLUSI',
+    title: 'Spesifikasi Layanan & Investasi',
+    subtitle: 'Pilih tab untuk cek fitur inti, harga awal & cakupan aset.',
+    viewDetailsLabel: 'Detail Lengkap',
     inquireServiceLabel: 'Konsultasi Layanan Ini',
-    viewAllLink: 'Lihat Semua Detail & Paket Layanan',
+    viewAllLink: 'Semua Paket & FAQ',
     timelinePrefix: 'Estimasi',
     hostingPrefix: 'Hosting, Domain & Email',
   },
   comparisonSection: {
-    eyebrow: 'KEUNGGULAN KEMITRAAN',
-    title: 'Mengapa Perusahaan Memilih Web Ramah?',
-    subtitle:
-      'Bandingkan kemudahan layanan terima beres dengan infrastruktur terkelola dibandingkan pengerjaan lepas yang merepotkan saat pemeliharaan.',
-    leftHeader: 'Pendekatan Kurang Terstruktur',
-    leftTag: 'Risiko Tinggi',
-    leftItems: [
-      'Menggunakan template pasaran yang lambat dan rentan celah keamanan',
-      'Klien harus mengurus sewa server, SSL, dan backup sendiri setelah rilis',
-      'Jadwal rilis sering molor tanpa kontrak milestone maupun SLA pemeliharaan',
-      'Minim dukungan dokumen pengadaan resmi (PO, NDA, BAST)',
+    eyebrow: 'PERBANDINGAN STANDAR',
+    title: 'Mengapa Memilih Web Ramah?',
+    subtitle: 'Perbandingan langsung legalitas, kepemilikan aset & dukungan pasca-rilis.',
+    toggleManagedLabel: 'Website & Kampanye (Managed)',
+    toggleOwnershipLabel: 'Toko Online & Software (Source Code)',
+    columns: {
+      parameter: 'Parameter Evaluasi',
+      webramah: 'Web Ramah',
+      alternative: 'Pekerja Lepas / Template Tanpa Kontrak',
+    },
+    managedRows: [
+      {
+        parameter: 'Legalitas & Kontrak B2B',
+        webramah: 'Resmi PT Kirana Informatika Indonesia (PO, PKS/NDA, Faktur & BAST)',
+        alternative: 'Perorangan tanpa kontrak resmi maupun badan hukum',
+      },
+      {
+        parameter: 'Hosting, Domain & Email Th. 1',
+        webramah: 'Gratis hosting cloud, domain, SSL & email (sales@perusahaan.com) Th. 1',
+        alternative: 'Server, domain, SSL & email perusahaan diurus terpisah',
+      },
+      {
+        parameter: 'Keberlanjutan & Managed Care',
+        webramah: 'Perpanjangan Managed Care tahunan praktis + opsi buyout korporat',
+        alternative: 'Sulit dihubungi saat butuh update atau server bermasalah',
+      },
+      {
+        parameter: 'Kecepatan & Desain Kustom',
+        webramah: 'Desain kustom ringan & responsif di desktop maupun perangkat mobile',
+        alternative: 'Menggunakan tema berat berulang dengan skor performa rendah',
+      },
+      {
+        parameter: 'Struktur SEO On-Page',
+        webramah: 'Heading terstruktur, metadata, sitemap & siap integrasi Pixel/Analytics',
+        alternative: 'Hanya instalasi tema bawaan tanpa penataan teknis SEO',
+      },
+      {
+        parameter: 'Dukungan & Panduan Admin',
+        webramah: 'Pemantauan uptime, backup terjadwal & onboarding singkat tim admin',
+        alternative: 'Lepas tangan setelah rilis tanpa SLA pemeliharaan resmi',
+      },
     ],
-    rightHeader: 'Web Ramah',
-    rightTag: 'Standar Enterprise',
-    rightItems: [
-      'Desain bersih dan arsitektur khusus sesuai standar perusahaan Anda',
-      'Gratis hosting, domain, SSL & email bisnis resmi tahun ke-1 (lanjut Managed Care Th. 2+)',
-      'Custom Software, Aplikasi Mobile & Toko Online langsung mendapat serah terima source code penuh',
-      'Siap administrasi B2B lengkap: Penawaran Resmi, PO, NDA & BAST',
+    ownershipRows: [
+      {
+        parameter: 'Serah Terima Source Code',
+        webramah: '100% kepemilikan penuh source code (Git) & dokumentasi teknis',
+        alternative: 'Kode sering terkunci atau dikenakan biaya tebusan lisensi',
+      },
+      {
+        parameter: 'Legalitas & Kontrak B2B',
+        webramah: 'Resmi PT Kirana Informatika Indonesia (PO, PKS/NDA, Faktur & BAST)',
+        alternative: 'Minim perlindungan kontrak jadwal, HAKI maupun NDA',
+      },
+      {
+        parameter: 'Cloud Server, Domain & Email Th. 1',
+        webramah: 'Gratis cloud server, domain & email Th. 1; Th. 2+ bebas Managed Care atau VPS sendiri',
+        alternative: 'Setup VPS, database & konfigurasi keamanan dibebankan terpisah',
+      },
+      {
+        parameter: 'Integrasi Pembayaran & API',
+        webramah: 'Terhubung QRIS, Virtual Account, cek ongkir, WhatsApp & API internal',
+        alternative: 'Mengandalkan plugin standar dengan modul integrasi terbatas',
+      },
+      {
+        parameter: 'Pengujian QA & Hak Akses',
+        webramah: 'UAT bertahap di staging, hak akses multi-role (RBAC) & HTTPS aktif',
+        alternative: 'Minim uji fungsional sebelum sistem dipakai di lingkungan produksi',
+      },
+      {
+        parameter: 'Pelatihan Tim & Maintenance SLA',
+        webramah: 'Sesi training staf internal + opsi kontrak SLA berkala',
+        alternative: 'Tim operasional harus mempelajari alur penggunaan sendiri',
+      },
     ],
-    ctaLabel: 'Jadwalkan Diskusi Bersama Tim Kami',
   },
   portfolioSection: {
-    eyebrow: 'PORTOFOLIO KARYA',
-    title: 'Implementasi Website, Toko Online & Aplikasi Bisnis',
-    subtitle:
-      'Klik ikon pratinjau pada setiap proyek untuk melihat rincian hasil dan manfaat bisnis yang dicapai.',
-    viewAllLink: 'Lihat Seluruh Portofolio',
+    eyebrow: 'PORTOFOLIO',
+    title: 'Hasil Kerja & Implementasi Nyata',
+    subtitle: 'Filter per kategori atau klik ikon mata untuk rincian proyek.',
+    viewAllLink: 'Lihat Semua Portofolio',
     searchPlaceholder: 'Cari proyek atau industri...',
     resetFilterTooltip: 'Reset filter',
     viewModeGridTooltip: 'Tampilan Kartu Bergambar',
     viewModeTableTooltip: 'Tampilan Daftar Tabel',
     inspectTooltip: 'Lihat detail proyek',
-    emptyState: 'Belum ada proyek yang sesuai dengan kata kunci pencarian Anda.',
+    emptyState: 'Belum ada proyek yang sesuai filter.',
     categories: {
-      all: 'Semua Solusi',
+      all: 'Semua',
       compro: 'Company Profile',
       landing: 'Landing Page',
       store: 'Toko Online',
@@ -147,94 +194,87 @@ export const id: Dictionary = {
     dialog: {
       solutionLabel: 'Jenis Solusi',
       sectorLabel: 'Sektor Bisnis',
-      metricLabel: 'Dampak Terukur',
-      capabilitiesLabel: 'Fitur & Kapabilitas Utama',
-      deliverablesLabel: 'Yang Didapatkan Klien',
+      metricLabel: 'Hasil Terukur',
+      capabilitiesLabel: 'Fitur Utama',
+      deliverablesLabel: 'Cakupan Hasil',
       closeLabel: 'Tutup',
       inquireSimilar: 'Buat Sistem Serupa',
     },
   },
   processSection: {
-    eyebrow: 'ALUR KERJA JELAS',
-    title: 'Dari Diskusi Awal Hingga Siap Digunakan dalam 4 Langkah',
-    subtitle:
-      'Proses pengerjaan kami ringkas, transparan, dan tidak membingungkan dengan istilah teknis yang berbelit.',
+    eyebrow: 'ALUR KERJA',
+    title: '4 Tahapan Ringkas Hingga Sistem Online',
+    subtitle: 'Alur kerja langsung ke poin output di setiap minggu.',
     stepLabel: 'Tahap',
   },
   techStackSection: {
-    eyebrow: 'FONDASI KEANDALAN',
-    title: 'Didukung Teknologi Modern yang Stabil & Aman',
-    subtitle:
-      'Anda tidak perlu pusing memikirkan sisi teknisnya—tim kami memastikan fondasi sistem siap melayani pertumbuhan bisnis Anda.',
+    eyebrow: 'ARSITEKTUR',
+    title: 'Komponen Teknologi Terstandar',
+    subtitle: 'Spesifikasi teknis per lapisan sistem.',
   },
   ctaBanner: {
-    eyebrow: 'LANGKAH SELANJUTNYA',
-    title: 'Siap Meningkatkan Kredibilitas & Sistem Digital Perusahaan Anda?',
-    subtitle:
-      'Sampaikan gambaran singkat kebutuhan Anda. Kami siap membantu menyusun rekomendasi solusi, estimasi waktu, dan penawaran resmi.',
-    primaryButton: 'Konsultasi Gratis Sekarang',
+    eyebrow: 'MULAI KONSULTASI',
+    title: 'Siapkan Estimasi & Penawaran Proyek Anda',
+    subtitle: 'Kirim kebutuhan singkat — penawaran dikirim maksimal 1 hari kerja.',
+    points: [
+      'Gratis hosting, domain & email (sales@perusahaan.com) Th. 1',
+      'Siap dokumen PO, PKS/NDA & BAST korporat',
+    ],
+    primaryButton: 'Konsultasi Gratis',
     copyEmailTooltip: 'Salin alamat email',
     copiedTooltip: 'Email disalin',
   },
   servicesPage: {
     eyebrow: 'KATALOG LAYANAN',
-    title: 'Solusi Website, E-Commerce & Software Khusus Bisnis',
-    subtitle:
-      'Pilih layanan sesuai kebutuhan perusahaan Anda, lengkap dengan rincian fitur dan estimasi waktu pengerjaan.',
-    deliverablesLabel: 'Cakupan Hasil Kerja',
+    title: 'Daftar Paket Website, E-Commerce & Software',
+    subtitle: 'Poin deliverables, harga awal, estimasi waktu & kebijakan kepemilikan.',
+    deliverablesLabel: 'Poin yang Didapatkan',
     idealForLabel: 'Cocok Untuk',
     timelineLabel: 'Estimasi Waktu',
     investmentLabel: 'Investasi Awal',
     hostingLabel: 'Hosting & Email',
-    engagementTitle: 'Pilihan Skema Kerja Sama',
-    engagementSubtitle: 'Fleksibel mengikuti kesiapan spesifikasi proyek dan anggaran perusahaan Anda.',
-    faqTitle: 'Pertanyaan yang Sering Diajukan',
-    faqSubtitle: 'Informasi seputar kepemilikan aset, estimasi pengerjaan, dan administrasi perusahaan.',
+    engagementTitle: 'Skema Kerja Sama',
+    engagementSubtitle: 'Perbandingan ringkas Managed Turnkey vs Kepemilikan Source Code.',
+    faqTitle: 'Pertanyaan Umum (FAQ)',
+    faqSubtitle: 'Poin jawaban seputar source code, Managed Care, waktu rilis & B2B.',
   },
   portfolioPage: {
-    eyebrow: 'PORTOFOLIO KARYA',
-    title: 'Contoh Proyek & Blueprint Solusi Bisnis',
-    subtitle:
-      'Lihat beragam implementasi website, toko online, dan sistem aplikasi di berbagai sektor industri.',
+    eyebrow: 'PORTOFOLIO',
+    title: 'Daftar Proyek & Blueprint Solusi',
+    subtitle: 'Filter per industri atau beralih ke mode tabel.',
   },
   aboutPage: {
     eyebrow: 'PROFIL PERUSAHAAN',
-    title: 'Mengenal Web Ramah',
-    subtitle:
-      'Mitra teknologi informasi bagi perusahaan di Indonesia dalam membangun wajah digital profesional serta sistem kerja yang efisien.',
-    overviewTitle: 'Fokus pada Kejelasan & Kredibilitas Bisnis',
-    overviewParagraphs: [
-      'Web Ramah hadir untuk menjembatani kebutuhan manajemen perusahaan terhadap produk digital yang tidak hanya rapi secara visual, tetapi juga tangguh serta terkelola baik setiap harinya.',
-      'Melalui skema fleksibel kami, layanan Company Profile dan Landing Page hadir terima beres lengkap dengan gratis hosting, domain & email bisnis tahun pertama—sementara proyek Toko Online, Custom Software Web, dan Aplikasi Mobile langsung mendapatkan serah terima penuh source code beserta dukungan Managed Care berkelanjutan.',
+    title: 'Tentang Web Ramah',
+    subtitle: 'Unit produk layanan digital dari PT Kirana Informatika Indonesia.',
+    overviewTitle: 'Ringkasan Layanan & Komitmen',
+    overviewPoints: [
+      'Company Profile & Landing Page terima beres (gratis hosting, domain & email Th. 1, lanjut Managed Care Th. 2+).',
+      'Toko Online, Custom Software Web & Aplikasi Mobile langsung serah terima source code penuh.',
+      'Mendukung penuh pengadaan B2B: Quotation, PO, PKS/NDA, Faktur & BAST.',
     ],
-    principlesTitle: 'Komitmen Kualitas Kami',
+    principlesTitle: 'Standar Kerja Kami',
     principles: [
       {
-        title: 'Desain Rapi Berorientasi Pembeli',
-        description:
-          'Setiap halaman disusun agar calon mitra dan pembeli Anda langsung menangkap nilai perusahaan tanpa membaca teks yang membingungkan.',
+        title: 'Ringan & Siap Bisnis',
+        description: 'Tampilan bersih yang memuat cepat di semua perangkat.',
       },
       {
-        title: 'Kepemilikan Jelas & Hosting Terkelola',
-        description:
-          'Gratis hosting, domain, SSL & email bisnis resmi (sales@perusahaan.com) tahun pertama di setiap paket—plus serah terima penuh source code untuk Toko Online, Custom Software & Aplikasi Mobile.',
+        title: 'Aturan Aset Transparan',
+        description: 'Jelas sejak awal antara Managed Care vs kepemilikan source code.',
       },
       {
-        title: 'Kesiapan Administrasi Korporat',
-        description:
-          'Mendukung penuh alur pengadaan B2B mulai dari penawaran resmi, PO, perjanjian kerahasiaan (NDA), hingga BAST.',
+        title: 'Siap Administrasi B2B',
+        description: 'Lengkap dukungan PO, NDA, faktur resmi, dan BAST.',
       },
     ],
     legalTitle: 'Identitas Resmi Badan Hukum',
-    legalSubtitle: 'Ringkasan legalitas untuk keperluan verifikasi rekanan dan pengadaan korporat.',
-    legalNote:
-      'Catatan: Data NIB dan SK di bawah ini merupakan contoh placeholder yang dapat diperbarui melalui src/data/company.ts.',
+    legalSubtitle: 'Data verifikasi rekanan & pengadaan korporat.',
   },
   contactPage: {
-    eyebrow: 'HUBUNGI KAMI',
-    title: 'Mulai Diskusi Proyek Anda Bersama Tim Kami',
-    subtitle:
-      'Isi formulir singkat di samping untuk mendapatkan estimasi solusi, atau hubungi tim kami langsung melalui email dan WhatsApp resmi.',
+    eyebrow: 'KONTAK & BRIEF',
+    title: 'Buat Ringkasan Kebutuhan Proyek Anda',
+    subtitle: 'Isi form di samping untuk menyiapkan pesan siap kirim ke WhatsApp atau Email.',
     channelsTitle: 'Kontak Resmi Perusahaan',
     copyTooltip: 'Salin',
     copiedTooltip: 'Tersalin',
@@ -248,7 +288,7 @@ export const id: Dictionary = {
     },
     form: {
       title: 'Formulir Konsultasi Proyek',
-      subtitle: 'Ceritakan kebutuhan singkat Anda—tim kami siap menindaklanjuti dengan cepat.',
+      subtitle: 'Pilih layanan, rentang anggaran & tulis poin kebutuhan.',
       nameLabel: 'Nama Lengkap',
       namePlaceholder: 'Contoh: Budi Santoso',
       companyLabel: 'Nama Perusahaan / Usaha',
@@ -267,15 +307,13 @@ export const id: Dictionary = {
         '> Rp 40 Juta',
         'Belum ditentukan',
       ],
-      notesLabel: 'Ceritakan Kebutuhan Proyek Anda',
-      notesPlaceholder:
-        'Contoh: Kami butuh website company profile perusahaan manufaktur dalam 2 bahasa, beserta halaman katalog produk dan form penawaran.',
-      submitButton: 'Kirim & Siapkan Konsultasi',
+      notesLabel: 'Poin Kebutuhan Fitur',
+      notesPlaceholder: 'Contoh: Company profile 2 bahasa, katalog produk & form penawaran.',
+      submitButton: 'Siapkan Brief Konsultasi',
       submittingButton: 'Memproses...',
       validationError: 'Mohon lengkapi nama, email aktif, pilihan layanan, dan ringkasan kebutuhan.',
       successTitle: 'Ringkasan Konsultasi Siap Dikirim',
-      successDescription:
-        'Data kebutuhan Anda telah tersusun rapi. Klik tombol di bawah ini untuk langsung terhubung via WhatsApp atau Email ke tim kami.',
+      successDescription: 'Klik tombol WhatsApp atau Email untuk langsung mengirim brief ini.',
       sendViaWhatsapp: 'Lanjutkan ke WhatsApp',
       sendViaEmail: 'Kirim via Email',
       copyBriefTooltip: 'Salin ringkasan konsultasi',
@@ -285,8 +323,7 @@ export const id: Dictionary = {
   footer: {
     unitAttributionPrefix: 'Web Ramah adalah unit produk layanan dari ',
     unitAttributionCompany: 'PT Kirana Informatika Indonesia.',
-    tagline:
-      'Mitra pengembangan website company profile, toko online, landing page, dan software bisnis terpercaya untuk perusahaan Indonesia.',
+    tagline: 'Website company profile, landing page, toko online & software bisnis.',
     navigationTitle: 'Navigasi',
     servicesTitle: 'Layanan Utama',
     contactTitle: 'Kontak Langsung',

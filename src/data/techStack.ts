@@ -3,7 +3,6 @@ import type { Locale } from '@/i18n/routes';
 export interface TechStackCategory {
   icon: 'Monitor' | 'Server' | 'Database' | 'ShieldCheck';
   title: Record<Locale, string>;
-  description: Record<Locale, string>;
   items: {
     name: string;
     role: Record<Locale, string>;
@@ -14,100 +13,84 @@ export const TECH_STACK: TechStackCategory[] = [
   {
     icon: 'Monitor',
     title: {
-      id: 'Antarmuka Modern & Website Cepat',
-      en: 'Modern Web & Frontend Experience',
-    },
-    description: {
-      id: 'Tampilan bersih yang terbuka dalam hitungan detik di desktop maupun smartphone.',
-      en: 'Clean, responsive interfaces engineered to open smoothly across desktop and mobile.',
+      id: 'Frontend & Performa Web',
+      en: 'Frontend & Web Speed',
     },
     items: [
       {
         name: 'Astro & Next.js',
-        role: { id: 'Fondasi Website Cepat & Ramah SEO', en: 'Fast Static & SEO Web Foundation' },
+        role: { id: 'Website cepat & ramah SEO', en: 'Fast static & SEO architecture' },
       },
       {
         name: 'React & TypeScript',
-        role: { id: 'Antarmuka Interaktif Andal', en: 'Reliable Interactive Interfaces' },
+        role: { id: 'Antarmuka interaktif & aman tipe', en: 'Interactive type-safe UI' },
       },
       {
         name: 'Tailwind CSS',
-        role: { id: 'Konsistensi Sistem Desain Korporat', en: 'Consistent Corporate Design System' },
+        role: { id: 'Sistem desain rapi & responsif', en: 'Clean responsive UI system' },
       },
     ],
   },
   {
     icon: 'Server',
     title: {
-      id: 'Integrasi Bisnis & Aplikasi Mobile',
-      en: 'Business Integrations & Mobile Apps',
-    },
-    description: {
-      id: 'Menghubungkan website atau aplikasi Anda dengan pembayaran, kurir, dan ERP.',
-      en: 'Connecting your digital platforms with payment gateways, couriers, and internal tools.',
+      id: 'Backend API & Mobile Apps',
+      en: 'Backend API & Mobile',
     },
     items: [
       {
         name: 'Node.js & Go',
-        role: { id: 'Layanan Backend & API Terpadu', en: 'Scalable API & Backend Services' },
+        role: { id: 'API & layanan backend terukur', en: 'Scalable API & services' },
       },
       {
         name: 'React Native / Flutter',
-        role: { id: 'Aplikasi Android & iOS', en: 'Android & iOS Mobile Apps' },
+        role: { id: 'Aplikasi Android & iOS', en: 'Android & iOS apps' },
       },
       {
         name: 'Midtrans & Xendit',
-        role: { id: 'Pembayaran Online QRIS & VA', en: 'Local Payment & QRIS Integration' },
+        role: { id: 'Checkout QRIS & Virtual Account', en: 'QRIS & VA payments' },
       },
     ],
   },
   {
     icon: 'Database',
     title: {
-      id: 'Pengelolaan Data & Penyimpanan Aman',
-      en: 'Structured Data & Reliable Storage',
-    },
-    description: {
-      id: 'Menjaga data produk, transaksi, dan pelanggan tetap tertata dan mudah dicadangkan.',
-      en: 'Keeping product catalogs, transactions, and client records organized and backed up.',
+      id: 'Database & Penyimpanan',
+      en: 'Data & Storage',
     },
     items: [
       {
         name: 'PostgreSQL',
-        role: { id: 'Database Utama Berstandar Enterprise', en: 'Enterprise Relational Database' },
+        role: { id: 'Database relasional enterprise', en: 'Enterprise database' },
       },
       {
         name: 'Redis Caching',
-        role: { id: 'Akses Cepat pada Jam Sibuk', en: 'High-Speed Peak Load Caching' },
+        role: { id: 'Kecepatan akses beban tinggi', en: 'High-speed caching' },
       },
       {
         name: 'Cloud Object Storage',
-        role: { id: 'Arsip Dokumen & Media Terlindungi', en: 'Protected Media & Document Storage' },
+        role: { id: 'Penyimpanan aset & dokumen aman', en: 'Protected asset storage' },
       },
     ],
   },
   {
     icon: 'ShieldCheck',
     title: {
-      id: 'Infrastruktur Cloud & Uji Kualitas',
-      en: 'Cloud Infrastructure & Quality Assurance',
-    },
-    description: {
-      id: 'Siap menghadapi lonjakan trafik dengan sertifikat keamanan HTTPS dan backup rutin.',
-      en: 'Prepared for traffic growth with HTTPS security, automated deployments, and QA checks.',
+      id: 'Cloud Server & Keamanan',
+      en: 'Cloud & Security',
     },
     items: [
       {
-        name: 'Cloudflare / Vercel Edge',
-        role: { id: 'Jaringan Pengiriman Global', en: 'Global Edge Network Delivery' },
+        name: 'Cloudflare / Edge CDN',
+        role: { id: 'SSL otomatis & proteksi trafik', en: 'Auto SSL & traffic security' },
       },
       {
         name: 'Docker & Linux Cloud',
-        role: { id: 'Server Khusus Aplikasi Bisnis', en: 'Dedicated Application Servers' },
+        role: { id: 'Deploy terisolasi & mudah pindah server', en: 'Portable container setup' },
       },
       {
-        name: 'Automated QA Audit',
-        role: { id: 'Pengujian Kecepatan & Fungsional', en: 'Speed & Functional Verification' },
+        name: 'Automated QA Check',
+        role: { id: 'Uji build, performa & zero-error', en: 'Build & runtime verification' },
       },
     ],
   },
@@ -117,7 +100,7 @@ export interface ProcessPhase {
   step: string;
   duration: Record<Locale, string>;
   title: Record<Locale, string>;
-  description: Record<Locale, string>;
+  points: Record<Locale, string[]>;
   artifact: Record<Locale, string>;
 }
 
@@ -126,64 +109,88 @@ export const PROCESS_PHASES: ProcessPhase[] = [
     step: '01',
     duration: { id: 'Hari 1 - 3', en: 'Days 1 - 3' },
     title: {
-      id: 'Konsultasi & Pemetaan Tujuan',
-      en: 'Discovery & Goal Mapping',
+      id: 'Diskusi & Pemetaan',
+      en: 'Discovery & Scope',
     },
-    description: {
-      id: 'Diskusi langsung untuk memahami model bisnis, target pasar, serta fitur yang benar-benar dibutuhkan.',
-      en: 'Direct consultation to align on your business model, audience, and essential deliverables.',
+    points: {
+      id: [
+        'Identifikasi target bisnis & modul inti',
+        'Penentuan biaya & jadwal rilis final',
+      ],
+      en: [
+        'Align on business goals & core features',
+        'Lock transparent quote & launch date',
+      ],
     },
     artifact: {
-      id: 'Hasil: Proposal Ruang Lingkup & Jadwal Jelas',
-      en: 'Outcome: Clear Scope & Timeline Proposal',
+      id: 'Output: Proposal & Timeline',
+      en: 'Output: Scope & Timeline',
     },
   },
   {
     step: '02',
     duration: { id: 'Hari 4 - 7', en: 'Days 4 - 7' },
     title: {
-      id: 'Perancangan Desain & Tata Letak',
-      en: 'Visual Design & Structure',
+      id: 'Desain & Tata Letak',
+      en: 'Design & Layout',
     },
-    description: {
-      id: 'Penyusunan alur halaman yang mudah dipahami calon pembeli, lengkap dengan pratinjau tampilan visual.',
-      en: 'Crafting buyer-focused page flow and clean visual layouts before full development begins.',
+    points: {
+      id: [
+        'Struktur halaman & alur konversi B2B',
+        'Revisi visual interaktif sebelum coding',
+      ],
+      en: [
+        'Buyer-focused page structure & copy',
+        'Visual approval prior to development',
+      ],
     },
     artifact: {
-      id: 'Hasil: Pratinjau Desain Disetujui Bersama',
-      en: 'Outcome: Approved Visual Design Preview',
+      id: 'Output: Pratinjau Desain',
+      en: 'Output: Approved Mockup',
     },
   },
   {
     step: '03',
     duration: { id: 'Minggu 2+', en: 'Week 2+' },
     title: {
-      id: 'Pengembangan & Uji Coba',
-      en: 'Build & Quality Verification',
+      id: 'Pengembangan & QA',
+      en: 'Build & QA Testing',
     },
-    description: {
-      id: 'Tim kami membangun website atau aplikasi secara bertahap dengan tautan staging agar Anda bisa memantau langsung.',
-      en: 'Iterative development paired with live staging previews so stakeholders can verify progress directly.',
+    points: {
+      id: [
+        'Integrasi fitur, form, payment & API',
+        'Tautan staging untuk review klien langsung',
+      ],
+      en: [
+        'Core features, forms, payment & APIs',
+        'Live staging preview URL for review',
+      ],
     },
     artifact: {
-      id: 'Hasil: Tautan Uji Coba & Daftar Verifikasi',
-      en: 'Outcome: Live Staging Build & QA Review',
+      id: 'Output: Staging & Checklist QA',
+      en: 'Output: Staging & QA Sign-off',
     },
   },
   {
     step: '04',
     duration: { id: 'Peluncuran', en: 'Launch' },
     title: {
-      id: 'Peluncuran & Aktivasi Managed Care',
-      en: 'Go-Live & Managed Care Setup',
+      id: 'Rilis & Aktivasi Aset',
+      en: 'Go-Live & Handover',
     },
-    description: {
-      id: 'Pemasangan ke domain resmi lengkap dengan gratis hosting tahun ke-1, akun email bisnis (sales@perusahaan.com), SSL keamanan, panduan tim, dan pemantauan aktif.',
-      en: 'Production domain launch with free 1st-year hosting, official business email (sales@company.com), SSL setup, team onboarding, and active monitoring.',
+    points: {
+      id: [
+        'Gratis hosting, SSL & email (sales@perusahaan.com)',
+        'Training tim + aktivasi Managed Care / Source Code',
+      ],
+      en: [
+        'Free 1st-yr hosting, SSL & email (sales@company.com)',
+        'Team training + Managed Care / Source Code handover',
+      ],
     },
     artifact: {
-      id: 'Hasil: Sistem Online, Backup Aktif & Support Resmi',
-      en: 'Outcome: Live System, Active Backups & Official Support',
+      id: 'Output: Online + BAST Resmi',
+      en: 'Output: Live + Formal BAST',
     },
   },
 ];

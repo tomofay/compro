@@ -33,23 +33,15 @@ export const COMPANY = {
       value: 'PT Kirana Informatika Indonesia (Perseroan Terbatas)',
     },
     {
-      code: 'NIB',
-      label: { id: 'Nomor Induk Berusaha', en: 'Business ID (NIB)' },
-      value: '1234000891021 (Editable Placeholder)',
-    },
-    {
-      code: 'SK-AHU',
-      label: { id: 'Pengesahan Kemenkumham', en: 'MoLHR Decree' },
-      value: 'AHU-0041290.AH.01.01 (Editable Placeholder)',
-    },
-    {
       code: 'KBLI',
       label: { id: 'Klasifikasi Baku (KBLI)', en: 'Standard Industry Code' },
       value: '62019 - Aktivitas Pemrograman Komputer Lainnya',
     },
+    {
+      code: 'PROCUREMENT',
+      label: { id: 'Kelengkapan Administrasi B2B', en: 'B2B Procurement Readiness' },
+      value: 'Quotation, PO, NDA & Berita Acara Serah Terima (BAST)',
+    },
   ],
-  // Optional Formspree / Web3Forms / custom POST endpoint.
-  // When empty, ContactInquiryForm runs in static mode (WhatsApp + mailto + clipboard brief).
   formEndpoint: '',
 } as const;
-

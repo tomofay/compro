@@ -2,36 +2,48 @@
 import { CopyIconButton } from '@/components/common/CopyIconButton';
 import { COMPANY } from '@/data/company';
 import { getDictionary, getLocalizedPath, type Locale } from '@/i18n';
-import { ArrowRight, Mail } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Mail } from 'lucide-react';
 
 interface Props {
   locale: Locale;
+  surface?: 'light' | 'muted';
 }
 
-const { locale } = Astro.props;
+const { locale, surface = 'muted' } = Astro.props;
 const dict = getDictionary(locale);
+const sectionSurfaceClass = surface === 'light' ? 'bg-[#FAFAFA]' : 'bg-[#F4F4F5]';
 ---
 
-<section class="border-t border-slate-200 bg-white py-16">
+<section class={`border-t border-neutral-200/80 py-16 ${sectionSurfaceClass}`}>
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <div class="flex flex-col justify-between gap-6 rounded-md border border-slate-200 bg-slate-50 p-6 sm:p-8 lg:flex-row lg:items-center">
+    <div
+      data-reveal=""
+      class="flex flex-col justify-between gap-6 rounded-3xl border border-emerald-100 bg-white p-6 shadow-[0_12px_32px_-16px_rgba(5,150,105,0.14)] sm:p-9 lg:flex-row lg:items-center"
+    >
       <div class="max-w-2xl">
         <p class="text-xs font-semibold tracking-wider text-emerald-700 uppercase">
           {dict.ctaBanner.eyebrow}
         </p>
-        <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+        <h2 class="font-heading mt-2 text-2xl font-bold tracking-tight text-neutral-900 sm:text-3xl">
           {dict.ctaBanner.title}
         </h2>
-        <p class="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
-          {dict.ctaBanner.subtitle}
-        </p>
+        <ul class="mt-4 space-y-2">
+          {
+            dict.ctaBanner.points.map((point) => (
+              <li class="flex items-start gap-2 text-sm text-neutral-700">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" aria-hidden="true" />
+                <span>{point}</span>
+              </li>
+            ))
+          }
+        </ul>
       </div>
 
-      <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <div class="flex items-center justify-between gap-2 rounded-md border border-slate-200 bg-white px-3 py-2">
+      <div class="flex shrink-0 flex-col gap-3 sm:flex-row sm:items-center">
+        <div class="flex items-center justify-between gap-2 rounded-xl border border-neutral-200/80 bg-neutral-50/70 px-3.5 py-2.5">
           <div class="flex items-center gap-2">
-            <Mail className="h-4 w-4 text-slate-500" aria-hidden="true" />
-            <span class="text-xs font-medium text-slate-800">
+            <Mail className="h-4 w-4 text-emerald-700" aria-hidden="true" />
+            <span class="text-xs font-medium whitespace-nowrap text-neutral-800">
               {COMPANY.email}
             </span>
           </div>
@@ -45,7 +57,7 @@ const dict = getDictionary(locale);
 
         <a
           href={getLocalizedPath(locale, 'contact')}
-          class="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-emerald-600 px-5 text-sm font-semibold text-white transition-colors hover:bg-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2"
+          class="inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-lg bg-emerald-600 px-6 text-sm font-semibold whitespace-nowrap text-white shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-emerald-700 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2"
         >
           <span>{dict.ctaBanner.primaryButton}</span>
           <ArrowRight className="h-4 w-4" aria-hidden="true" />

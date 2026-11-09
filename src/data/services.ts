@@ -19,7 +19,6 @@ export interface ServiceItem {
   shortLabel: Record<Locale, string>;
   title: Record<Locale, string>;
   tagline: Record<Locale, string>;
-  shortSummary: Record<Locale, string>;
   idealFor: Record<Locale, string>;
   deliverables: Record<Locale, string[]>;
   highlights: Record<Locale, string[]>;
@@ -53,34 +52,30 @@ export const SERVICES: ServiceItem[] = [
       en: 'Corporate Company Profile',
     },
     tagline: {
-      id: 'Tampil kredibel di hadapan klien korporat dan mitra tender.',
-      en: 'Present an authoritative corporate image to enterprise buyers and partners.',
-    },
-    shortSummary: {
-      id: 'Website perusahaan berkecepatan tinggi dengan desain modern, siap multi-bahasa, serta paket terima beres termasuk domain, email bisnis resmi, dan hosting tahun pertama.',
-      en: 'High-speed corporate website featuring executive design, bilingual readiness, and turnkey first-year domain, official business email, and hosting.',
+      id: 'Profil resmi perusahaan berkecepatan tinggi & multi-bahasa.',
+      en: 'High-speed, bilingual corporate presence for enterprise buyers.',
     },
     idealFor: {
-      id: 'Perusahaan B2B, Manufaktur, Konsultan & Institusi',
-      en: 'B2B Enterprises, Manufacturers, Firms & Institutions',
+      id: 'B2B, Manufaktur, Konsultan & Tender',
+      en: 'B2B, Manufacturing, Firms & Tenders',
     },
     deliverables: {
       id: [
-        'Desain profesional khusus sesuai identitas brand perusahaan',
-        'Gratis domain, SSL, hosting & akun email bisnis resmi (sales@perusahaan.com)',
-        'Optimasi SEO & kecepatan akses tinggi di desktop maupun ponsel',
-        'Integrasi WhatsApp bisnis, Google Maps & formulir penawaran resmi',
+        'Desain profesional sesuai identitas brand',
+        'Gratis domain, SSL & hosting tahun pertama',
+        'Akun email bisnis (sales@perusahaan.com)',
+        'SEO, WhatsApp bisnis & form penawaran',
       ],
       en: [
-        'Bespoke corporate design tailored to your brand guidelines',
-        'Free 1st-yr domain, SSL, hosting & business email (e.g. sales@company.com)',
-        'Search engine optimization and fast mobile & desktop loading',
-        'Business WhatsApp routing, maps, and formal inquiry capture',
+        'Bespoke design aligned with brand guidelines',
+        'Free 1st-yr domain, SSL & cloud hosting',
+        'Official business email (sales@company.com)',
+        'SEO structure, WhatsApp routing & RFQ form',
       ],
     },
     highlights: {
-      id: ['Gratis Hosting & Domain Th. 1', 'Akun Email Bisnis Resmi', 'Perpanjangan Managed Care'],
-      en: ['Free 1st-Yr Hosting & Domain', 'Official Business Email', 'Annual Managed Care'],
+      id: ['Gratis Hosting Th. 1', 'Akun Email Bisnis', 'Managed Care Th. 2+'],
+      en: ['Free 1st-Yr Hosting', 'Business Email', 'Annual Managed Care'],
     },
   },
   {
@@ -110,34 +105,30 @@ export const SERVICES: ServiceItem[] = [
       en: 'High-Converting Landing Page',
     },
     tagline: {
-      id: 'Ubah pengunjung iklan menjadi calon pelanggan potensial.',
-      en: 'Convert paid traffic and product interest into qualified business leads.',
-    },
-    shortSummary: {
-      id: 'Halaman penawaran produk atau layanan yang dirancang fokus pada konversi, kecepatan muat instan, lengkap dengan hosting, domain, dan email bisnis tahun pertama.',
-      en: 'Focused campaign page structured for buyer conversion, instant load speed, and turnkey first-year hosting, domain, and business email.',
+      id: 'Halaman penawaran fokus konversi iklan & prospek.',
+      en: 'Focused campaign page engineered for ad conversion.',
     },
     idealFor: {
-      id: 'Peluncuran Produk, Properti, Layanan Jasa & Acara Bisnis',
-      en: 'Product Launches, Real Estate, Services & Corporate Events',
+      id: 'Produk Baru, Properti, Jasa & Event',
+      en: 'Product Launches, Real Estate & Services',
     },
     deliverables: {
       id: [
-        'Alur konten persuasif agar calon pembeli langsung paham nilai produk',
-        'Gratis domain, SSL, hosting cepat & akun email bisnis (sales@perusahaan.com)',
-        'Formulir leads terhubung ke WhatsApp tim penjualan atau CRM',
-        'Pemasangan pelacakan konversi Meta Pixel & Google Analytics',
+        'Struktur penawaran fokus konversi pembeli',
+        'Gratis domain, SSL & hosting tahun pertama',
+        'Akun email bisnis (sales@perusahaan.com)',
+        'Leads ke WhatsApp + Meta & Google Pixel',
       ],
       en: [
-        'Persuasive storytelling flow engineered for immediate buyer clarity',
-        'Free 1st-yr domain, SSL, hosting & business email (e.g. sales@company.com)',
-        'Lead capture routed directly to sales WhatsApp or CRM',
-        'Meta Pixel and Google Analytics conversion event setup',
+        'Conversion-oriented offer layout',
+        'Free 1st-yr domain, SSL & hosting',
+        'Official business email (sales@company.com)',
+        'WhatsApp lead routing + Meta & Google Pixel',
       ],
     },
     highlights: {
-      id: ['Gratis Hosting & Domain Th. 1', 'Akun Email Bisnis Resmi', 'Siap Iklan Google & Meta'],
-      en: ['Free 1st-Yr Hosting & Domain', 'Official Business Email', 'Google & Meta Ads Ready'],
+      id: ['Gratis Hosting Th. 1', 'Email Bisnis Resmi', 'Siap Google & Meta Ads'],
+      en: ['Free 1st-Yr Hosting', 'Official Business Email', 'Google & Meta Ads Ready'],
     },
   },
   {
@@ -167,33 +158,29 @@ export const SERVICES: ServiceItem[] = [
       en: 'E-Commerce & Online Store',
     },
     tagline: {
-      id: 'Miliki toko resmi sendiri tanpa bergantung pada potongan marketplace.',
-      en: 'Own your branded storefront and customer database free from marketplace fees.',
-    },
-    shortSummary: {
-      id: 'Website toko online lengkap dengan katalog produk, pembayaran otomatis QRIS/Virtual Account, ongkos kirim otomatis, serah terima source code penuh, serta gratis hosting, domain & email bisnis tahun pertama.',
-      en: 'Complete online storefront with variant catalogs, automated QRIS & Virtual Account checkout, full source code ownership, and free year-one hosting, domain & business email.',
+      id: 'Toko resmi mandiri tanpa potongan komisi marketplace.',
+      en: 'Independent branded storefront without marketplace commissions.',
     },
     idealFor: {
-      id: 'Brand Retail, Distributor Resmi & Penjualan Direct-to-Consumer',
-      en: 'Retail Brands, Distributors & Direct-to-Consumer Businesses',
+      id: 'Brand Retail, Distributor & D2C',
+      en: 'Retail Brands, Distributors & D2C',
     },
     deliverables: {
       id: [
-        'Katalog produk rapi dengan variasi ukuran, warna, dan promo',
-        'Pembayaran otomatis terintegrasi (QRIS, Transfer VA, Kartu Kredit)',
-        'Gratis domain, cloud hosting & akun email bisnis resmi (sales@perusahaan.com)',
-        'Panel admin pesanan & stok beserta serah terima penuh source code proyek',
+        'Katalog produk, varian, promo & keranjang',
+        'Pembayaran otomatis QRIS, VA & Kartu',
+        'Gratis cloud, domain & email (sales@perusahaan.com)',
+        'Admin stok + serah terima penuh source code',
       ],
       en: [
-        'Organized product catalog with variants, pricing tiers, and promos',
-        'Automated local payments (QRIS, Virtual Account, Cards)',
-        'Free 1st-yr domain, cloud hosting & official business email (sales@company.com)',
-        'Admin order & stock dashboard plus full project source code handover',
+        'Variant catalog, promotions & checkout cart',
+        'Automated QRIS, Virtual Account & Card checkout',
+        'Free 1st-yr cloud, domain & email (sales@company.com)',
+        'Admin dashboard + full source code handover',
       ],
     },
     highlights: {
-      id: ['Termasuk Source Code', 'Gratis Hosting & Email Th. 1', 'Integrasi Midtrans / Xendit'],
+      id: ['Termasuk Source Code', 'Gratis Hosting & Email Th. 1', 'Midtrans / Xendit Ready'],
       en: ['Full Source Code Included', 'Free 1st-Yr Hosting & Email', 'Midtrans / Xendit Ready'],
     },
   },
@@ -224,34 +211,30 @@ export const SERVICES: ServiceItem[] = [
       en: 'Custom Software & Web Systems',
     },
     tagline: {
-      id: 'Otomatiskan operasional perusahaan dengan sistem yang mengikuti alur kerja Anda.',
-      en: 'Automate internal operations with software built around your exact business rules.',
-    },
-    shortSummary: {
-      id: 'Pengembangan aplikasi web internal, portal pelanggan, sistem stok, hingga dashboard eksekutif—sudah termasuk serah terima source code penuh beserta gratis cloud server, domain & email bisnis tahun pertama.',
-      en: 'Bespoke web platforms, client portals, inventory workflows, and executive dashboards—delivered with full source code ownership and free first-year cloud, domain & business email.',
+      id: 'Sistem web internal sesuai alur kerja operasional.',
+      en: 'Bespoke web applications built around internal workflows.',
     },
     idealFor: {
-      id: 'Operasional Perusahaan, Logistik, Keuangan, Klinik & HR',
-      en: 'Enterprise Operations, Logistics, Finance, Clinics & HR',
+      id: 'Logistik, Keuangan, Klinik, HR & ERP',
+      en: 'Logistics, Finance, Clinics, HR & Operations',
     },
     deliverables: {
       id: [
-        'Sistem manajemen data terpusat pengganti spreadsheet manual',
-        'Pengaturan hak akses berbeda untuk staf, manajer, dan direksi',
-        'Gratis cloud server, domain & akun email bisnis resmi tahun pertama',
-        'Pelatihan tim, dokumentasi & serah terima penuh source code aplikasi',
+        'Sistem terpusat pengganti spreadsheet manual',
+        'Hak akses berbeda staf, manajer & direksi',
+        'Gratis cloud server, domain & email Th. 1',
+        'Pelatihan tim & serah terima penuh source code',
       ],
       en: [
-        'Centralized operational platform replacing fragmented spreadsheets',
-        'Role-based access permissions across staff, managers, and executives',
-        'Free 1st-yr cloud hosting, domain & official business email accounts',
-        'Team onboarding training, documentation & full application source code handover',
+        'Centralized web system replacing spreadsheets',
+        'Role-based access across teams & executives',
+        'Free 1st-yr cloud, domain & business email',
+        'Team training & full source code handover',
       ],
     },
     highlights: {
-      id: ['Termasuk Source Code', 'Gratis Cloud & Email Th. 1', 'Managed Care / Server Sendiri'],
-      en: ['Full Source Code Included', 'Free 1st-Yr Cloud & Email', 'Managed or Self-Hosted'],
+      id: ['Termasuk Source Code', 'Gratis Cloud & Email Th. 1', 'Managed Care / On-Premise'],
+      en: ['Full Source Code Included', 'Free 1st-Yr Cloud & Email', 'Managed or On-Premise'],
     },
   },
   {
@@ -281,34 +264,30 @@ export const SERVICES: ServiceItem[] = [
       en: 'Android & iOS Mobile Apps',
     },
     tagline: {
-      id: 'Hadirkan layanan di genggaman pelanggan maupun tim lapangan Anda.',
-      en: 'Put real-time service and operational workflows in the hands of users and field teams.',
-    },
-    shortSummary: {
-      id: 'Pembuatan aplikasi smartphone Android & iOS yang terhubung real-time ke backend cloud—lengkap dengan serah terima penuh source code aplikasi & API serta gratis cloud, domain & email bisnis tahun pertama.',
-      en: 'Cross-platform Android and iOS applications synchronized with a cloud backend—delivered with full app & API source code ownership plus free year-one cloud, domain & business email.',
+      id: 'Aplikasi smartphone real-time terhubung backend cloud.',
+      en: 'Android & iOS applications synchronized with cloud APIs.',
     },
     idealFor: {
-      id: 'Aplikasi Pelanggan, Tim Sales Lapangan & Layanan Member',
-      en: 'Customer Engagement, Field Sales Forces & Membership Apps',
+      id: 'Aplikasi Member, Kurir & Tim Sales',
+      en: 'Customer Apps, Couriers & Field Sales',
     },
     deliverables: {
       id: [
-        'Satu pengembangan terpadu untuk rilis di Android dan iOS',
-        'Gratis hosting backend API, domain & akun email bisnis (sales@perusahaan.com)',
-        'Pencatatan data tim lapangan tetap berjalan saat koneksi terbatas',
-        'Pendampingan Play Store/App Store & serah terima penuh source code',
+        'Satu pengembangan untuk Android & iOS',
+        'Gratis server API, domain & email Th. 1',
+        'Mode offline tim lapangan & sync pusat',
+        'Rilis Store + serah terima source code',
       ],
       en: [
-        'Unified build delivered efficiently for both Android and iOS',
-        'Free 1st-yr backend API server, domain & official business email',
-        'Reliable field data capture even in low-connectivity areas',
-        'Play Store & App Store guidance plus full source code handover',
+        'Unified build for Android and iOS stores',
+        'Free 1st-yr backend API, domain & email',
+        'Offline queue support with cloud sync',
+        'Store submission & full source code handover',
       ],
     },
     highlights: {
-      id: ['Termasuk Source Code', 'Gratis Cloud & Email Th. 1', 'Rilis Android & iOS'],
-      en: ['Full Source Code Included', 'Free 1st-Yr Cloud & Email', 'Android & iOS Coverage'],
+      id: ['Termasuk Source Code', 'Gratis Cloud & Email Th. 1', 'Android & iOS'],
+      en: ['Full Source Code Included', 'Free 1st-Yr Cloud & Email', 'Android & iOS'],
     },
   },
 ];
@@ -327,129 +306,166 @@ export const ENGAGEMENT_MODELS: EngagementModel[] = [
       en: 'Managed Turnkey (Free Year-1 Hosting)',
     },
     billingType: {
-      id: 'Gratis Th. 1 · Perpanjangan Managed Care Th. 2+',
-      en: 'Free Year 1 · Annual Managed Care Renewal',
+      id: 'Gratis Th. 1 · Managed Care Th. 2+',
+      en: 'Free Year 1 · Annual Managed Care',
     },
     bestFor: {
-      id: 'Untuk Website Company Profile dan Landing Page terima beres agar perusahaan cukup fokus pada bisnis.',
-      en: 'Turnkey model for Company Profiles and Landing Pages with zero technical management burden.',
+      id: 'Website Company Profile & Landing Page terima beres.',
+      en: 'Hassle-free Company Profiles and Landing Pages.',
     },
     terms: {
       id: [
-        'Sudah termasuk gratis domain, SSL, cloud hosting & akun email bisnis (sales@perusahaan.com)',
-        'Tahun ke-2+ cukup membayar perpanjangan Managed Care tahunan (server, email, backup & support)',
-        'Kode dan infrastruktur dikelola penuh oleh tim kami (tersedia opsi buyout untuk server internal)',
+        'Gratis domain, SSL, hosting & email (sales@perusahaan.com) Th. 1',
+        'Tahun ke-2+ perpanjangan Managed Care tahunan praktis',
+        'Server dikelola penuh (opsional buyout kode korporat)',
       ],
       en: [
-        'Includes free domain, SSL, cloud hosting & business email accounts (e.g. sales@company.com)',
-        'From year two onward, simple annual Managed Care renewal covers hosting, email, backups & support',
-        'Code and infrastructure managed by our team (optional code buyout available if tenders require it)',
+        'Free 1st-yr domain, SSL, hosting & email (sales@company.com)',
+        'Simple annual Managed Care renewal starting Year 2+',
+        'Fully managed server (optional corporate buyout available)',
       ],
     },
   },
   {
     title: {
       id: 'Kepemilikan Penuh (Termasuk Source Code)',
-      en: 'Full Ownership Delivery (Source Code Included)',
+      en: 'Full Ownership (Source Code Included)',
     },
     billingType: {
       id: 'Source Code Penuh · Gratis Cloud Th. 1',
       en: 'Full Source Code · Free Year-1 Cloud',
     },
     bestFor: {
-      id: 'Berlaku standar untuk seluruh proyek Toko Online, Custom Software Web, dan Aplikasi Mobile.',
-      en: 'Standard package included with all Online Stores, Custom Web Software, and Mobile Apps.',
+      id: 'Standar Toko Online, Custom Software & Aplikasi Mobile.',
+      en: 'Included on Online Stores, Custom Software & Mobile Apps.',
     },
     terms: {
       id: [
-        'Serah terima penuh source code proyek (Git repository) beserta dokumentasi teknis',
-        'Tetap mendapatkan gratis cloud hosting, domain & email bisnis resmi di tahun pertama',
-        'Tahun ke-2+ bebas lanjut Managed Care tahunan atau migrasi ke server internal Anda',
+        'Serah terima penuh source code Git & dokumentasi',
+        'Gratis cloud hosting, domain & email bisnis Th. 1',
+        'Tahun ke-2+ bebas Managed Care atau server sendiri',
       ],
       en: [
-        'Full project source code (Git repository) handover alongside technical documentation',
-        'Includes free first-year cloud hosting, domain & official business email accounts',
-        'From year 2+, freely choose annual Managed Care renewal or migrate to your own server',
+        'Full Git source code & technical documentation handover',
+        'Free 1st-yr cloud hosting, domain & official email',
+        'Year 2+: continue Managed Care or self-host anywhere',
       ],
     },
   },
   {
     title: {
-      id: 'Enterprise Managed Care & Server Internal',
-      en: 'Enterprise Managed Care & On-Premise Setup',
+      id: 'Enterprise SLA & Server Internal',
+      en: 'Enterprise SLA & On-Premise Setup',
     },
     billingType: {
-      id: 'Kontrak SLA Tahunan / Instalasi Server Klien',
-      en: 'Annual Maintenance SLA / Client Server Setup',
+      id: 'Kontrak SLA / Instalasi VPS Klien',
+      en: 'Maintenance SLA / Internal Server',
     },
     bestFor: {
-      id: 'Untuk korporasi dengan kontrak SLA khusus, instalasi server internal, atau buyout Company Profile.',
-      en: 'For organizations needing priority SLA maintenance, on-premise hosting, or corporate website buyout.',
+      id: 'Korporasi dengan infrastruktur internal atau SLA khusus.',
+      en: 'Organizations with internal servers or priority SLA.',
     },
     terms: {
       id: [
-        'Bantuan instalasi dan konfigurasi ke server internal (VPS/On-Premise) perusahaan Anda',
-        'Pemantauan uptime berkala, backup terjadwal, serta dukungan pembaruan fitur prioritas',
-        'Mendukung administrasi B2B lengkap: Penawaran Resmi, PO, NDA & Berita Acara Serah Terima',
+        'Instalasi ke VPS / On-Premise server internal klien',
+        'Backup terjadwal, monitoring uptime & prioritas support',
+        'Lengkap Penawaran Resmi, PO, NDA & BAST',
       ],
       en: [
-        'Full deployment and configuration onto your internal corporate VPS or on-premise server',
-        'Scheduled backups, active uptime monitoring, and priority technical support SLA',
-        'Complete B2B procurement support covering Quotations, POs, NDAs, and formal BAST',
+        'Deployment onto client corporate VPS or on-premise server',
+        'Scheduled backups, uptime monitoring & priority SLA',
+        'Complete Quotations, POs, NDAs & formal BAST',
       ],
     },
   },
 ];
 
+export type FaqCategory = 'ownership' | 'hosting' | 'b2b';
+
 export interface FaqItem {
   id: string;
+  category: FaqCategory;
   question: Record<Locale, string>;
-  answer: Record<Locale, string>;
+  points: Record<Locale, string[]>;
 }
 
 export const SERVICE_FAQS: FaqItem[] = [
   {
     id: 'faq-01',
+    category: 'ownership',
     question: {
-      id: 'Layanan mana saja yang mendapatkan source code penuh dan bagaimana sistem hostingnya?',
+      id: 'Layanan mana yang mendapat source code penuh & bagaimana sistem hostingnya?',
       en: 'Which services include full source code handover and how does hosting work?',
     },
-    answer: {
-      id: 'Untuk Custom Software Web, Aplikasi Mobile Android/iOS, dan Toko Online, Anda langsung mendapatkan serah terima penuh source code proyek sekaligus tetap memperoleh gratis cloud hosting, domain & akun email bisnis tahun pertama. Sementara untuk Website Company Profile dan Landing Page, kami menerapkan paket terima beres (Managed Turnkey) dengan gratis hosting, domain & email tahun ke-1 lalu perpanjangan Managed Care tahunan mulai tahun ke-2 (tersedia pula opsi buyout source code bila dibutuhkan korporasi/tender).',
-      en: 'All Custom Web Software, Android/iOS Mobile Apps, and Online Store packages automatically include full project source code handover alongside free first-year cloud hosting, domain, and business email. For Corporate Company Profiles and Landing Pages, we deliver on a hassle-free Managed Turnkey basis with free year-one hosting, domain & email followed by annual Managed Care renewal from year two onward (enterprise code buyout remains available if required).',
+    points: {
+      id: [
+        'Toko Online, Custom Software Web & Aplikasi Mobile langsung mendapat serah terima penuh source code.',
+        'Company Profile & Landing Page menggunakan paket Managed Turnkey (perpanjangan Managed Care Th. 2+, tersedia opsi buyout).',
+        'Semua paket tetap mendapatkan gratis hosting, domain & email tahun pertama.',
+      ],
+      en: [
+        'Online Stores, Custom Web Software & Mobile Apps include full source code handover.',
+        'Company Profiles & Landing Pages run on Managed Turnkey (annual Managed Care Year 2+, optional buyout available).',
+        'All packages include complimentary first-year hosting, domain & business email.',
+      ],
     },
   },
   {
     id: 'faq-02',
+    category: 'hosting',
     question: {
-      id: 'Apa saja yang didapatkan di tahun pertama dan perpanjangan Managed Care di tahun ke-2+?',
-      en: 'What is included in year one and the annual Managed Care renewal from year two onward?',
+      id: 'Apa isi fasilitas gratis tahun pertama & perpanjangan Managed Care tahun ke-2+?',
+      en: 'What is covered in Year 1 and the Year 2+ Managed Care renewal?',
     },
-    answer: {
-      id: 'Fasilitas tahun pertama dan perpanjangan Managed Care tahunan mencakup domain resmi, akun email bisnis sesuai domain perusahaan (misalnya sales@perusahaan.com), server cloud cepat, pembaruan sertifikat keamanan SSL, backup data terjadwal, pemantauan uptime 24/7, serta bantuan teknis.',
-      en: 'Both your complimentary first year and annual Managed Care renewal cover official domain registration, branded business email accounts matching your domain (e.g. sales@company.com), high-speed cloud hosting, active SSL security, automated backups, 24/7 uptime monitoring, and technical support.',
+    points: {
+      id: [
+        'Domain resmi (.com / .co.id / .id) & sertifikat keamanan SSL aktif.',
+        'Akun email bisnis resmi sesuai domain (misal: sales@perusahaan.com).',
+        'Server cloud cepat, backup data terjadwal & pemantauan uptime 24/7.',
+      ],
+      en: [
+        'Official domain registration and active HTTPS/SSL security.',
+        'Domain-matched official business email (e.g. sales@company.com).',
+        'Managed cloud server, automated backups & 24/7 uptime monitoring.',
+      ],
     },
   },
   {
     id: 'faq-03',
+    category: 'b2b',
     question: {
-      id: 'Berapa lama waktu pengerjaan hingga website perusahaan siap online?',
-      en: 'How long does it take before our corporate website goes live?',
+      id: 'Berapa estimasi waktu pengerjaan hingga website atau sistem online?',
+      en: 'How long does it take to launch our website or software?',
     },
-    answer: {
-      id: 'Untuk Landing Page berkisar 5–10 hari kerja, Website Company Profile 10–14 hari kerja, Toko Online 3–6 minggu, dan Custom Software disesuaikan dengan kompleksitas alur kerja yang disepakati di proposal.',
-      en: 'Landing Pages typically take 5–10 business days, Corporate Company Profiles 10–14 business days, Online Stores 3–6 weeks, and Custom Software timelines are tailored to your approved workflow scope.',
+    points: {
+      id: [
+        'Landing Page: 5–10 hari kerja · Company Profile: 10–14 hari kerja.',
+        'Toko Online: 3–6 minggu.',
+        'Custom Software & Aplikasi Mobile: 6–16 minggu sesuai ruang lingkup.',
+      ],
+      en: [
+        'Landing Page: 5–10 business days · Company Profile: 10–14 business days.',
+        'Online Store: 3–6 weeks.',
+        'Custom Software & Mobile Apps: 6–16 weeks based on approved scope.',
+      ],
     },
   },
   {
     id: 'faq-04',
+    category: 'b2b',
     question: {
-      id: 'Apakah Web Ramah melayani administrasi B2B seperti PO, NDA, dan faktur resmi?',
-      en: 'Does Web Ramah support B2B procurement documents such as PO, NDA, and formal invoices?',
+      id: 'Apakah Web Ramah melayani dokumen pengadaan B2B (PO, NDA, BAST)?',
+      en: 'Does Web Ramah support B2B procurement documents (PO, NDA, BAST)?',
     },
-    answer: {
-      id: 'Tentu. Sebagai mitra penyedia solusi digital korporat berbadan hukum resmi, Web Ramah mendukung pengadaan B2B lengkap dengan penawaran resmi (Quotation), Perjanjian Kerja Sama / NDA, Purchase Order (PO), faktur resmi, dan Berita Acara Serah Terima (BAST).',
-      en: 'Yes. As an incorporated digital technology partner in Indonesia, Web Ramah supports formal corporate procurement including official Quotations, NDAs, Purchase Orders (PO), official invoices, and Handover Certificates (BAST).',
+    points: {
+      id: [
+        'Ya, beroperasi resmi di bawah badan hukum PT Kirana Informatika Indonesia.',
+        'Mendukung penuh Quotation resmi, PKS/NDA, Purchase Order (PO), Faktur & BAST.',
+      ],
+      en: [
+        'Yes, operated legally under incorporated PT Kirana Informatika Indonesia.',
+        'Supports official Quotations, MSAs/NDAs, POs, official invoices & BAST.',
+      ],
     },
   },
 ];

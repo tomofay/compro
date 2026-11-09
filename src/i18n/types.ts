@@ -60,13 +60,23 @@ export interface Dictionary {
     eyebrow: string;
     title: string;
     subtitle: string;
-    leftHeader: string;
-    leftTag: string;
-    leftItems: string[];
-    rightHeader: string;
-    rightTag: string;
-    rightItems: string[];
-    ctaLabel: string;
+    toggleManagedLabel: string;
+    toggleOwnershipLabel: string;
+    columns: {
+      parameter: string;
+      webramah: string;
+      alternative: string;
+    };
+    managedRows: {
+      parameter: string;
+      webramah: string;
+      alternative: string;
+    }[];
+    ownershipRows: {
+      parameter: string;
+      webramah: string;
+      alternative: string;
+    }[];
   };
   portfolioSection: {
     eyebrow: string;
@@ -120,6 +130,7 @@ export interface Dictionary {
     eyebrow: string;
     title: string;
     subtitle: string;
+    points: string[];
     primaryButton: string;
     copyEmailTooltip: string;
     copiedTooltip: string;
@@ -148,7 +159,7 @@ export interface Dictionary {
     title: string;
     subtitle: string;
     overviewTitle: string;
-    overviewParagraphs: string[];
+    overviewPoints: string[];
     principlesTitle: string;
     principles: {
       title: string;
@@ -156,7 +167,6 @@ export interface Dictionary {
     }[];
     legalTitle: string;
     legalSubtitle: string;
-    legalNote: string;
   };
   contactPage: {
     eyebrow: string;
