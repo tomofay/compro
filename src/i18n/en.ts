@@ -2,22 +2,22 @@ import type { Dictionary } from './types';
 
 export const en: Dictionary = {
   meta: {
-    siteTitleSuffix: 'Web Ramah',
-    homeTitle: 'Web Ramah — Corporate Website, Online Store & Custom Software Agency',
+    siteTitleSuffix: 'HalamanKode',
+    homeTitle: 'HalamanKode — Corporate Website, Online Store & Custom Software Agency',
     homeDescription:
-      'Corporate company profile websites, landing pages, online stores, and custom business software by Web Ramah (PT Kirana Informatika Indonesia). Free 1st-year hosting included.',
+      'Company profile websites, landing pages, online stores, mobile apps, and custom business software by HalamanKode. Free 1st-year hosting & email included.',
     servicesTitle: 'Website, E-Commerce & Custom Software Pricing Packages',
     servicesDescription:
       'Landing pages from IDR 1.8M, company profiles IDR 2.5M, online stores IDR 8M, mobile apps & custom B2B web software with source code handover.',
     portfolioTitle: 'Delivered Corporate Websites, Stores & Software Portfolio',
     portfolioDescription:
-      'Production implementations of bilingual company profiles, multi-warehouse online stores, Android & iOS apps, and custom internal systems by Web Ramah.',
-    aboutTitle: 'Company Profile & Legal Registry — PT Kirana Informatika Indonesia',
+      'Production implementations of bilingual company profiles, multi-warehouse online stores, Android & iOS apps, and custom internal systems by HalamanKode.',
+    aboutTitle: 'About HalamanKode — Web & Software Studio Standards',
     aboutDescription:
-      'Official profile of Web Ramah under PT Kirana Informatika Indonesia. B2B procurement compliant with Quotations, POs, NDAs, Invoices, and formal BAST.',
+      'Profile and standards of HalamanKode — building company profile websites, e-commerce stores, and custom business software with Quotations, POs, NDAs & BAST.',
     contactTitle: 'Request a Website & Software Project Consultation',
     contactDescription:
-      'Prepare your website, online store, or custom software requirements with Web Ramah and send your consultation summary via WhatsApp or Email.',
+      'Prepare your website, online store, or custom software requirements with HalamanKode and send your consultation summary via WhatsApp or Email.',
   },
   nav: {
     home: 'Home',
@@ -76,7 +76,7 @@ export const en: Dictionary = {
         description: 'Operations slowed down by scattered spreadsheets.',
       },
     ],
-    imageCaption: 'Workflow scoping session with the Web Ramah team.',
+    imageCaption: 'Workflow scoping session with the HalamanKode team.',
   },
   servicesSection: {
     eyebrow: 'SOLUTION CATALOG',
@@ -90,76 +90,76 @@ export const en: Dictionary = {
   },
   comparisonSection: {
     eyebrow: 'STANDARD COMPARISON',
-    title: 'Why Choose Web Ramah?',
-    subtitle: 'Direct evaluation of legal compliance, asset ownership & post-launch support.',
+    title: 'Why Choose HalamanKode?',
+    subtitle: 'Direct evaluation of project paperwork, asset ownership & post-launch support.',
     toggleManagedLabel: 'Websites & Campaigns (Managed)',
     toggleOwnershipLabel: 'Stores & Software (Source Code)',
     columns: {
       parameter: 'Evaluation Criteria',
-      webramah: 'Web Ramah',
+      halamankode: 'HalamanKode',
       alternative: 'Freelancer / Ad-Hoc Template',
     },
     managedRows: [
       {
-        parameter: 'Legal & B2B Procurement',
-        webramah: 'Incorporated PT Kirana Informatika Indonesia (PO, NDA, Invoice & BAST)',
-        alternative: 'Individual operator without registered legal entity or SLA contract',
+        parameter: 'Contracts & Project Paperwork',
+        halamankode: 'Official Quotation, milestone contract, PO, NDA, Invoice & BAST',
+        alternative: 'Informal arrangement without written scope or SLA contract',
       },
       {
         parameter: 'Year-1 Hosting, Domain & Email',
-        webramah: 'Free 1st-yr cloud hosting, domain, SSL & email (sales@company.com)',
+        halamankode: 'Free 1st-yr cloud hosting, domain, SSL & email (sales@company.com)',
         alternative: 'Server hosting, SSL & business email managed separately',
       },
       {
         parameter: 'Continuity & Managed Care',
-        webramah: 'Simple annual Managed Care Year 2+ with optional corporate buyout',
+        halamankode: 'Simple annual Managed Care Year 2+ with optional corporate buyout',
         alternative: 'Hard to reach when urgent updates or server incidents happen',
       },
       {
         parameter: 'Speed & Custom Layout',
-        webramah: 'Lightweight bespoke design tuned for desktop and mobile speeds',
+        halamankode: 'Lightweight bespoke design tuned for desktop and mobile speeds',
         alternative: 'Heavy recycled template loaded with redundant plugins',
       },
       {
         parameter: 'On-Page SEO Structure',
-        webramah: 'Structured headings, metadata, sitemap & Analytics/Pixel readiness',
+        halamankode: 'Structured headings, metadata, sitemap & Analytics/Pixel readiness',
         alternative: 'Default theme installation without technical SEO setup',
       },
       {
         parameter: 'Support & Admin Onboarding',
-        webramah: 'Uptime monitoring, scheduled backups & concise team handover',
+        halamankode: 'Uptime monitoring, scheduled backups & concise team handover',
         alternative: 'No formal post-launch warranty or maintenance coverage',
       },
     ],
     ownershipRows: [
       {
         parameter: 'Full Source Code Handover',
-        webramah: '100% full Git source code handover and architecture documentation',
+        halamankode: '100% full Git source code handover and architecture documentation',
         alternative: 'Locked repository or extra source buyout surcharges',
       },
       {
-        parameter: 'Legal & B2B Procurement',
-        webramah: 'Incorporated PT Kirana Informatika Indonesia (PO, NDA, Invoice & BAST)',
+        parameter: 'Contracts & Project Paperwork',
+        halamankode: 'Official Quotation, milestone contract, PO, NDA, Invoice & BAST',
         alternative: 'Weak IP clauses and no enforceable delivery contract',
       },
       {
         parameter: 'Year-1 Cloud Infrastructure',
-        webramah: 'Free 1st-yr cloud, domain & email; Year 2+ Managed Care or self-host',
+        halamankode: 'Free 1st-yr cloud, domain & email; Year 2+ Managed Care or self-host',
         alternative: 'VPS provisioning and security setup billed outside project scope',
       },
       {
         parameter: 'Payment Gateway & API',
-        webramah: 'QRIS, Virtual Account, shipping API & internal system connectors',
+        halamankode: 'QRIS, Virtual Account, shipping API & internal system connectors',
         alternative: 'Basic off-the-shelf plugins with rigid integration limits',
       },
       {
         parameter: 'QA Testing & Access Control',
-        webramah: 'Staging UAT milestones, multi-role RBAC & active SSL encryption',
+        halamankode: 'Staging UAT milestones, multi-role RBAC & active SSL encryption',
         alternative: 'Minimal functional verification before production launch',
       },
       {
         parameter: 'Team Training & SLA',
-        webramah: 'Staff training session plus optional recurring maintenance SLA',
+        halamankode: 'Staff training session plus optional recurring maintenance SLA',
         alternative: 'Internal team left without structured usage handover',
       },
     ],
@@ -244,14 +244,14 @@ export const en: Dictionary = {
     subtitle: 'Filter by industry or switch to table comparison view.',
   },
   aboutPage: {
-    eyebrow: 'COMPANY PROFILE',
-    title: 'About Web Ramah',
-    subtitle: 'Digital service product unit of PT Kirana Informatika Indonesia.',
+    eyebrow: 'ABOUT STUDIO',
+    title: 'About HalamanKode',
+    subtitle: 'Web & software studio building corporate websites, online stores, mobile apps & custom systems.',
     overviewTitle: 'Service Scope & Commitments',
     overviewPoints: [
       'Turnkey Company Profiles & Landing Pages (free 1st-yr hosting, domain & email; annual Managed Care Year 2+).',
       'Online Stores, Custom Web Software & Mobile Apps include full source code handover.',
-      'Complete B2B procurement compliance: Quotations, POs, NDAs, Invoices & BAST.',
+      'Complete B2B project paperwork: Quotations, POs, NDAs, official Invoices & BAST.',
     ],
     principlesTitle: 'Delivery Standards',
     principles: [
@@ -264,12 +264,10 @@ export const en: Dictionary = {
         description: 'Upfront clarity between Managed Care and full source code.',
       },
       {
-        title: 'B2B Procurement Ready',
-        description: 'Full support for POs, NDAs, official invoices, and BAST.',
+        title: 'Structured Project Admin',
+        description: 'Full support for Quotations, contracts, NDAs, invoices, and BAST.',
       },
     ],
-    legalTitle: 'Corporate Legal Registry',
-    legalSubtitle: 'Official summary for vendor verification.',
   },
   contactPage: {
     eyebrow: 'CONTACT & BRIEF',
@@ -282,8 +280,7 @@ export const en: Dictionary = {
       email: 'General Email',
       projectsEmail: 'Proposals & RFP Email',
       whatsapp: 'Business WhatsApp',
-      phone: 'Office Phone',
-      address: 'Office Address',
+      address: 'Company Address',
       hours: 'Business Hours',
     },
     form: {
@@ -321,13 +318,11 @@ export const en: Dictionary = {
     },
   },
   footer: {
-    unitAttributionPrefix: 'Web Ramah is a service product unit of ',
-    unitAttributionCompany: 'PT Kirana Informatika Indonesia.',
-    tagline: 'Company profiles, landing pages, online stores & custom software.',
+    tagline: 'Company profiles, landing pages, online stores, mobile apps & custom software.',
     navigationTitle: 'Navigation',
     servicesTitle: 'Core Services',
     contactTitle: 'Direct Contact',
     copyright: 'All rights reserved.',
-    builtNote: 'Service Product Unit · PT Kirana Informatika Indonesia',
+    builtNote: 'HalamanKode · Websites & Business Software',
   },
 };

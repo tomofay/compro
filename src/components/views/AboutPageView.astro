@@ -4,7 +4,7 @@ import TechStackMatrix from '@/components/sections/TechStackMatrix.astro';
 import CtaBanner from '@/components/sections/CtaBanner.astro';
 import { COMPANY } from '@/data/company';
 import { getDictionary, type Locale } from '@/i18n';
-import { Building2, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { Building2, CheckCircle2 } from 'lucide-react';
 
 interface Props {
   locale: Locale;
@@ -108,44 +108,5 @@ const dict = getDictionary(locale);
 
   <TechStackMatrix locale={locale} />
 
-  <section class="border-t border-neutral-200/80 bg-[#FAFAFA] py-16">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <div data-reveal="" class="flex items-start gap-3">
-        <div class="rounded-xl border border-emerald-100 bg-emerald-50 p-2 text-emerald-700">
-          <ShieldCheck className="h-4 w-4" aria-hidden="true" />
-        </div>
-        <div>
-          <h2 class="font-heading text-xl font-bold tracking-tight text-neutral-900 sm:text-2xl">
-            {dict.aboutPage.legalTitle}
-          </h2>
-          <p class="mt-1 text-sm text-neutral-600">
-            {dict.aboutPage.legalSubtitle}
-          </p>
-        </div>
-      </div>
-
-      <div
-        data-reveal=""
-        style="--reveal-delay: 80ms"
-        class="mt-6 overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-sm"
-      >
-        <dl class="divide-y divide-neutral-200/80">
-          {
-            COMPANY.legalRegistry.map((row) => (
-              <div class="grid grid-cols-1 gap-2 px-5 py-3.5 text-sm sm:grid-cols-12 sm:items-center">
-                <dt class="font-medium text-neutral-700 sm:col-span-4">
-                  {row.label[locale]}
-                </dt>
-                <dd class="font-mono text-xs text-neutral-900 sm:col-span-8 sm:text-right">
-                  {row.value}
-                </dd>
-              </div>
-            ))
-          }
-        </dl>
-      </div>
-    </div>
-  </section>
-
-  <CtaBanner locale={locale} />
+  <CtaBanner locale={locale} surface="light" />
 </BaseLayout>

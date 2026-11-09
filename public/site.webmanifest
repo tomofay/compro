@@ -1,7 +1,7 @@
 {
-  "name": "Web Ramah",
-  "short_name": "Web Ramah",
-  "description": "Website company profile, landing page, toko online, dan custom software bisnis dari PT Kirana Informatika Indonesia.",
+  "name": "HalamanKode",
+  "short_name": "HalamanKode",
+  "description": "Jasa pembuatan website company profile, landing page, toko online, aplikasi mobile, dan custom software bisnis oleh HalamanKode.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FAFAFA",

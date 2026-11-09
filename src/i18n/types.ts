@@ -64,17 +64,17 @@ export interface Dictionary {
     toggleOwnershipLabel: string;
     columns: {
       parameter: string;
-      webramah: string;
+      halamankode: string;
       alternative: string;
     };
     managedRows: {
       parameter: string;
-      webramah: string;
+      halamankode: string;
       alternative: string;
     }[];
     ownershipRows: {
       parameter: string;
-      webramah: string;
+      halamankode: string;
       alternative: string;
     }[];
   };
@@ -165,8 +165,6 @@ export interface Dictionary {
       title: string;
       description: string;
     }[];
-    legalTitle: string;
-    legalSubtitle: string;
   };
   contactPage: {
     eyebrow: string;
@@ -179,7 +177,6 @@ export interface Dictionary {
       email: string;
       projectsEmail: string;
       whatsapp: string;
-      phone: string;
       address: string;
       hours: string;
     };
@@ -211,8 +208,6 @@ export interface Dictionary {
     };
   };
   footer: {
-    unitAttributionPrefix: string;
-    unitAttributionCompany: string;
     tagline: string;
     navigationTitle: string;
     servicesTitle: string;

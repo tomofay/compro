@@ -3,7 +3,7 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://webramah.id',
+  site: 'https://halamankode.cloud',
   trailingSlash: 'always',
   output: 'static',
   integrations: [react()],

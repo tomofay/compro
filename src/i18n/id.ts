@@ -2,22 +2,22 @@ import type { Dictionary } from './types';
 
 export const id: Dictionary = {
   meta: {
-    siteTitleSuffix: 'Web Ramah',
-    homeTitle: 'Web Ramah — Jasa Pembuatan Website, Toko Online & Software Bisnis',
+    siteTitleSuffix: 'HalamanKode',
+    homeTitle: 'HalamanKode — Jasa Pembuatan Website, Toko Online & Software Bisnis',
     homeDescription:
-      'Jasa pembuatan website company profile, landing page, toko online, dan custom software bisnis resmi PT Kirana Informatika Indonesia. Gratis hosting & email tahun pertama.',
+      'Jasa pembuatan website company profile, landing page, toko online, aplikasi mobile, dan custom software bisnis HalamanKode. Gratis hosting & email tahun pertama.',
     servicesTitle: 'Harga & Paket Website Company Profile, Toko Online & Software',
     servicesDescription:
       'Paket landing page mulai Rp 1,8 juta, website company profile Rp 2,5 juta, toko online Rp 8 juta, aplikasi mobile & custom software B2B lengkap BAST.',
     portfolioTitle: 'Portofolio Website Perusahaan, Toko Online & Sistem Bisnis',
     portfolioDescription:
-      'Studi kasus implementasi portal korporat, toko online QRIS multi-gudang, aplikasi mobile Android & iOS, serta software operasional oleh Web Ramah.',
-    aboutTitle: 'Tentang Perusahaan & Legalitas PT Kirana Informatika Indonesia',
+      'Studi kasus implementasi portal korporat, toko online QRIS multi-gudang, aplikasi mobile Android & iOS, serta software operasional oleh HalamanKode.',
+    aboutTitle: 'Tentang HalamanKode — Profil Studio & Standar Layanan',
     aboutDescription:
-      'Profil Web Ramah sebagai unit layanan digital resmi PT Kirana Informatika Indonesia. Mendukung pengadaan B2B dengan Quotation, PO, PKS/NDA, Faktur & BAST.',
+      'Profil HalamanKode sebagai pengembang website company profile, toko online, aplikasi mobile, dan custom software bisnis. Mendukung Quotation, PO, NDA, Faktur & BAST.',
     contactTitle: 'Konsultasi & Penawaran Pembuatan Website Perusahaan',
     contactDescription:
-      'Buat ringkasan kebutuhan website company profile, landing page, toko online, atau custom software bersama Web Ramah langsung ke WhatsApp atau Email.',
+      'Buat ringkasan kebutuhan website company profile, landing page, toko online, atau custom software bersama HalamanKode langsung ke WhatsApp atau Email.',
   },
   nav: {
     home: 'Beranda',
@@ -76,7 +76,7 @@ export const id: Dictionary = {
         description: 'Data operasional tersebar di banyak spreadsheet terpisah.',
       },
     ],
-    imageCaption: 'Sesi pemetaan alur fitur bersama tim Web Ramah.',
+    imageCaption: 'Sesi pemetaan alur fitur bersama tim HalamanKode.',
   },
   servicesSection: {
     eyebrow: 'PILIHAN SOLUSI',
@@ -90,76 +90,76 @@ export const id: Dictionary = {
   },
   comparisonSection: {
     eyebrow: 'PERBANDINGAN STANDAR',
-    title: 'Mengapa Memilih Web Ramah?',
-    subtitle: 'Perbandingan langsung legalitas, kepemilikan aset & dukungan pasca-rilis.',
+    title: 'Mengapa Memilih HalamanKode?',
+    subtitle: 'Perbandingan langsung administrasi kerja, kepemilikan aset & dukungan pasca-rilis.',
     toggleManagedLabel: 'Website & Kampanye (Managed)',
     toggleOwnershipLabel: 'Toko Online & Software (Source Code)',
     columns: {
       parameter: 'Parameter Evaluasi',
-      webramah: 'Web Ramah',
+      halamankode: 'HalamanKode',
       alternative: 'Pekerja Lepas / Template Tanpa Kontrak',
     },
     managedRows: [
       {
-        parameter: 'Legalitas & Kontrak B2B',
-        webramah: 'Resmi PT Kirana Informatika Indonesia (PO, PKS/NDA, Faktur & BAST)',
-        alternative: 'Perorangan tanpa kontrak resmi maupun badan hukum',
+        parameter: 'Kontrak & Administrasi Proyek',
+        halamankode: 'Quotation resmi, perjanjian kerja, PO, NDA, Faktur & BAST',
+        alternative: 'Pengerjaan lisan tanpa penawaran maupun kontrak tertulis resmi',
       },
       {
         parameter: 'Hosting, Domain & Email Th. 1',
-        webramah: 'Gratis hosting cloud, domain, SSL & email (sales@perusahaan.com) Th. 1',
+        halamankode: 'Gratis hosting cloud, domain, SSL & email (sales@perusahaan.com) Th. 1',
         alternative: 'Server, domain, SSL & email perusahaan diurus terpisah',
       },
       {
         parameter: 'Keberlanjutan & Managed Care',
-        webramah: 'Perpanjangan Managed Care tahunan praktis + opsi buyout korporat',
+        halamankode: 'Perpanjangan Managed Care tahunan praktis + opsi buyout korporat',
         alternative: 'Sulit dihubungi saat butuh update atau server bermasalah',
       },
       {
         parameter: 'Kecepatan & Desain Kustom',
-        webramah: 'Desain kustom ringan & responsif di desktop maupun perangkat mobile',
+        halamankode: 'Desain kustom ringan & responsif di desktop maupun perangkat mobile',
         alternative: 'Menggunakan tema berat berulang dengan skor performa rendah',
       },
       {
         parameter: 'Struktur SEO On-Page',
-        webramah: 'Heading terstruktur, metadata, sitemap & siap integrasi Pixel/Analytics',
+        halamankode: 'Heading terstruktur, metadata, sitemap & siap integrasi Pixel/Analytics',
         alternative: 'Hanya instalasi tema bawaan tanpa penataan teknis SEO',
       },
       {
         parameter: 'Dukungan & Panduan Admin',
-        webramah: 'Pemantauan uptime, backup terjadwal & onboarding singkat tim admin',
+        halamankode: 'Pemantauan uptime, backup terjadwal & onboarding singkat tim admin',
         alternative: 'Lepas tangan setelah rilis tanpa SLA pemeliharaan resmi',
       },
     ],
     ownershipRows: [
       {
         parameter: 'Serah Terima Source Code',
-        webramah: '100% kepemilikan penuh source code (Git) & dokumentasi teknis',
+        halamankode: '100% kepemilikan penuh source code (Git) & dokumentasi teknis',
         alternative: 'Kode sering terkunci atau dikenakan biaya tebusan lisensi',
       },
       {
-        parameter: 'Legalitas & Kontrak B2B',
-        webramah: 'Resmi PT Kirana Informatika Indonesia (PO, PKS/NDA, Faktur & BAST)',
+        parameter: 'Kontrak & Administrasi Proyek',
+        halamankode: 'Quotation resmi, perjanjian kerja, PO, NDA, Faktur & BAST',
         alternative: 'Minim perlindungan kontrak jadwal, HAKI maupun NDA',
       },
       {
         parameter: 'Cloud Server, Domain & Email Th. 1',
-        webramah: 'Gratis cloud server, domain & email Th. 1; Th. 2+ bebas Managed Care atau VPS sendiri',
+        halamankode: 'Gratis cloud server, domain & email Th. 1; Th. 2+ bebas Managed Care atau VPS sendiri',
         alternative: 'Setup VPS, database & konfigurasi keamanan dibebankan terpisah',
       },
       {
         parameter: 'Integrasi Pembayaran & API',
-        webramah: 'Terhubung QRIS, Virtual Account, cek ongkir, WhatsApp & API internal',
+        halamankode: 'Terhubung QRIS, Virtual Account, cek ongkir, WhatsApp & API internal',
         alternative: 'Mengandalkan plugin standar dengan modul integrasi terbatas',
       },
       {
         parameter: 'Pengujian QA & Hak Akses',
-        webramah: 'UAT bertahap di staging, hak akses multi-role (RBAC) & HTTPS aktif',
+        halamankode: 'UAT bertahap di staging, hak akses multi-role (RBAC) & HTTPS aktif',
         alternative: 'Minim uji fungsional sebelum sistem dipakai di lingkungan produksi',
       },
       {
         parameter: 'Pelatihan Tim & Maintenance SLA',
-        webramah: 'Sesi training staf internal + opsi kontrak SLA berkala',
+        halamankode: 'Sesi training staf internal + opsi kontrak SLA berkala',
         alternative: 'Tim operasional harus mempelajari alur penggunaan sendiri',
       },
     ],
@@ -244,14 +244,14 @@ export const id: Dictionary = {
     subtitle: 'Filter per industri atau beralih ke mode tabel.',
   },
   aboutPage: {
-    eyebrow: 'PROFIL PERUSAHAAN',
-    title: 'Tentang Web Ramah',
-    subtitle: 'Unit produk layanan digital dari PT Kirana Informatika Indonesia.',
+    eyebrow: 'PROFIL STUDIO',
+    title: 'Tentang HalamanKode',
+    subtitle: 'Pengembang website company profile, toko online, aplikasi mobile & sistem perangkat lunak bisnis.',
     overviewTitle: 'Ringkasan Layanan & Komitmen',
     overviewPoints: [
       'Company Profile & Landing Page terima beres (gratis hosting, domain & email Th. 1, lanjut Managed Care Th. 2+).',
       'Toko Online, Custom Software Web & Aplikasi Mobile langsung serah terima source code penuh.',
-      'Mendukung penuh pengadaan B2B: Quotation, PO, PKS/NDA, Faktur & BAST.',
+      'Kelengkapan administrasi proyek B2B: Quotation, PO, kontrak/NDA, Invoice & BAST.',
     ],
     principlesTitle: 'Standar Kerja Kami',
     principles: [
@@ -264,26 +264,23 @@ export const id: Dictionary = {
         description: 'Jelas sejak awal antara Managed Care vs kepemilikan source code.',
       },
       {
-        title: 'Siap Administrasi B2B',
-        description: 'Lengkap dukungan PO, NDA, faktur resmi, dan BAST.',
+        title: 'Siap Administrasi Proyek',
+        description: 'Lengkap dukungan Quotation, kontrak kerja, NDA, invoice, dan BAST.',
       },
     ],
-    legalTitle: 'Identitas Resmi Badan Hukum',
-    legalSubtitle: 'Data verifikasi rekanan & pengadaan korporat.',
   },
   contactPage: {
     eyebrow: 'KONTAK & BRIEF',
     title: 'Buat Ringkasan Kebutuhan Proyek Anda',
     subtitle: 'Isi form di samping untuk menyiapkan pesan siap kirim ke WhatsApp atau Email.',
-    channelsTitle: 'Kontak Resmi Perusahaan',
+    channelsTitle: 'Kontak Resmi HalamanKode',
     copyTooltip: 'Salin',
     copiedTooltip: 'Tersalin',
     channels: {
       email: 'Email Utama',
       projectsEmail: 'Email Penawaran Proyek',
       whatsapp: 'WhatsApp Bisnis',
-      phone: 'Telepon Kantor',
-      address: 'Alamat Kantor',
+      address: 'Alamat Perusahaan',
       hours: 'Jam Operasional',
     },
     form: {
@@ -321,13 +318,11 @@ export const id: Dictionary = {
     },
   },
   footer: {
-    unitAttributionPrefix: 'Web Ramah adalah unit produk layanan dari ',
-    unitAttributionCompany: 'PT Kirana Informatika Indonesia.',
-    tagline: 'Website company profile, landing page, toko online & software bisnis.',
+    tagline: 'Jasa pembuatan website company profile, landing page, toko online, aplikasi mobile & software bisnis.',
     navigationTitle: 'Navigasi',
     servicesTitle: 'Layanan Utama',
     contactTitle: 'Kontak Langsung',
     copyright: 'Seluruh hak cipta dilindungi.',
-    builtNote: 'Unit Produk Layanan · PT Kirana Informatika Indonesia',
+    builtNote: 'HalamanKode · Website & Software Bisnis',
   },
 };

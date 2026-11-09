@@ -4,7 +4,7 @@ import { CopyIconButton } from '@/components/common/CopyIconButton';
 import { COMPANY } from '@/data/company';
 import { SERVICES } from '@/data/services';
 import { getDictionary, getLocalizedPath, type Locale } from '@/i18n';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, MessageSquare } from 'lucide-react';
 
 interface Props {
   locale: Locale;
@@ -26,10 +26,7 @@ const currentYear = new Date().getFullYear();
         >
           <BrandWordmark variant="footer" tone="dark" />
         </a>
-        <p class="mt-3.5 text-[13px] leading-relaxed font-medium text-emerald-100/95">
-          {dict.footer.unitAttributionPrefix}<span class="font-semibold text-white">{dict.footer.unitAttributionCompany}</span>
-        </p>
-        <p class="mt-2.5 text-xs leading-relaxed text-emerald-200/80 sm:text-[13px]">
+        <p class="mt-3.5 text-xs leading-relaxed text-emerald-100/90 sm:text-[13px]">
           {dict.footer.tagline}
         </p>
         <div class="mt-5 flex items-start gap-2 text-xs leading-relaxed text-emerald-200/75">
@@ -111,7 +108,7 @@ const currentYear = new Date().getFullYear();
           </div>
           <div class="flex items-center justify-between gap-2 rounded-xl border border-emerald-800/80 bg-emerald-950/60 px-3 py-2.5">
             <div class="flex min-w-0 items-center gap-2">
-              <Phone className="h-3.5 w-3.5 shrink-0 text-emerald-400" aria-hidden="true" />
+              <MessageSquare className="h-3.5 w-3.5 shrink-0 text-emerald-400" aria-hidden="true" />
               <span class="truncate font-mono text-xs text-emerald-50">{COMPANY.whatsappDisplay}</span>
             </div>
             <CopyIconButton
@@ -128,7 +125,7 @@ const currentYear = new Date().getFullYear();
 
     <div class="mt-12 flex flex-col items-start justify-between gap-3 border-t border-emerald-800/70 pt-6 text-xs text-emerald-200/75 sm:flex-row sm:items-center">
       <p>
-        &copy; {currentYear} {COMPANY.legalName} · {COMPANY.parentCompany}. {dict.footer.copyright}
+        &copy; {currentYear} {COMPANY.legalName}. {dict.footer.copyright}
       </p>
       <p class="text-[11px] font-medium text-emerald-200/90">
         {dict.footer.builtNote}

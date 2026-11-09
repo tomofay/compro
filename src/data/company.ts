@@ -1,47 +1,23 @@
 export const COMPANY = {
-  legalName: 'Web Ramah',
-  shortName: 'Web Ramah',
-  parentCompany: 'PT Kirana Informatika Indonesia',
+  legalName: 'HalamanKode',
+  shortName: 'HalamanKode',
   establishedYear: '2024',
-  domain: 'https://webramah.id',
-  email: 'hello@webramah.id',
-  projectsEmail: 'projects@webramah.id',
-  phoneDisplay: '+62 21 5099 8410',
-  whatsappNumber: '6281100008410',
-  whatsappDisplay: '+62 811-0000-8410',
+  domain: 'https://halamankode.cloud',
+  email: 'hello@halamankode.cloud',
+  projectsEmail: 'projects@halamankode.cloud',
+  whatsappNumber: '6287864952795',
+  whatsappDisplay: '+62 878-6495-2795',
   city: {
-    id: 'Jakarta Selatan, Indonesia',
-    en: 'South Jakarta, Indonesia',
+    id: 'Sukahati, Jawa Barat, Indonesia',
+    en: 'Sukahati, West Java, Indonesia',
   },
   address: {
-    id: 'Gedung Web Ramah Hub Lt. 4, Jl. TB Simatupang Kav. 18, Jakarta Selatan 12430',
-    en: 'Web Ramah Hub Building 4th Fl, Jl. TB Simatupang Kav. 18, South Jakarta 12430',
+    id: 'Perumahan BDB 2, Jl. Siliwangi 5 Blok ER No. 9, RT 2 / RW 16, Sukahati, Jawa Barat, Indonesia',
+    en: 'Perumahan BDB 2, Jl. Siliwangi 5 Block ER No. 9, RT 2 / RW 16, Sukahati, West Java, Indonesia',
   },
   operatingHours: {
     id: 'Senin - Jumat, 09:00 - 18:00 WIB',
     en: 'Monday - Friday, 09:00 - 18:00 WIB (UTC+7)',
   },
-  legalRegistry: [
-    {
-      code: 'BRAND',
-      label: { id: 'Unit Produk Layanan', en: 'Service Product Unit' },
-      value: 'Web Ramah',
-    },
-    {
-      code: 'ENTITY',
-      label: { id: 'Badan Hukum Induk', en: 'Parent Legal Entity' },
-      value: 'PT Kirana Informatika Indonesia (Perseroan Terbatas)',
-    },
-    {
-      code: 'KBLI',
-      label: { id: 'Klasifikasi Baku (KBLI)', en: 'Standard Industry Code' },
-      value: '62019 - Aktivitas Pemrograman Komputer Lainnya',
-    },
-    {
-      code: 'PROCUREMENT',
-      label: { id: 'Kelengkapan Administrasi B2B', en: 'B2B Procurement Readiness' },
-      value: 'Quotation, PO, NDA & Berita Acara Serah Terima (BAST)',
-    },
-  ],
   formEndpoint: '',
 } as const;

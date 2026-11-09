@@ -89,7 +89,7 @@ export function PricingComparisonShowcase({ locale }: PricingComparisonShowcaseP
                 className="col-span-5 flex items-center gap-2 border-x border-emerald-700 bg-emerald-700 px-6 py-4 text-xs font-bold tracking-wider text-white uppercase"
               >
                 <ShieldCheck className="h-4 w-4 shrink-0 text-emerald-200" aria-hidden="true" />
-                <span>{c.columns.webramah}</span>
+                <span>{c.columns.halamankode}</span>
               </div>
               <div
                 role="columnheader"
@@ -131,7 +131,7 @@ export function PricingComparisonShowcase({ locale }: PricingComparisonShowcaseP
                         className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"
                         aria-hidden="true"
                       />
-                      <span>{row.webramah}</span>
+                      <span>{row.halamankode}</span>
                     </div>
                   </div>
                   <div role="cell" className="col-span-4 px-6 py-4">
@@ -173,9 +173,9 @@ export function PricingComparisonShowcase({ locale }: PricingComparisonShowcaseP
                   />
                   <div>
                     <div className="text-[10px] font-bold tracking-wider text-emerald-700 uppercase">
-                      {c.columns.webramah}
+                      {c.columns.halamankode}
                     </div>
-                    <p className="mt-0.5 leading-relaxed">{row.webramah}</p>
+                    <p className="mt-0.5 leading-relaxed">{row.halamankode}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-2 rounded-xl border border-neutral-200/70 bg-neutral-50 p-3 text-xs text-neutral-600">

@@ -105,7 +105,7 @@ html.js-reveal [data-reveal="visible"] {
   transform: translateY(0) scale(1);
 }
 
-@keyframes webramah-float {
+@keyframes halamankode-float {
   0%,
   100% {
     transform: translateY(0px);
@@ -115,7 +115,7 @@ html.js-reveal [data-reveal="visible"] {
   }
 }
 
-@keyframes webramah-marquee {
+@keyframes halamankode-marquee {
   0% {
     transform: translate3d(0, 0, 0);
   }
@@ -125,14 +125,14 @@ html.js-reveal [data-reveal="visible"] {
 }
 
 .animate-float-slow {
-  animation: webramah-float 3.6s ease-in-out infinite;
+  animation: halamankode-float 3.6s ease-in-out infinite;
   will-change: transform;
 }
 
 .animate-marquee-track {
   display: flex;
   width: max-content;
-  animation: webramah-marquee 34s linear infinite;
+  animation: halamankode-marquee 34s linear infinite;
   will-change: transform;
 }
 

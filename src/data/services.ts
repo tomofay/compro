@@ -454,17 +454,17 @@ export const SERVICE_FAQS: FaqItem[] = [
     id: 'faq-04',
     category: 'b2b',
     question: {
-      id: 'Apakah Web Ramah melayani dokumen pengadaan B2B (PO, NDA, BAST)?',
-      en: 'Does Web Ramah support B2B procurement documents (PO, NDA, BAST)?',
+      id: 'Apakah HalamanKode menyediakan Quotation, Kontrak/NDA & BAST proyek?',
+      en: 'Does HalamanKode provide Quotations, Contracts/NDAs & BAST documents?',
     },
     points: {
       id: [
-        'Ya, beroperasi resmi di bawah badan hukum PT Kirana Informatika Indonesia.',
-        'Mendukung penuh Quotation resmi, PKS/NDA, Purchase Order (PO), Faktur & BAST.',
+        'Setiap proyek diawali dokumen Quotation resmi dan ruang lingkup kerja yang disepakati.',
+        'Mendukung perjanjian kerahasiaan (NDA), Invoice resmi & Berita Acara Serah Terima (BAST).',
       ],
       en: [
-        'Yes, operated legally under incorporated PT Kirana Informatika Indonesia.',
-        'Supports official Quotations, MSAs/NDAs, POs, official invoices & BAST.',
+        'Every engagement begins with an official Quotation and clear scope agreement.',
+        'Supports project NDAs, official Invoices & formal BAST completion handover.',
       ],
     },
   },

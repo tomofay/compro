@@ -29,8 +29,8 @@ export function BrandWordmark({
         className
       )}
     >
-      <span className={cn('font-bold', leadColor)}>Web</span>{' '}
-      <span className={cn('font-semibold', accentColor)}>Ramah</span>
+      <span className={cn('font-bold', leadColor)}>Halaman</span>
+      <span className={cn('font-semibold', accentColor)}>Kode</span>
     </span>
   );
 }

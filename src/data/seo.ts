@@ -11,36 +11,36 @@ const OG_IMAGE_MAP: Record<PageKey, { path: string; alt: Record<Locale, string> 
   home: {
     path: '/images/showcase-compro.jpg',
     alt: {
-      id: 'Web Ramah — Jasa Pembuatan Website Company Profile, Toko Online & Software Bisnis',
-      en: 'Web Ramah — Corporate Website, Online Store & Custom Business Software Agency',
+      id: 'HalamanKode — Jasa Pembuatan Website Company Profile, Toko Online & Software Bisnis',
+      en: 'HalamanKode — Corporate Website, Online Store & Custom Business Software Agency',
     },
   },
   services: {
     path: '/images/showcase-store.jpg',
     alt: {
-      id: 'Paket Layanan Website, E-Commerce & Custom Software Web Ramah',
-      en: 'Website, E-Commerce & Custom Software Service Packages by Web Ramah',
+      id: 'Paket Layanan Website, E-Commerce & Custom Software HalamanKode',
+      en: 'Website, E-Commerce & Custom Software Service Packages by HalamanKode',
     },
   },
   portfolio: {
     path: '/images/showcase-software.jpg',
     alt: {
-      id: 'Portofolio Sistem Operasional, Toko Online & Website Perusahaan Web Ramah',
-      en: 'Portfolio of Enterprise Systems, Online Stores & Corporate Websites by Web Ramah',
+      id: 'Portofolio Sistem Operasional, Toko Online & Website Perusahaan HalamanKode',
+      en: 'Portfolio of Enterprise Systems, Online Stores & Corporate Websites by HalamanKode',
     },
   },
   about: {
     path: '/images/about-studio.jpg',
     alt: {
-      id: 'Profil Perusahaan Web Ramah — PT Kirana Informatika Indonesia',
-      en: 'Web Ramah Corporate Profile — PT Kirana Informatika Indonesia',
+      id: 'Profil Studio Website & Software HalamanKode',
+      en: 'HalamanKode Web & Software Studio Profile',
     },
   },
   contact: {
     path: '/images/enterprise-meeting.jpg',
     alt: {
-      id: 'Konsultasi Proyek Website & Software Bisnis Web Ramah',
-      en: 'Project Consultation for Websites & Business Software with Web Ramah',
+      id: 'Konsultasi Proyek Website & Software Bisnis HalamanKode',
+      en: 'Project Consultation for Websites & Business Software with HalamanKode',
     },
   },
 };
@@ -126,12 +126,6 @@ export function buildStructuredData({
       '@type': ['Organization', 'ProfessionalService'],
       '@id': orgId,
       name: COMPANY.legalName,
-      alternateName: COMPANY.parentCompany,
-      legalName: COMPANY.parentCompany,
-      parentOrganization: {
-        '@type': 'Organization',
-        name: COMPANY.parentCompany,
-      },
       url: siteOrigin,
       logo: {
         '@type': 'ImageObject',
@@ -141,13 +135,12 @@ export function buildStructuredData({
       },
       image: buildAbsoluteUrl('/images/showcase-compro.jpg', siteOrigin),
       email: COMPANY.email,
-      telephone: COMPANY.phoneDisplay,
+      telephone: COMPANY.whatsappDisplay,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Jl. TB Simatupang Kav. 18, Gedung Web Ramah Hub Lt. 4',
-        addressLocality: 'Jakarta Selatan',
-        addressRegion: 'DKI Jakarta',
-        postalCode: '12430',
+        streetAddress: 'Perumahan BDB 2, Jl. Siliwangi 5 Blok ER No. 9, RT 2 / RW 16',
+        addressLocality: 'Sukahati',
+        addressRegion: 'Jawa Barat',
         addressCountry: 'ID',
       },
       areaServed: {
@@ -157,7 +150,7 @@ export function buildStructuredData({
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'sales',
-        telephone: '+62-811-0000-8410',
+        telephone: '+62-878-6495-2795',
         email: COMPANY.email,
         availableLanguage: ['Indonesian', 'English'],
       },
@@ -206,8 +199,8 @@ export function buildStructuredData({
       '@id': `${canonicalUrl}#catalog`,
       name:
         locale === 'id'
-          ? 'Layanan Website & Software Web Ramah'
-          : 'Web Ramah Website & Software Services',
+          ? 'Layanan Website & Software HalamanKode'
+          : 'HalamanKode Website & Software Services',
       itemListElement: SERVICES.map((service) => {
         const numericPrice = NUMERIC_STARTING_PRICES[service.id];
         const offer: Record<string, unknown> = {

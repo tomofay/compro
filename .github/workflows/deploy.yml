@@ -41,26 +41,27 @@ jobs:
 
       - name: Build and verify Docker container (non-80/443 port)
         run: |
-          docker build -t webramah-compro:ci .
-          docker run -d --name webramah-ci-test -p 18090:8080 webramah-compro:ci
-          trap 'docker rm -f webramah-ci-test >/dev/null 2>&1 || true' EXIT
+          docker build -t halamankode-compro:ci .
+          docker run -d --name halamankode-ci-test -p 18090:8080 halamankode-compro:ci
+          trap 'docker rm -f halamankode-ci-test >/dev/null 2>&1 || true' EXIT
           sleep 2
           curl -fsS http://127.0.0.1:18090/ -o /tmp/ci-home.html
-          grep -Fq "Web Ramah" /tmp/ci-home.html
-          grep -Fq "PT Kirana Informatika Indonesia" /tmp/ci-home.html
+          grep -Fq "HalamanKode" /tmp/ci-home.html
+          ! grep -Fqi "Kirana" /tmp/ci-home.html
           curl -fsS http://127.0.0.1:18090/layanan/ -o /tmp/ci-services.html
           grep -Fq "Mulai Rp 1,8 Juta" /tmp/ci-services.html
           grep -Fq "Sesuai Kebutuhan" /tmp/ci-services.html
           grep -Fq '<link rel="canonical"' /tmp/ci-home.html
           grep -Fq 'application/ld+json' /tmp/ci-home.html
           curl -fsS http://127.0.0.1:18090/sitemap.xml -o /tmp/ci-sitemap.xml
-          grep -Fq "https://webramah.id/layanan/" /tmp/ci-sitemap.xml
+          grep -Fq "https://halamankode.cloud/layanan/" /tmp/ci-sitemap.xml
           curl -fsS http://127.0.0.1:18090/robots.txt -o /tmp/ci-robots.txt
-          grep -Fq "Sitemap:" /tmp/ci-robots.txt
+          grep -Fq "Sitemap: https://halamankode.cloud/sitemap.xml" /tmp/ci-robots.txt
           curl -fsS http://127.0.0.1:18090/site.webmanifest -o /tmp/ci-manifest.json
-          grep -Fq "Web Ramah" /tmp/ci-manifest.json
+          grep -Fq "HalamanKode" /tmp/ci-manifest.json
           curl -fsS http://127.0.0.1:18090/en/ -o /tmp/ci-en.html
-          grep -Fq "Web Ramah is a service product unit of" /tmp/ci-en.html
+          grep -Fq "HalamanKode" /tmp/ci-en.html
+          grep -Fq "Ready-to-Launch" /tmp/ci-en.html
           for img in about-studio.jpg enterprise-meeting.jpg showcase-compro.jpg showcase-landing.jpg showcase-mobile.jpg showcase-software.jpg showcase-store.jpg; do
             curl -fsSI "http://127.0.0.1:18090/images/${img}" >/dev/null
           done
@@ -108,33 +109,36 @@ jobs:
             --exclude='node_modules' \
             --exclude='dist' \
             --exclude='.astro' \
-            -czf /tmp/webramah-compro.tar.gz .
+            -czf /tmp/halamankode-compro.tar.gz .
           scp -i ~/.ssh/vps_deploy_key -o BatchMode=yes \
-            /tmp/webramah-compro.tar.gz \
-            "${VPS_USER}@${VPS_HOST}:/tmp/webramah-compro.tar.gz"
+            /tmp/halamankode-compro.tar.gz \
+            "${VPS_USER}@${VPS_HOST}:/tmp/halamankode-compro.tar.gz"
 
       - name: Build and start container on VPS (external port 8090 -> internal 8080)
         run: |
           ssh -i ~/.ssh/vps_deploy_key -o BatchMode=yes "${VPS_USER}@${VPS_HOST}" 'bash -s' <<'EOF'
           set -euo pipefail
-          APP_DIR="$HOME/apps/webramah-compro"
+          APP_DIR="$HOME/apps/halamankode-compro"
+          LEGACY_WEBRAMAH_DIR="$HOME/apps/webramah-compro"
           LEGACY_LAMANKITA_DIR="$HOME/apps/lamankita-compro"
           LEGACY_KIRANA_DIR="$HOME/apps/kirana-compro"
           APP_PORT="${APP_PORT:-8090}"
           mkdir -p "$APP_DIR"
 
           if [ -f "$APP_DIR/.env" ]; then
-            cp "$APP_DIR/.env" /tmp/webramah-compro.env.bak
+            cp "$APP_DIR/.env" /tmp/halamankode-compro.env.bak
+          elif [ -f "$LEGACY_WEBRAMAH_DIR/.env" ]; then
+            cp "$LEGACY_WEBRAMAH_DIR/.env" /tmp/halamankode-compro.env.bak
           elif [ -f "$LEGACY_LAMANKITA_DIR/.env" ]; then
-            cp "$LEGACY_LAMANKITA_DIR/.env" /tmp/webramah-compro.env.bak
+            cp "$LEGACY_LAMANKITA_DIR/.env" /tmp/halamankode-compro.env.bak
           elif [ -f "$LEGACY_KIRANA_DIR/.env" ]; then
-            cp "$LEGACY_KIRANA_DIR/.env" /tmp/webramah-compro.env.bak
+            cp "$LEGACY_KIRANA_DIR/.env" /tmp/halamankode-compro.env.bak
           fi
           find "$APP_DIR" -mindepth 1 -maxdepth 1 ! -name '.env' -exec rm -rf {} +
-          tar -xzf /tmp/webramah-compro.tar.gz -C "$APP_DIR"
-          rm -f /tmp/webramah-compro.tar.gz
-          if [ -f /tmp/webramah-compro.env.bak ]; then
-            mv /tmp/webramah-compro.env.bak "$APP_DIR/.env"
+          tar -xzf /tmp/halamankode-compro.tar.gz -C "$APP_DIR"
+          rm -f /tmp/halamankode-compro.tar.gz
+          if [ -f /tmp/halamankode-compro.env.bak ]; then
+            mv /tmp/halamankode-compro.env.bak "$APP_DIR/.env"
           fi
 
           cd "$APP_DIR"
@@ -155,8 +159,8 @@ jobs:
           fi
 
           # Clean up legacy containers from before rebrand so port 8090 stays free.
-          $DOCKER rm -f kirana-compro lamankita-compro >/dev/null 2>&1 || true
-          rm -rf "$LEGACY_KIRANA_DIR" "$LEGACY_LAMANKITA_DIR"
+          $DOCKER rm -f kirana-compro lamankita-compro webramah-compro >/dev/null 2>&1 || true
+          rm -rf "$LEGACY_KIRANA_DIR" "$LEGACY_LAMANKITA_DIR" "$LEGACY_WEBRAMAH_DIR"
 
           if $DOCKER compose version >/dev/null 2>&1; then
             $DOCKER compose up -d --build --remove-orphans
@@ -178,15 +182,15 @@ jobs:
             elif command -v wget >/dev/null 2>&1 && wget -q -O /dev/null "http://127.0.0.1:${APP_PORT}/" >/dev/null 2>&1; then
               echo "Deployment succeeded on http://127.0.0.1:${APP_PORT}/ (container port 8080)"
               break
-            elif $DOCKER exec webramah-compro wget -q -O /dev/null http://127.0.0.1:8080/ >/dev/null 2>&1; then
+            elif $DOCKER exec halamankode-compro wget -q -O /dev/null http://127.0.0.1:8080/ >/dev/null 2>&1; then
               echo "Deployment container healthy on mapped port ${APP_PORT}:8080"
               break
             fi
 
             if [ "$i" -eq 15 ]; then
               echo "ERROR: Container failed health verification on port ${APP_PORT}"
-              $DOCKER ps -a --filter "name=webramah-compro" || true
-              $DOCKER logs --tail 50 webramah-compro || true
+              $DOCKER ps -a --filter "name=halamankode-compro" || true
+              $DOCKER logs --tail 50 halamankode-compro || true
               exit 1
             fi
             sleep 2
@@ -197,5 +201,5 @@ jobs:
 
       - name: Cleanup temporary SSH credentials
         if: always()
-        run: rm -f ~/.ssh/vps_deploy_key /tmp/webramah-compro.tar.gz
+        run: rm -f ~/.ssh/vps_deploy_key /tmp/halamankode-compro.tar.gz
 
