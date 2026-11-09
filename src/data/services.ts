@@ -244,8 +244,8 @@ export const SERVICES: ServiceItem[] = [
     image: '/images/showcase-mobile.jpg',
     categoryKey: 'mobile',
     startingPrice: {
-      id: 'Mulai Rp 15 Juta',
-      en: 'From IDR 15M',
+      id: 'Sesuai Kebutuhan',
+      en: 'Custom Quote',
     },
     timeline: {
       id: '8 - 16 Minggu',

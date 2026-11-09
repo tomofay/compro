@@ -49,7 +49,6 @@ const NUMERIC_STARTING_PRICES: Record<string, string | undefined> = {
   compro: '2500000',
   landing: '1800000',
   store: '8000000',
-  mobile: '15000000',
 };
 
 export function resolveSiteOrigin(site?: URL | string): string {
