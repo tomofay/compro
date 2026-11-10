@@ -71,15 +71,15 @@ export function ServicesFaqAccordion({ locale }: ServicesFaqAccordionProps) {
               className={cn(
                 'relative rounded-full border px-4 py-1.5 text-xs font-semibold transition-colors duration-150',
                 isSelected
-                  ? 'border-emerald-600 text-white'
-                  : 'border-neutral-200/80 bg-white text-neutral-600 hover:border-emerald-200 hover:text-emerald-700'
+                  ? 'border-indigo-600 text-white'
+                  : 'border-slate-200 bg-white text-slate-600 hover:border-indigo-200 hover:text-indigo-600'
               )}
             >
               {isSelected && (
                 <motion.span
                   layoutId="faq-category-pill"
                   transition={{ type: 'spring', stiffness: 420, damping: 32 }}
-                  className="absolute inset-0 rounded-full bg-emerald-600 shadow-sm"
+                  className="absolute inset-0 rounded-full bg-indigo-600"
                 />
               )}
               <span className="relative z-10">{cat.label}</span>
@@ -99,22 +99,22 @@ export function ServicesFaqAccordion({ locale }: ServicesFaqAccordionProps) {
           <AccordionItem
             key={faq.id}
             value={faq.id}
-            className="overflow-hidden rounded-2xl border border-neutral-200/80 bg-white px-5 shadow-sm transition-colors duration-200 data-[state=open]:border-emerald-600 data-[state=open]:bg-emerald-600 data-[state=open]:text-white data-[state=open]:shadow-md"
+            className="overflow-hidden rounded-2xl border border-slate-200 bg-white px-5 transition-colors duration-200 data-[state=open]:border-indigo-600 data-[state=open]:bg-indigo-600 data-[state=open]:text-white"
           >
-            <AccordionTrigger className="group/trigger py-4 text-left text-sm font-semibold text-neutral-900 hover:no-underline hover:text-emerald-700 data-[state=open]:text-white data-[state=open]:hover:text-white [&[data-state=open]>svg]:text-white">
+            <AccordionTrigger className="group/trigger py-4 text-left text-sm font-semibold text-slate-900 hover:no-underline hover:text-indigo-600 data-[state=open]:text-white data-[state=open]:hover:text-white [&[data-state=open]>svg]:text-white">
               <span className="flex items-start gap-3">
-                <span className="mt-0.5 font-mono text-xs text-neutral-400 tabular-nums group-data-[state=open]/trigger:text-emerald-200">
+                <span className="mt-0.5 font-mono text-xs text-slate-400 tabular-nums group-data-[state=open]/trigger:text-indigo-200">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <span className="font-heading leading-snug">{faq.question[locale]}</span>
               </span>
             </AccordionTrigger>
             <AccordionContent className="pb-5 pl-7">
-              <ul className="space-y-2 text-sm text-emerald-50">
+              <ul className="space-y-2 text-sm text-indigo-50">
                 {faq.points[locale].map((point) => (
                   <li key={point} className="flex items-start gap-2">
                     <CheckCircle2
-                      className="mt-0.5 h-4 w-4 shrink-0 text-emerald-200"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300"
                       aria-hidden="true"
                     />
                     <span>{point}</span>

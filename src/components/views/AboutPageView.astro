@@ -20,26 +20,26 @@ const dict = getDictionary(locale);
   title={dict.meta.aboutTitle}
   description={dict.meta.aboutDescription}
 >
-  <section class="border-b border-neutral-200/80 bg-[#F4F4F5] py-14 sm:py-16">
+  <section class="border-b border-slate-200 bg-white py-14 sm:py-16">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <p class="text-xs font-semibold tracking-wider text-emerald-700 uppercase">
+      <p class="font-mono text-xs font-semibold tracking-wider text-indigo-600 uppercase">
         {dict.aboutPage.eyebrow}
       </p>
-      <h1 class="font-heading mt-2 max-w-3xl text-3xl font-bold tracking-[-0.03em] text-neutral-950 sm:text-4xl">
+      <h1 class="font-heading mt-2 max-w-3xl text-3xl font-bold tracking-[-0.03em] text-slate-900 sm:text-4xl">
         {dict.aboutPage.title}
       </h1>
-      <p class="mt-2.5 max-w-2xl text-sm text-neutral-600 sm:text-base">
+      <p class="mt-2.5 max-w-2xl text-sm text-slate-600 sm:text-base">
         {dict.aboutPage.subtitle}
       </p>
     </div>
   </section>
 
-  <section class="bg-[#FAFAFA] py-16">
+  <section class="bg-slate-50 py-16">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
       <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
         <div data-reveal="" class="lg:col-span-6">
-          <div class="overflow-hidden rounded-xl border border-neutral-200 bg-white p-2">
-            <div class="aspect-video w-full overflow-hidden rounded-lg border border-neutral-200/70 bg-neutral-100">
+          <div class="overflow-hidden rounded-xl border border-slate-200 bg-white p-2">
+            <div class="aspect-video w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-100">
               <img
                 src="/images/about-studio.jpg"
                 alt={COMPANY.legalName}
@@ -54,19 +54,19 @@ const dict = getDictionary(locale);
 
         <div data-reveal="" style="--reveal-delay: 80ms" class="lg:col-span-6">
           <div class="flex items-center gap-3">
-            <div class="rounded-lg border border-neutral-200 bg-[#FAFAFA] p-2 text-emerald-700">
+            <div class="rounded-xl border border-indigo-100 bg-indigo-50 p-2 text-indigo-600">
               <Building2 className="h-4 w-4" aria-hidden="true" />
             </div>
-            <h2 class="font-heading text-xl font-semibold tracking-[-0.025em] text-neutral-950 sm:text-2xl">
+            <h2 class="font-heading text-xl font-semibold tracking-[-0.025em] text-slate-900 sm:text-2xl">
               {dict.aboutPage.overviewTitle}
             </h2>
           </div>
           <ul class="mt-5 space-y-3">
             {
               dict.aboutPage.overviewPoints.map((point) => (
-                <li class="flex items-start gap-2.5 text-sm leading-relaxed text-neutral-700">
+                <li class="flex items-start gap-2.5 text-sm leading-relaxed text-slate-700">
                   <CheckCircle2
-                    className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-indigo-600"
                     aria-hidden="true"
                   />
                   <span>{point}</span>
@@ -78,7 +78,7 @@ const dict = getDictionary(locale);
       </div>
 
       <div class="mt-12">
-        <h2 class="font-heading text-xs font-semibold tracking-wider text-neutral-900 uppercase">
+        <h2 class="font-heading text-xs font-semibold tracking-wider text-slate-900 uppercase">
           {dict.aboutPage.principlesTitle}
         </h2>
         <div class="mt-4 grid grid-cols-1 gap-5 md:grid-cols-3">
@@ -87,15 +87,15 @@ const dict = getDictionary(locale);
               <div
                 data-reveal=""
                 style={`--reveal-delay: ${idx * 80}ms`}
-                class="rounded-2xl border border-neutral-200/80 bg-white p-5 shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg"
+                class="rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-indigo-300"
               >
-                <div class="font-mono text-xs font-bold text-emerald-700">
+                <div class="font-mono text-xs font-bold text-indigo-600">
                   {String(idx + 1).padStart(2, '0')}
                 </div>
-                <h3 class="font-heading mt-2 text-base font-semibold text-neutral-900">
+                <h3 class="font-heading mt-2 text-base font-semibold text-slate-900">
                   {item.title}
                 </h3>
-                <p class="mt-1 text-xs leading-relaxed text-neutral-600 sm:text-sm">
+                <p class="mt-1 text-xs leading-relaxed text-slate-600 sm:text-sm">
                   {item.description}
                 </p>
               </div>

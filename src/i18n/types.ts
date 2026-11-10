@@ -23,10 +23,13 @@ export interface Dictionary {
     openMenuLabel: string;
   };
   hero: {
+    badge: string;
     headlinePrefix: string;
     headlineAccent: string;
     headlineSuffix: string;
-    subheadline: string;
+    subheadlineLead: string;
+    subheadlineEmail: string;
+    subheadlineTrail: string;
     primaryCta: string;
     secondaryCta: string;
     pillars: {

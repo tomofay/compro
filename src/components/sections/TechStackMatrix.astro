@@ -19,16 +19,16 @@ const { locale } = Astro.props;
 const dict = getDictionary(locale);
 ---
 
-<section id="tech-stack" class="border-t border-neutral-200 bg-[#F4F4F5] py-16 sm:py-20">
+<section id="tech-stack" class="border-t border-slate-200 bg-white py-16 sm:py-20">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
     <div data-reveal="" class="max-w-2xl">
-      <p class="text-xs font-semibold tracking-wider text-emerald-700 uppercase">
+      <p class="font-mono text-xs font-semibold tracking-wider text-indigo-600 uppercase">
         {dict.techStackSection.eyebrow}
       </p>
-      <h2 class="font-heading mt-2 text-2xl font-semibold tracking-[-0.025em] text-neutral-950 sm:text-3xl">
+      <h2 class="font-heading mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
         {dict.techStackSection.title}
       </h2>
-      <p class="mt-2 text-sm text-neutral-600 sm:text-base">
+      <p class="mt-2 text-sm text-slate-600 sm:text-base">
         {dict.techStackSection.subtitle}
       </p>
     </div>
@@ -39,10 +39,10 @@ const dict = getDictionary(locale);
           <div
             data-reveal=""
             style={`--reveal-delay: ${idx * 80}ms`}
-            class="overflow-hidden rounded-xl border border-neutral-200 bg-white transition-colors duration-200 hover:border-neutral-300"
+            class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50/40 transition-colors duration-200 hover:border-indigo-200"
           >
-            <div class="flex items-center gap-3 border-b border-neutral-200 px-5 py-4">
-              <div class="rounded-md border border-neutral-200 bg-[#FAFAFA] p-2 text-neutral-700">
+            <div class="flex items-center gap-3 border-b border-slate-200 bg-white px-5 py-4">
+              <div class="rounded-xl border border-indigo-100 bg-indigo-50 p-2 text-indigo-600">
                 {group.icon === 'Monitor' && <Monitor className="h-4 w-4" aria-hidden="true" />}
                 {group.icon === 'Server' && <Server className="h-4 w-4" aria-hidden="true" />}
                 {group.icon === 'Database' && <Database className="h-4 w-4" aria-hidden="true" />}
@@ -50,18 +50,18 @@ const dict = getDictionary(locale);
                   <ShieldCheck className="h-4 w-4" aria-hidden="true" />
                 )}
               </div>
-              <h3 class="font-heading text-[15px] font-semibold tracking-[-0.015em] text-neutral-950">
+              <h3 class="font-heading text-[15px] font-semibold tracking-[-0.015em] text-slate-900">
                 {group.title[locale]}
               </h3>
             </div>
-            <div class="divide-y divide-neutral-200/75">
+            <div class="divide-y divide-slate-200/80 bg-white">
               {group.items.map((tech) => (
-                <div class="flex items-center justify-between gap-4 px-5 py-3 text-xs transition-colors hover:bg-neutral-50/70">
+                <div class="flex items-center justify-between gap-4 px-5 py-3 text-xs transition-colors hover:bg-slate-50">
                   <div class="flex min-w-0 items-center gap-3">
                     {tech.logos && tech.logos.length > 0 ? (
                       <div class="flex shrink-0 items-center gap-1">
                         {tech.logos.map((logo) => (
-                          <span class="inline-flex h-7 w-7 items-center justify-center rounded-md border border-neutral-200 bg-[#FAFAFA]">
+                          <span class="inline-flex h-7 w-7 items-center justify-center rounded-md border border-slate-200 bg-slate-50">
                             <img
                               src={logo.src}
                               alt=""
@@ -75,23 +75,23 @@ const dict = getDictionary(locale);
                         ))}
                       </div>
                     ) : (
-                      <span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-neutral-200 bg-[#FAFAFA] text-neutral-700">
+                      <span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-indigo-100 bg-indigo-50 text-indigo-600">
                         {tech.fallbackIcon === 'CreditCard' && (
-                          <CreditCard className="h-3.5 w-3.5 text-emerald-700" aria-hidden="true" />
+                          <CreditCard className="h-3.5 w-3.5 text-indigo-600" aria-hidden="true" />
                         )}
                         {tech.fallbackIcon === 'HardDrive' && (
-                          <HardDrive className="h-3.5 w-3.5" aria-hidden="true" />
+                          <HardDrive className="h-3.5 w-3.5 text-indigo-600" aria-hidden="true" />
                         )}
                         {(!tech.fallbackIcon || tech.fallbackIcon === 'CheckCheck') && (
-                          <CheckCheck className="h-3.5 w-3.5 text-emerald-700" aria-hidden="true" />
+                          <CheckCheck className="h-3.5 w-3.5 text-indigo-600" aria-hidden="true" />
                         )}
                       </span>
                     )}
-                    <span class="font-heading truncate text-[13px] font-semibold text-neutral-900">
+                    <span class="font-heading truncate text-[13px] font-semibold text-slate-900">
                       {tech.name}
                     </span>
                   </div>
-                  <span class="shrink-0 text-right text-xs text-neutral-500">
+                  <span class="shrink-0 text-right text-xs text-slate-600">
                     {tech.role[locale]}
                   </span>
                 </div>

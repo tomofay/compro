@@ -30,11 +30,13 @@ export const en: Dictionary = {
     openMenuLabel: 'Open navigation menu',
   },
   hero: {
+    badge: 'Ready-to-Launch B2B Digital & Software Solutions',
     headlinePrefix: 'Ready-to-Launch',
     headlineAccent: 'Websites & Business',
     headlineSuffix: 'Software.',
-    subheadline:
-      'Free 1st-year hosting, domain & business email (sales@company.com) included.',
+    subheadlineLead: 'Free 1st-year hosting, domain & business email (',
+    subheadlineEmail: 'sales@company.com',
+    subheadlineTrail: ') included.',
     primaryCta: 'Start a Project',
     secondaryCta: 'View Services & Pricing',
     pillars: [

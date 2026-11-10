@@ -49,8 +49,9 @@ export function CopyIconButton({
             onClick={handleCopy}
             aria-label={copied ? copiedLabel : label}
             className={cn(
+              'border-slate-200 bg-white shadow-none hover:bg-slate-50',
               tone === 'dark' &&
-                'border-emerald-800 bg-emerald-900/60 text-emerald-100 hover:bg-emerald-800 hover:text-white',
+                'border-slate-700 bg-slate-800/80 text-slate-100 hover:border-slate-600 hover:bg-slate-800 hover:text-white',
               className
             )}
           >
@@ -58,7 +59,7 @@ export function CopyIconButton({
               <Check
                 className={cn(
                   'h-3.5 w-3.5',
-                  tone === 'dark' ? 'text-emerald-300' : 'text-emerald-600'
+                  tone === 'dark' ? 'text-cyan-400' : 'text-indigo-600'
                 )}
                 aria-hidden="true"
               />
@@ -66,7 +67,7 @@ export function CopyIconButton({
               <Copy
                 className={cn(
                   'h-3.5 w-3.5',
-                  tone === 'dark' ? 'text-emerald-200' : 'text-neutral-600'
+                  tone === 'dark' ? 'text-slate-300' : 'text-slate-600'
                 )}
                 aria-hidden="true"
               />

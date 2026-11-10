@@ -98,17 +98,17 @@ export function ShowcaseExplorer({
 
   return (
     <TooltipProvider delayDuration={120}>
-      <section className="border-t border-neutral-200/80 bg-[#FAFAFA] py-16 sm:py-20">
+      <section className="border-t border-slate-200 bg-slate-50 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <RevealBlock className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div className="max-w-2xl">
-              <p className="text-xs font-semibold tracking-wider text-emerald-700 uppercase">
+              <p className="font-mono text-xs font-semibold tracking-wider text-indigo-600 uppercase">
                 {s.eyebrow}
               </p>
-              <h2 className="font-heading mt-2 text-2xl font-bold tracking-tight text-neutral-900 sm:text-3xl">
+              <h2 className="font-heading mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                 {s.title}
               </h2>
-              <p className="mt-2 text-sm text-neutral-600 sm:text-base">
+              <p className="mt-2 text-sm text-slate-600 sm:text-base">
                 {s.subtitle}
               </p>
             </div>
@@ -116,7 +116,7 @@ export function ShowcaseExplorer({
             {compact && (
               <a
                 href={showcaseUrl}
-                className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-emerald-700 transition-colors hover:text-emerald-800"
+                className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-indigo-600 transition-colors hover:text-indigo-700"
               >
                 <span>{s.viewAllLink}</span>
                 <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -124,12 +124,12 @@ export function ShowcaseExplorer({
             )}
           </RevealBlock>
 
-          <div className="mt-7 flex flex-col justify-between gap-3 rounded-2xl border border-neutral-200/80 bg-white p-2.5 shadow-sm lg:flex-row lg:items-center">
+          <div className="mt-7 flex flex-col justify-between gap-3 rounded-2xl border border-slate-200 bg-white p-2.5 lg:flex-row lg:items-center">
             <div
               role="tablist"
               data-showcase="showcase-filters"
               aria-label={s.eyebrow}
-              className="flex flex-wrap gap-1 rounded-xl bg-neutral-100 p-1"
+              className="flex flex-wrap gap-1 rounded-xl bg-slate-100 p-1"
             >
               {categoryTabs.map((tab) => {
                 const isSelected = category === tab.key;
@@ -144,14 +144,14 @@ export function ShowcaseExplorer({
                       'relative rounded-lg px-3 py-1.5 text-xs font-medium transition-colors',
                       isSelected
                         ? 'font-semibold text-white'
-                        : 'text-neutral-600 hover:text-neutral-900'
+                        : 'text-slate-600 hover:text-slate-900'
                     )}
                   >
                     {isSelected && (
                       <motion.span
                         layoutId="showcase-filter-pill"
                         transition={{ type: 'spring', stiffness: 420, damping: 32 }}
-                        className="absolute inset-0 rounded-lg bg-emerald-600 shadow-sm"
+                        className="absolute inset-0 rounded-lg bg-indigo-600"
                       />
                     )}
                     <span className="relative z-10">{tab.label}</span>
@@ -164,7 +164,7 @@ export function ShowcaseExplorer({
               {!compact && (
                 <div className="relative flex-1 sm:w-64 lg:flex-none">
                   <Search
-                    className="pointer-events-none absolute top-1/2 left-2.5 h-3.5 w-3.5 -translate-y-1/2 text-neutral-400"
+                    className="pointer-events-none absolute top-1/2 left-2.5 h-3.5 w-3.5 -translate-y-1/2 text-slate-400"
                     aria-hidden="true"
                   />
                   <Input
@@ -172,7 +172,7 @@ export function ShowcaseExplorer({
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder={s.searchPlaceholder}
-                    className="h-8.5 rounded-lg bg-white pl-8 text-xs"
+                    className="h-8.5 rounded-lg border-slate-200 bg-white pl-8 text-xs"
                   />
                 </div>
               )}
@@ -186,9 +186,9 @@ export function ShowcaseExplorer({
                       size="icon-sm"
                       onClick={resetFilters}
                       aria-label={s.resetFilterTooltip}
-                      className="rounded-lg bg-white"
+                      className="rounded-lg border-slate-200 bg-white"
                     >
-                      <X className="h-3.5 w-3.5 text-neutral-600" aria-hidden="true" />
+                      <X className="h-3.5 w-3.5 text-slate-600" aria-hidden="true" />
                     </Button>
                   </TooltipTrigger>
                   <TooltipContent side="top" className="text-xs">
@@ -197,7 +197,7 @@ export function ShowcaseExplorer({
                 </Tooltip>
               )}
 
-              <div className="flex items-center rounded-lg border border-neutral-200/80 bg-neutral-50 p-0.5">
+              <div className="flex items-center rounded-lg border border-slate-200 bg-slate-50 p-0.5">
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Button
@@ -236,8 +236,8 @@ export function ShowcaseExplorer({
           </div>
 
           {displayedItems.length === 0 ? (
-            <div className="mt-6 rounded-2xl border border-dashed border-neutral-300 bg-white p-10 text-center">
-              <p className="text-sm text-neutral-600">{s.emptyState}</p>
+            <div className="mt-6 rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center">
+              <p className="text-sm text-slate-600">{s.emptyState}</p>
             </div>
           ) : viewMode === 'grid' ? (
             <motion.div
@@ -255,10 +255,10 @@ export function ShowcaseExplorer({
                       animate={{ opacity: 1, scale: 1, y: 0 }}
                       exit={{ opacity: 0, scale: 0.96, y: -8 }}
                       transition={{ duration: 0.24, ease: [0.16, 1, 0.3, 1] }}
-                      className="group flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg"
+                      className="group flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-indigo-300"
                     >
                       <div>
-                        <div className="aspect-video w-full overflow-hidden border-b border-neutral-100 bg-neutral-100">
+                        <div className="aspect-video w-full overflow-hidden border-b border-slate-200 bg-slate-100">
                           <img
                             src={item.image}
                             alt={item.title[locale]}
@@ -274,10 +274,10 @@ export function ShowcaseExplorer({
                             <Badge
                               variant="outline"
                               className={cn(
-                                'font-sans text-[11px]',
+                                'font-mono text-[11px]',
                                 isClient
-                                  ? 'border-emerald-200 bg-emerald-50 font-semibold text-emerald-800'
-                                  : 'border-neutral-200 bg-neutral-50 font-medium text-neutral-600'
+                                  ? 'border-indigo-100 bg-indigo-50 font-semibold text-indigo-700'
+                                  : 'border-slate-200 bg-slate-50 font-medium text-slate-600'
                               )}
                             >
                               {item.status[locale]}
@@ -291,7 +291,7 @@ export function ShowcaseExplorer({
                                       asChild
                                       variant="outline"
                                       size="icon-xs"
-                                      className="rounded-lg border-neutral-200/80"
+                                      className="rounded-lg border-slate-200 hover:border-indigo-300"
                                     >
                                       <a
                                         href={item.liveUrl}
@@ -300,7 +300,7 @@ export function ShowcaseExplorer({
                                         aria-label={`${s.visitLiveTooltip}: ${item.title[locale]}`}
                                       >
                                         <ExternalLink
-                                          className="h-3.5 w-3.5 text-emerald-700"
+                                          className="h-3.5 w-3.5 text-indigo-600"
                                           aria-hidden="true"
                                         />
                                       </a>
@@ -320,9 +320,9 @@ export function ShowcaseExplorer({
                                     size="icon-xs"
                                     onClick={() => setSelectedItem(item)}
                                     aria-label={`${s.inspectTooltip}: ${item.title[locale]}`}
-                                    className="rounded-lg border-neutral-200/80"
+                                    className="rounded-lg border-slate-200 hover:border-indigo-300"
                                   >
-                                    <Eye className="h-3.5 w-3.5 text-neutral-600" aria-hidden="true" />
+                                    <Eye className="h-3.5 w-3.5 text-slate-600" aria-hidden="true" />
                                   </Button>
                                 </TooltipTrigger>
                                 <TooltipContent side="top" className="text-xs">
@@ -332,16 +332,16 @@ export function ShowcaseExplorer({
                             </div>
                           </div>
 
-                          <p className="mt-3 text-xs font-semibold text-emerald-700">
+                          <p className="mt-3 text-xs font-semibold text-indigo-600">
                             {item.solutionType[locale]}
                           </p>
-                          <h3 className="font-heading mt-1 text-base font-semibold text-neutral-900">
+                          <h3 className="font-heading mt-1 text-base font-semibold text-slate-900">
                             {item.title[locale]}
                           </h3>
-                          <p className="mt-1 text-xs font-medium text-neutral-500">
+                          <p className="mt-1 text-xs font-medium text-slate-500">
                             {item.sector[locale]}
                           </p>
-                          <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-neutral-600">
+                          <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-slate-600">
                             {item.summary[locale]}
                           </p>
 
@@ -349,7 +349,7 @@ export function ShowcaseExplorer({
                             {item.capabilities.slice(0, 3).map((cap) => (
                               <span
                                 key={cap}
-                                className="rounded-md border border-neutral-200/80 bg-neutral-50 px-2 py-0.5 text-[11px] font-medium text-neutral-600"
+                                className="rounded-md border border-slate-200 bg-slate-50 px-2 py-0.5 font-mono text-[11px] font-medium text-slate-600"
                               >
                                 {cap}
                               </span>
@@ -363,23 +363,23 @@ export function ShowcaseExplorer({
               </AnimatePresence>
             </motion.div>
           ) : (
-            <div className="mt-6 overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-sm">
+            <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white">
               <Table>
                 <TableHeader>
-                  <TableRow className="bg-neutral-50 hover:bg-neutral-50">
-                    <TableHead className="text-xs font-semibold text-neutral-600">
+                  <TableRow className="border-slate-200 bg-slate-50 hover:bg-slate-50">
+                    <TableHead className="text-xs font-semibold text-slate-600">
                       {s.tableColumns.project}
                     </TableHead>
-                    <TableHead className="hidden text-xs font-semibold text-neutral-600 md:table-cell">
+                    <TableHead className="hidden text-xs font-semibold text-slate-600 md:table-cell">
                       {s.tableColumns.sector}
                     </TableHead>
-                    <TableHead className="hidden text-xs font-semibold text-neutral-600 lg:table-cell">
+                    <TableHead className="hidden text-xs font-semibold text-slate-600 lg:table-cell">
                       {s.tableColumns.solution}
                     </TableHead>
-                    <TableHead className="hidden text-xs font-semibold text-neutral-600 sm:table-cell">
+                    <TableHead className="hidden text-xs font-semibold text-slate-600 sm:table-cell">
                       {s.tableColumns.status}
                     </TableHead>
-                    <TableHead className="text-right text-xs font-semibold text-neutral-600">
+                    <TableHead className="text-right text-xs font-semibold text-slate-600">
                       {s.tableColumns.action}
                     </TableHead>
                   </TableRow>
@@ -388,24 +388,24 @@ export function ShowcaseExplorer({
                   {displayedItems.map((item) => {
                     const isClient = item.kind === 'client';
                     return (
-                      <TableRow key={item.id}>
-                        <TableCell className="font-medium text-neutral-900">
+                      <TableRow key={item.id} className="border-slate-200">
+                        <TableCell className="font-medium text-slate-900">
                           {item.title[locale]}
                         </TableCell>
-                        <TableCell className="hidden text-xs text-neutral-600 md:table-cell">
+                        <TableCell className="hidden text-xs text-slate-600 md:table-cell">
                           {item.sector[locale]}
                         </TableCell>
-                        <TableCell className="hidden text-xs text-neutral-600 lg:table-cell">
+                        <TableCell className="hidden text-xs text-slate-600 lg:table-cell">
                           {item.solutionType[locale]}
                         </TableCell>
                         <TableCell className="hidden sm:table-cell">
                           <Badge
                             variant="outline"
                             className={cn(
-                              'font-sans text-[11px]',
+                              'font-mono text-[11px]',
                               isClient
-                                ? 'border-emerald-200 bg-emerald-50 font-semibold text-emerald-800'
-                                : 'border-neutral-200 bg-neutral-50 text-neutral-700'
+                                ? 'border-indigo-100 bg-indigo-50 font-semibold text-indigo-700'
+                                : 'border-slate-200 bg-slate-50 text-slate-700'
                             )}
                           >
                             {item.status[locale]}
@@ -416,7 +416,12 @@ export function ShowcaseExplorer({
                             {item.liveUrl && (
                               <Tooltip>
                                 <TooltipTrigger asChild>
-                                  <Button asChild variant="outline" size="icon-xs">
+                                  <Button
+                                    asChild
+                                    variant="outline"
+                                    size="icon-xs"
+                                    className="border-slate-200 hover:border-indigo-300"
+                                  >
                                     <a
                                       href={item.liveUrl}
                                       target="_blank"
@@ -424,7 +429,7 @@ export function ShowcaseExplorer({
                                       aria-label={`${s.visitLiveTooltip}: ${item.title[locale]}`}
                                     >
                                       <ExternalLink
-                                        className="h-3.5 w-3.5 text-emerald-700"
+                                        className="h-3.5 w-3.5 text-indigo-600"
                                         aria-hidden="true"
                                       />
                                     </a>
@@ -444,8 +449,9 @@ export function ShowcaseExplorer({
                                   size="icon-xs"
                                   onClick={() => setSelectedItem(item)}
                                   aria-label={`${s.inspectTooltip}: ${item.title[locale]}`}
+                                  className="border-slate-200 hover:border-indigo-300"
                                 >
-                                  <Eye className="h-3.5 w-3.5 text-neutral-600" aria-hidden="true" />
+                                  <Eye className="h-3.5 w-3.5 text-slate-600" aria-hidden="true" />
                                 </Button>
                               </TooltipTrigger>
                               <TooltipContent side="left" className="text-xs">
@@ -468,33 +474,33 @@ export function ShowcaseExplorer({
           onOpenChange={(open) => !open && setSelectedItem(null)}
         >
           {selectedItem && (
-            <DialogContent className="rounded-2xl border-neutral-200 bg-white sm:max-w-xl">
+            <DialogContent className="rounded-2xl border-slate-200 bg-white sm:max-w-xl">
               <DialogHeader>
-                <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-emerald-700">
+                <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-indigo-600">
                   <span>{selectedItem.solutionType[locale]}</span>
-                  <span className="text-neutral-300">·</span>
-                  <span className="font-mono text-neutral-500">{selectedItem.id}</span>
+                  <span className="text-slate-300">·</span>
+                  <span className="font-mono text-slate-500">{selectedItem.id}</span>
                   <Badge
                     variant="outline"
                     className={cn(
-                      'font-sans text-[11px]',
+                      'font-mono text-[11px]',
                       selectedItem.kind === 'client'
-                        ? 'border-emerald-200 bg-emerald-50 font-semibold text-emerald-800'
-                        : 'border-neutral-200 bg-neutral-50 font-medium text-neutral-600'
+                        ? 'border-indigo-100 bg-indigo-50 font-semibold text-indigo-700'
+                        : 'border-slate-200 bg-slate-50 font-medium text-slate-600'
                     )}
                   >
                     {selectedItem.status[locale]}
                   </Badge>
                 </div>
-                <DialogTitle className="font-heading mt-1 text-lg font-bold text-neutral-900">
+                <DialogTitle className="font-heading mt-1 text-lg font-bold text-slate-900">
                   {selectedItem.title[locale]}
                 </DialogTitle>
-                <DialogDescription className="text-sm text-neutral-600">
+                <DialogDescription className="text-sm text-slate-600">
                   {selectedItem.summary[locale]}
                 </DialogDescription>
               </DialogHeader>
 
-              <div className="aspect-video w-full overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
+              <div className="aspect-video w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
                 <img
                   src={selectedItem.image}
                   alt={selectedItem.title[locale]}
@@ -505,34 +511,34 @@ export function ShowcaseExplorer({
                 />
               </div>
 
-              <div className="grid grid-cols-1 gap-3 rounded-xl border border-neutral-200 bg-neutral-50 p-4 text-xs sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs sm:grid-cols-2">
                 <div>
-                  <div className="text-[11px] text-neutral-500">
+                  <div className="text-[11px] text-slate-500">
                     {s.dialog.sectorLabel}
                   </div>
-                  <div className="mt-1 font-medium text-neutral-900">
+                  <div className="mt-1 font-medium text-slate-900">
                     {selectedItem.sector[locale]}
                   </div>
                 </div>
                 <div>
-                  <div className="text-[11px] text-neutral-500">
+                  <div className="text-[11px] text-slate-500">
                     {s.dialog.solutionLabel}
                   </div>
-                  <div className="mt-1 font-medium text-neutral-900">
+                  <div className="mt-1 font-medium text-slate-900">
                     {selectedItem.solutionType[locale]}
                   </div>
                 </div>
               </div>
 
               <div>
-                <h4 className="text-xs font-semibold tracking-wider text-neutral-900 uppercase">
+                <h4 className="text-xs font-semibold tracking-wider text-slate-900 uppercase">
                   {s.dialog.deliverablesLabel}
                 </h4>
                 <ul className="mt-2.5 space-y-2">
                   {selectedItem.deliverables[locale].map((deliverable) => (
-                    <li key={deliverable} className="flex items-start gap-2 text-sm text-neutral-700">
+                    <li key={deliverable} className="flex items-start gap-2 text-sm text-slate-700">
                       <CheckCircle2
-                        className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"
+                        className="mt-0.5 h-4 w-4 shrink-0 text-indigo-600"
                         aria-hidden="true"
                       />
                       <span>{deliverable}</span>
@@ -542,14 +548,14 @@ export function ShowcaseExplorer({
               </div>
 
               <div>
-                <h4 className="text-xs font-semibold tracking-wider text-neutral-900 uppercase">
+                <h4 className="text-xs font-semibold tracking-wider text-slate-900 uppercase">
                   {s.dialog.capabilitiesLabel}
                 </h4>
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {selectedItem.capabilities.map((cap) => (
                     <span
                       key={cap}
-                      className="rounded-md border border-neutral-200 bg-neutral-50 px-2.5 py-1 text-xs font-medium text-neutral-700"
+                      className="rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1 font-mono text-xs font-medium text-slate-700"
                     >
                       {cap}
                     </span>
@@ -557,17 +563,17 @@ export function ShowcaseExplorer({
                 </div>
               </div>
 
-              <DialogFooter className="flex-wrap gap-2 border-t border-neutral-100 pt-4">
+              <DialogFooter className="flex-wrap gap-2 border-t border-slate-100 pt-4">
                 <Button
                   type="button"
                   variant="outline"
                   onClick={() => setSelectedItem(null)}
-                  className="rounded-lg"
+                  className="rounded-lg border-slate-200"
                 >
                   {s.dialog.closeLabel}
                 </Button>
                 {selectedItem.liveUrl && (
-                  <Button asChild variant="outline" className="rounded-lg border-neutral-200">
+                  <Button asChild variant="outline" className="rounded-lg border-slate-200">
                     <a
                       href={selectedItem.liveUrl}
                       target="_blank"
@@ -580,7 +586,7 @@ export function ShowcaseExplorer({
                 )}
                 <Button
                   asChild
-                  className="rounded-lg bg-emerald-600 text-white hover:bg-emerald-700"
+                  className="rounded-lg bg-indigo-600 text-white hover:bg-indigo-700"
                 >
                   <a href={`${contactUrl}?service=${selectedItem.category}`}>
                     <span>{s.dialog.inquireSimilar}</span>

@@ -2,10 +2,10 @@
   <rect x="0.5" y="0.5" width="31" height="31" rx="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
   <path
     d="M5 9H7.7V14.7H12.1V9H14.8V23H12.1V17.3H7.7V23H5V9Z"
-    fill="#020617"
+    fill="#0f172a"
   />
   <path
     d="M17.2 9H19.9V14.9L24.1 9H27.1L22.2 15.4L27.3 23H24.1L20.4 17.0L19.9 17.6V23H17.2V9Z"
-    fill="#059669"
+    fill="#4f46e5"
   />
 </svg>

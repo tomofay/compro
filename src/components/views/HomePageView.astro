@@ -32,16 +32,16 @@ const dict = getDictionary(locale);
   <ProcessSection locale={locale} />
   <CtaBanner locale={locale} surface="light" />
 
-  <section class="border-t border-neutral-200/80 bg-[#F4F4F5] py-16 sm:py-20">
+  <section class="border-t border-slate-200 bg-slate-50 py-16 sm:py-20">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
       <div data-reveal="" class="text-center">
-        <p class="text-xs font-semibold tracking-wider text-emerald-700 uppercase">
+        <p class="font-mono text-xs font-semibold tracking-wider text-indigo-600 uppercase">
           FAQ
         </p>
-        <h2 class="font-heading mt-2 text-2xl font-bold tracking-tight text-neutral-900 sm:text-3xl">
+        <h2 class="font-heading mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
           {dict.servicesPage.faqTitle}
         </h2>
-        <p class="mx-auto mt-2 max-w-xl text-sm text-neutral-600">
+        <p class="mx-auto mt-2 max-w-xl text-sm text-slate-600">
           {dict.servicesPage.faqSubtitle}
         </p>
       </div>
@@ -53,7 +53,7 @@ const dict = getDictionary(locale);
       <div class="mt-7 text-center">
         <a
           href={getLocalizedPath(locale, 'services')}
-          class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 transition-colors hover:text-emerald-800"
+          class="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 transition-colors hover:text-indigo-700"
         >
           <span>{dict.servicesSection.viewAllLink}</span>
           <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

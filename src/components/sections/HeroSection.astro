@@ -22,23 +22,35 @@ const contactUrl = getLocalizedPath(locale, 'contact');
 const pillarIcons = [Gauge, Building2, CreditCard, ShieldCheck];
 ---
 
-<section class="overflow-hidden bg-[#FAFAFA] pt-12 pb-16 sm:pt-16 sm:pb-20">
+<section class="relative isolate overflow-x-clip bg-slate-50 pt-12 pb-16 sm:pt-16 sm:pb-20">
+  <div
+    aria-hidden="true"
+    class="bg-hero-grid pointer-events-none absolute inset-x-0 -top-24 bottom-0 -z-10"
+  ></div>
+
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
     <div class="mx-auto max-w-3xl text-center">
-      <h1 class="font-heading text-4xl font-bold tracking-[-0.035em] text-neutral-950 sm:text-5xl lg:text-[3.35rem] lg:leading-[1.06]">
+      <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-indigo-50 px-3.5 py-1 text-xs font-medium text-indigo-700">
+        <span class="h-1.5 w-1.5 rounded-full bg-indigo-600" aria-hidden="true"></span>
+        <span>{dict.hero.badge}</span>
+      </div>
+
+      <h1 class="font-heading text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-[3.35rem] lg:leading-[1.06]">
         {dict.hero.headlinePrefix}{' '}
-        <span class="text-emerald-600">{dict.hero.headlineAccent}</span>{' '}
+        <span class="bg-gradient-to-r from-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+          {dict.hero.headlineAccent}
+        </span>{' '}
         {dict.hero.headlineSuffix}
       </h1>
 
-      <p class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-neutral-600 sm:text-base">
-        {dict.hero.subheadline}
+      <p class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">
+        {dict.hero.subheadlineLead}<span class="font-mono font-medium text-indigo-600">{dict.hero.subheadlineEmail}</span>{dict.hero.subheadlineTrail}
       </p>
 
       <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
         <a
           href={contactUrl}
-          class="group inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-emerald-600 px-6 text-sm font-medium whitespace-nowrap text-white transition-colors duration-150 hover:bg-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+          class="group inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-indigo-600 px-6 text-sm font-semibold whitespace-nowrap text-white transition-colors duration-150 hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
         >
           <span>{dict.hero.primaryCta}</span>
           <ArrowRight
@@ -48,29 +60,29 @@ const pillarIcons = [Gauge, Building2, CreditCard, ShieldCheck];
         </a>
         <a
           href={servicesUrl}
-          class="inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-neutral-200 bg-white px-6 text-sm font-medium whitespace-nowrap text-neutral-900 transition-colors duration-150 hover:border-neutral-300 hover:bg-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+          class="inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-6 text-sm font-medium whitespace-nowrap text-slate-900 transition-colors duration-150 hover:border-slate-300 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
         >
           <span>{dict.hero.secondaryCta}</span>
-          <ArrowUpRight className="h-4 w-4 text-neutral-500" aria-hidden="true" />
+          <ArrowUpRight className="h-4 w-4 text-slate-500" aria-hidden="true" />
         </a>
       </div>
     </div>
 
-    <div class="mx-auto mt-8 max-w-5xl overflow-hidden rounded-xl border border-neutral-200 bg-white">
-      <div class="grid grid-cols-1 divide-y divide-neutral-200/80 sm:grid-cols-2 sm:divide-x lg:grid-cols-4 lg:divide-y-0 sm:[&>*:nth-child(odd)]:border-l-0 lg:[&>*:nth-child(odd)]:border-l lg:[&>*:first-child]:border-l-0">
+    <div class="mx-auto mt-8 max-w-5xl overflow-hidden rounded-xl border border-slate-200 bg-white">
+      <div class="grid grid-cols-1 divide-y divide-slate-200/80 sm:grid-cols-2 sm:divide-x lg:grid-cols-4 lg:divide-y-0 sm:[&>*:nth-child(odd)]:border-l-0 lg:[&>*:nth-child(odd)]:border-l lg:[&>*:first-child]:border-l-0">
         {
           dict.hero.pillars.map((pillar, idx) => {
             const Icon = pillarIcons[idx] ?? Building2;
             return (
               <div class="flex items-start gap-3 p-4 text-left">
-                <div class="shrink-0 rounded-md border border-neutral-200 bg-[#FAFAFA] p-1.5 text-emerald-700">
+                <div class="shrink-0 rounded-xl border border-indigo-100 bg-indigo-50 p-2 text-indigo-600">
                   <Icon className="h-3.5 w-3.5" aria-hidden="true" />
                 </div>
                 <div class="min-w-0">
-                  <h2 class="font-heading text-xs font-semibold tracking-[-0.01em] text-neutral-950">
+                  <h2 class="font-heading text-xs font-semibold tracking-tight text-slate-900">
                     {pillar.title}
                   </h2>
-                  <p class="mt-0.5 text-[11px] leading-snug text-neutral-600">
+                  <p class="mt-0.5 text-[11px] leading-snug text-slate-600">
                     {pillar.description}
                   </p>
                 </div>

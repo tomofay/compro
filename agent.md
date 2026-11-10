@@ -7,8 +7,8 @@ Hindari gaya visual generik buatan AI yang pasaran (glowing neon gradients, bent
 - Utamakan struktur batas permukaian solid berbasis border tipis 1px (`border border-neutral-800` atau `border-slate-200`) daripada menggunakan *box-shadow* yang tebal dan kabur.
 
 ### B. Color & Surface Palette
-- Gunakan skema warna netral berkarakter (Dark Mode: Background `#0a0a0a` / `#0f172a`, Card Background `#121212` / `#1e293b`).
-- Gunakan 1 warna aksen dominan (misal: Crimson `#dc2626`, Slate Blue `#2563eb`, atau Emerald `#059669`). DILARANG mencampur warna neon cyan, violet-purple glow, atau gradien teks berwarna-warni.
+- Gunakan skema warna netral berkarakter (*Enterprise Trust*: Light Cool `#F8FAFC` / `#FFFFFF` atau Dark Slate `#0F172A`).
+- Gunakan palet dominan **Royal Indigo (`#4F46E5`)** dan aksen sekunder **Cyan (`#06B6D4`)** secara terkendali (termasuk gradasi teks `from-indigo-600 to-cyan-500` khusus untuk keyword penekanan). DILARANG mencampur warna neon berlebihan, ungu glowing dekoratif, atau efek AI slop.
 
 ### C. Typography
 - Gunakan hirarki bobot tipografi yang tegas: Heading `font-semibold` / `font-bold` (700/800), Body Text `text-neutral-400` / `text-slate-600`.

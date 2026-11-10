@@ -31,11 +31,11 @@ export function HeroShowcase({ locale, caption }: HeroShowcaseProps) {
       <div className="group/marquee relative mx-auto w-full max-w-[1600px] overflow-hidden py-5">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-[#FAFAFA] to-transparent sm:w-24"
+          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-slate-50 to-transparent sm:w-24"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-[#FAFAFA] to-transparent sm:w-24"
+          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-slate-50 to-transparent sm:w-24"
         />
 
         <div className="animate-marquee-track">
@@ -64,30 +64,30 @@ export function HeroShowcase({ locale, caption }: HeroShowcaseProps) {
                         href={`${servicesUrl}#${service.slug}`}
                         tabIndex={isDuplicate ? -1 : undefined}
                         className={cn(
-                          'group block overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-[0_12px_28px_-14px_rgba(15,23,42,0.14)] transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:z-20 hover:rotate-0 hover:-translate-y-2.5 hover:scale-[1.03] hover:border-emerald-400 hover:shadow-[0_24px_44px_-14px_rgba(5,150,105,0.24)]',
+                          'group block overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:z-20 hover:rotate-0 hover:-translate-y-2 hover:border-indigo-300',
                           preset.tiltClass
                         )}
                       >
-                        <div className="aspect-[16/10] w-full overflow-hidden border-b border-neutral-100 bg-neutral-100">
+                        <div className="aspect-[16/10] w-full overflow-hidden border-b border-slate-100 bg-slate-100">
                           <img
                             src={service.image}
                             alt={isDuplicate ? '' : service.title[locale]}
                             width={1376}
                             height={768}
                             loading="eager"
-                            className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                            className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                           />
                         </div>
 
                         <div className="flex items-center justify-between gap-2 px-3.5 py-3">
-                          <span className="inline-flex min-w-0 items-center gap-2 text-xs font-semibold whitespace-nowrap text-neutral-900 transition-colors group-hover:text-emerald-700">
-                            <span className="shrink-0 rounded-md border border-emerald-100 bg-emerald-50 p-1 text-emerald-700 transition-colors group-hover:border-emerald-500 group-hover:bg-emerald-600 group-hover:text-white">
+                          <span className="inline-flex min-w-0 items-center gap-2 text-xs font-semibold whitespace-nowrap text-slate-900 transition-colors group-hover:text-indigo-600">
+                            <span className="shrink-0 rounded-lg border border-indigo-100 bg-indigo-50 p-1.5 text-indigo-600 transition-colors group-hover:border-indigo-600 group-hover:bg-indigo-600 group-hover:text-white">
                               <ServiceIcon name={service.icon} className="h-3.5 w-3.5" />
                             </span>
                             <span className="truncate">{service.shortLabel[locale]}</span>
                           </span>
                           <ArrowUpRight
-                            className="h-3.5 w-3.5 shrink-0 text-neutral-400 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-emerald-600"
+                            className="h-3.5 w-3.5 shrink-0 text-slate-400 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-indigo-600"
                             aria-hidden="true"
                           />
                         </div>
@@ -101,7 +101,7 @@ export function HeroShowcase({ locale, caption }: HeroShowcaseProps) {
         </div>
       </div>
 
-      <p className="mt-2 text-center text-[11px] font-medium text-neutral-500">
+      <p className="mt-2 text-center text-[11px] font-medium text-slate-500">
         {caption}
       </p>
     </motion.div>

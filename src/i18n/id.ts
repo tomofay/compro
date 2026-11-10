@@ -30,11 +30,13 @@ export const id: Dictionary = {
     openMenuLabel: 'Buka menu navigasi',
   },
   hero: {
+    badge: 'Solusi Digital & Software B2B Siap Pakai',
     headlinePrefix: 'Website &',
     headlineAccent: 'Software Bisnis',
     headlineSuffix: 'Siap Pakai.',
-    subheadline:
-      'Paket lengkap gratis hosting, domain & email bisnis (sales@perusahaan.com) tahun ke-1.',
+    subheadlineLead: 'Paket lengkap gratis hosting, domain & email bisnis (',
+    subheadlineEmail: 'sales@perusahaan.com',
+    subheadlineTrail: ') tahun ke-1.',
     primaryCta: 'Konsultasi Proyek',
     secondaryCta: 'Lihat Layanan & Harga',
     pillars: [

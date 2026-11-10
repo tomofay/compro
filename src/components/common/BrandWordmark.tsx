@@ -18,8 +18,8 @@ export function BrandWordmark({
         ? 'text-[20px]'
         : 'text-[20px] sm:text-[22px]';
 
-  const leadColor = tone === 'dark' ? 'text-white' : 'text-neutral-950';
-  const accentColor = tone === 'dark' ? 'text-emerald-400' : 'text-emerald-600';
+  const leadColor = tone === 'dark' ? 'text-white' : 'text-slate-900';
+  const accentColor = tone === 'dark' ? 'text-cyan-400' : 'text-indigo-600';
 
   return (
     <span
