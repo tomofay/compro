@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/HeroSection.astro';
 import ProblemSection from '@/components/sections/ProblemSection.astro';
 import { ServicesShowcase } from '@/components/sections/ServicesShowcase';
 import ComparisonSection from '@/components/sections/ComparisonSection.astro';
-import { PortfolioExplorer } from '@/components/sections/PortfolioExplorer';
+import { ShowcaseExplorer } from '@/components/sections/ShowcaseExplorer';
 import ProcessSection from '@/components/sections/ProcessSection.astro';
 import CtaBanner from '@/components/sections/CtaBanner.astro';
 import { ServicesFaqAccordion } from '@/components/sections/ServicesFaqAccordion';
@@ -28,7 +28,7 @@ const dict = getDictionary(locale);
   <ProblemSection locale={locale} />
   <ServicesShowcase client:load locale={locale} />
   <ComparisonSection locale={locale} />
-  <PortfolioExplorer client:load locale={locale} compact={true} />
+  <ShowcaseExplorer client:load locale={locale} compact={true} />
   <ProcessSection locale={locale} />
   <CtaBanner locale={locale} surface="light" />
 

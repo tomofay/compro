@@ -21,12 +21,20 @@ import {
 
 interface Props {
   locale: Locale;
-  currentPage: PageKey;
+  currentPage?: PageKey;
   title?: string;
   description?: string;
+  noindex?: boolean;
 }
 
-const { locale, currentPage, title, description } = Astro.props;
+const {
+  locale,
+  currentPage,
+  title,
+  description,
+  noindex = false,
+} = Astro.props;
+const activePage: PageKey = currentPage ?? 'home';
 const dict = getDictionary(locale);
 
 const resolvedTitle = title
@@ -36,20 +44,27 @@ const resolvedDescription = description ?? dict.meta.homeDescription;
 
 const siteOrigin = resolveSiteOrigin(Astro.site);
 const canonicalUrl = buildAbsoluteUrl(
-  getLocalizedPath(locale, currentPage),
+  getLocalizedPath(locale, activePage),
   siteOrigin
 );
-const idUrl = buildAbsoluteUrl(getLocalizedPath('id', currentPage), siteOrigin);
-const enUrl = buildAbsoluteUrl(getLocalizedPath('en', currentPage), siteOrigin);
-const ogImage = getPageOgImage(currentPage, locale, siteOrigin);
-const structuredData = buildStructuredData({
-  locale,
-  currentPage,
-  title: resolvedTitle,
-  description: resolvedDescription,
-  canonicalUrl,
-  siteOrigin,
-});
+const idUrl = buildAbsoluteUrl(getLocalizedPath('id', activePage), siteOrigin);
+const enUrl = buildAbsoluteUrl(getLocalizedPath('en', activePage), siteOrigin);
+const ogImage = getPageOgImage(activePage, locale, siteOrigin);
+const structuredData = noindex
+  ? null
+  : buildStructuredData({
+      locale,
+      currentPage: activePage,
+      title: resolvedTitle,
+      description: resolvedDescription,
+      canonicalUrl,
+      siteOrigin,
+    });
+
+const gaMeasurementId = /^G-[A-Z0-9]+$/.test(COMPANY.analytics.gaMeasurementId)
+  ? COMPANY.analytics.gaMeasurementId
+  : '';
+const googleSiteVerification = COMPANY.analytics.googleSiteVerification;
 ---
 
 <!doctype html>
@@ -59,15 +74,32 @@ const structuredData = buildStructuredData({
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{resolvedTitle}</title>
     <meta name="description" content={resolvedDescription} />
-    <meta
-      name="robots"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-    />
+    {
+      noindex ? (
+        <meta name="robots" content="noindex, nofollow" />
+      ) : (
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+      )
+    }
     <meta name="theme-color" content="#059669" />
-    <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" hreflang="id" href={idUrl} />
-    <link rel="alternate" hreflang="en" href={enUrl} />
-    <link rel="alternate" hreflang="x-default" href={idUrl} />
+    {
+      googleSiteVerification && (
+        <meta name="google-site-verification" content={googleSiteVerification} />
+      )
+    }
+    {
+      !noindex && (
+        <>
+          <link rel="canonical" href={canonicalUrl} />
+          <link rel="alternate" hreflang="id" href={idUrl} />
+          <link rel="alternate" hreflang="en" href={enUrl} />
+          <link rel="alternate" hreflang="x-default" href={idUrl} />
+        </>
+      )
+    }
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -76,29 +108,54 @@ const structuredData = buildStructuredData({
     <link rel="alternate icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={resolvedTitle} />
     <meta property="og:description" content={resolvedDescription} />
     <meta property="og:site_name" content={COMPANY.legalName} />
     <meta property="og:locale" content={locale === 'id' ? 'id_ID' : 'en_US'} />
-    <meta
-      property="og:locale:alternate"
-      content={locale === 'id' ? 'en_US' : 'id_ID'}
-    />
-    <meta property="og:image" content={ogImage.url} />
-    <meta property="og:image:width" content={ogImage.width} />
-    <meta property="og:image:height" content={ogImage.height} />
-    <meta property="og:image:alt" content={ogImage.alt} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={resolvedTitle} />
-    <meta name="twitter:description" content={resolvedDescription} />
-    <meta name="twitter:image" content={ogImage.url} />
-    <meta name="twitter:image:alt" content={ogImage.alt} />
-    <script
-      is:inline
-      type="application/ld+json"
-      set:html={JSON.stringify(structuredData)}
-    />
+    {
+      !noindex && (
+        <>
+          <meta property="og:url" content={canonicalUrl} />
+          <meta
+            property="og:locale:alternate"
+            content={locale === 'id' ? 'en_US' : 'id_ID'}
+          />
+          <meta property="og:image" content={ogImage.url} />
+          <meta property="og:image:width" content={ogImage.width} />
+          <meta property="og:image:height" content={ogImage.height} />
+          <meta property="og:image:alt" content={ogImage.alt} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={resolvedTitle} />
+          <meta name="twitter:description" content={resolvedDescription} />
+          <meta name="twitter:image" content={ogImage.url} />
+          <meta name="twitter:image:alt" content={ogImage.alt} />
+        </>
+      )
+    }
+    {
+      structuredData && (
+        <script
+          is:inline
+          type="application/ld+json"
+          set:html={JSON.stringify(structuredData)}
+        />
+      )
+    }
+    {
+      gaMeasurementId && (
+        <>
+          <script
+            is:inline
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+          />
+          <script
+            is:inline
+            set:html={`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${gaMeasurementId}');`}
+          />
+        </>
+      )
+    }
     <script is:inline>
       if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.documentElement.classList.add('js-reveal');

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { PortfolioExplorer } from '@/components/sections/PortfolioExplorer';
+import { ShowcaseExplorer } from '@/components/sections/ShowcaseExplorer';
 import CtaBanner from '@/components/sections/CtaBanner.astro';
 import { getDictionary, type Locale } from '@/i18n';
 
@@ -14,24 +14,25 @@ const dict = getDictionary(locale);
 
 <BaseLayout
   locale={locale}
-  currentPage="portfolio"
-  title={dict.meta.portfolioTitle}
-  description={dict.meta.portfolioDescription}
+  currentPage="showcase"
+  title={dict.meta.showcaseTitle}
+  description={dict.meta.showcaseDescription}
 >
   <section class="bg-[#F4F4F5] py-14 sm:py-16">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
       <p class="text-xs font-semibold tracking-wider text-emerald-700 uppercase">
-        {dict.portfolioPage.eyebrow}
+        {dict.showcasePage.eyebrow}
       </p>
       <h1 class="font-heading mt-2 max-w-3xl text-3xl font-bold tracking-[-0.03em] text-neutral-950 sm:text-4xl">
-        {dict.portfolioPage.title}
+        {dict.showcasePage.title}
       </h1>
       <p class="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 sm:text-base">
-        {dict.portfolioPage.subtitle}
+        {dict.showcasePage.subtitle}
       </p>
     </div>
   </section>
 
-  <PortfolioExplorer client:load locale={locale} compact={false} />
+  <ShowcaseExplorer client:load locale={locale} compact={false} />
   <CtaBanner locale={locale} />
 </BaseLayout>
+

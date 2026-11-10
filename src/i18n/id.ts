@@ -9,9 +9,9 @@ export const id: Dictionary = {
     servicesTitle: 'Harga & Paket Website Company Profile, Toko Online & Software',
     servicesDescription:
       'Paket landing page mulai Rp 1,8 juta, website company profile Rp 2,5 juta, toko online Rp 8 juta, aplikasi mobile & custom software B2B lengkap BAST.',
-    portfolioTitle: 'Portofolio Website Perusahaan, Toko Online & Sistem Bisnis',
-    portfolioDescription:
-      'Studi kasus implementasi portal korporat, toko online QRIS multi-gudang, aplikasi mobile Android & iOS, serta software operasional oleh HalamanKode.',
+    showcaseTitle: 'Showcase Proyek Live & Blueprint Website, Toko Online & Software',
+    showcaseDescription:
+      'Showcase website klien aktif (PT Muda Bangkit Indotama & PT Seikou Jagorawi Indonesia) serta blueprint solusi toko online QRIS, aplikasi mobile & software bisnis HalamanKode.',
     aboutTitle: 'Tentang HalamanKode — Profil Studio & Standar Layanan',
     aboutDescription:
       'Profil HalamanKode sebagai pengembang website company profile, toko online, aplikasi mobile, dan custom software bisnis. Mendukung Quotation, PO, NDA, Faktur & BAST.',
@@ -22,7 +22,7 @@ export const id: Dictionary = {
   nav: {
     home: 'Beranda',
     services: 'Layanan',
-    portfolio: 'Portofolio',
+    showcase: 'Showcase',
     about: 'Tentang Kami',
     contact: 'Kontak',
     ctaButton: 'Konsultasi Gratis',
@@ -164,17 +164,18 @@ export const id: Dictionary = {
       },
     ],
   },
-  portfolioSection: {
-    eyebrow: 'PORTOFOLIO',
-    title: 'Hasil Kerja & Implementasi Nyata',
-    subtitle: 'Filter per kategori atau klik ikon mata untuk rincian proyek.',
-    viewAllLink: 'Lihat Semua Portofolio',
-    searchPlaceholder: 'Cari proyek atau industri...',
+  showcaseSection: {
+    eyebrow: 'SHOWCASE',
+    title: 'Proyek Klien & Blueprint Solusi',
+    subtitle: '2 website klien live serta blueprint siap kustomisasi per kategori layanan.',
+    viewAllLink: 'Lihat Semua Showcase',
+    searchPlaceholder: 'Cari proyek, blueprint atau industri...',
     resetFilterTooltip: 'Reset filter',
     viewModeGridTooltip: 'Tampilan Kartu Bergambar',
     viewModeTableTooltip: 'Tampilan Daftar Tabel',
-    inspectTooltip: 'Lihat detail proyek',
-    emptyState: 'Belum ada proyek yang sesuai filter.',
+    inspectTooltip: 'Lihat rincian arsitektur',
+    visitLiveTooltip: 'Kunjungi website live',
+    emptyState: 'Belum ada item yang sesuai filter.',
     categories: {
       all: 'Semua',
       compro: 'Company Profile',
@@ -184,19 +185,18 @@ export const id: Dictionary = {
       mobile: 'Aplikasi Mobile',
     },
     tableColumns: {
-      project: 'NAMA PROYEK',
+      project: 'PROYEK / BLUEPRINT',
       sector: 'SEKTOR INDUSTRI',
       solution: 'JENIS SOLUSI',
-      metric: 'HASIL UTAMA',
       status: 'STATUS',
       action: 'AKSI',
     },
     dialog: {
       solutionLabel: 'Jenis Solusi',
       sectorLabel: 'Sektor Bisnis',
-      metricLabel: 'Hasil Terukur',
       capabilitiesLabel: 'Fitur Utama',
-      deliverablesLabel: 'Cakupan Hasil',
+      deliverablesLabel: 'Cakupan Implementasi',
+      visitLiveSite: 'Kunjungi Website',
       closeLabel: 'Tutup',
       inquireSimilar: 'Buat Sistem Serupa',
     },
@@ -238,10 +238,10 @@ export const id: Dictionary = {
     faqTitle: 'Pertanyaan Umum (FAQ)',
     faqSubtitle: 'Poin jawaban seputar source code, Managed Care, waktu rilis & B2B.',
   },
-  portfolioPage: {
-    eyebrow: 'PORTOFOLIO',
-    title: 'Daftar Proyek & Blueprint Solusi',
-    subtitle: 'Filter per industri atau beralih ke mode tabel.',
+  showcasePage: {
+    eyebrow: 'SHOWCASE SOLUSI',
+    title: 'Proyek Klien Aktif & Blueprint Arsitektur',
+    subtitle: 'Tinjau implementasi website klien live maupun starter kit siap kustomisasi per industri.',
   },
   aboutPage: {
     eyebrow: 'PROFIL STUDIO',
@@ -278,7 +278,6 @@ export const id: Dictionary = {
     copiedTooltip: 'Tersalin',
     channels: {
       email: 'Email Utama',
-      projectsEmail: 'Email Penawaran Proyek',
       whatsapp: 'WhatsApp Bisnis',
       address: 'Alamat Perusahaan',
       hours: 'Jam Operasional',

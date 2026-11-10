@@ -1,0 +1,44 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getLocalizedPath } from '@/i18n';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
+---
+
+<BaseLayout
+  locale="id"
+  title="404 — Halaman Tidak Ditemukan"
+  description="Halaman yang Anda cari tidak tersedia atau telah dipindahkan di HalamanKode."
+  noindex={true}
+>
+  <section class="bg-[#FAFAFA] py-24 sm:py-32">
+    <div class="mx-auto max-w-2xl px-4 text-center sm:px-6">
+      <p class="font-mono text-xs font-semibold tracking-wider text-emerald-700 uppercase">
+        HTTP 404 · Not Found
+      </p>
+      <h1 class="font-heading mt-3 text-3xl font-bold tracking-[-0.03em] text-neutral-950 sm:text-4xl">
+        Halaman Tidak Ditemukan
+      </h1>
+      <p class="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-neutral-600 sm:text-base">
+        Tautan yang Anda buka mungkin telah diperbarui atau tidak tersedia. Silakan kembali ke beranda atau lihat daftar layanan HalamanKode.
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <a
+          href={getLocalizedPath('id', 'home')}
+          class="inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-emerald-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2"
+        >
+          <span>Kembali ke Beranda</span>
+          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+        </a>
+        <a
+          href={getLocalizedPath('id', 'showcase')}
+          class="inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-neutral-200 bg-white px-6 text-sm font-medium text-neutral-900 transition-colors hover:border-neutral-300 hover:bg-neutral-50"
+        >
+          <span>Lihat Showcase</span>
+          <ArrowUpRight className="h-4 w-4 text-neutral-500" aria-hidden="true" />
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

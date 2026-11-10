@@ -5,8 +5,8 @@ export interface Dictionary {
     homeDescription: string;
     servicesTitle: string;
     servicesDescription: string;
-    portfolioTitle: string;
-    portfolioDescription: string;
+    showcaseTitle: string;
+    showcaseDescription: string;
     aboutTitle: string;
     aboutDescription: string;
     contactTitle: string;
@@ -15,7 +15,7 @@ export interface Dictionary {
   nav: {
     home: string;
     services: string;
-    portfolio: string;
+    showcase: string;
     about: string;
     contact: string;
     ctaButton: string;
@@ -78,7 +78,7 @@ export interface Dictionary {
       alternative: string;
     }[];
   };
-  portfolioSection: {
+  showcaseSection: {
     eyebrow: string;
     title: string;
     subtitle: string;
@@ -88,6 +88,7 @@ export interface Dictionary {
     viewModeGridTooltip: string;
     viewModeTableTooltip: string;
     inspectTooltip: string;
+    visitLiveTooltip: string;
     emptyState: string;
     categories: {
       all: string;
@@ -101,16 +102,15 @@ export interface Dictionary {
       project: string;
       sector: string;
       solution: string;
-      metric: string;
       status: string;
       action: string;
     };
     dialog: {
       solutionLabel: string;
       sectorLabel: string;
-      metricLabel: string;
       capabilitiesLabel: string;
       deliverablesLabel: string;
+      visitLiveSite: string;
       closeLabel: string;
       inquireSimilar: string;
     };
@@ -149,7 +149,7 @@ export interface Dictionary {
     faqTitle: string;
     faqSubtitle: string;
   };
-  portfolioPage: {
+  showcasePage: {
     eyebrow: string;
     title: string;
     subtitle: string;
@@ -175,7 +175,6 @@ export interface Dictionary {
     copiedTooltip: string;
     channels: {
       email: string;
-      projectsEmail: string;
       whatsapp: string;
       address: string;
       hours: string;

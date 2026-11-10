@@ -141,7 +141,7 @@ export function ContactInquiryForm({ locale }: ContactInquiryFormProps) {
   const emailSubject = encodeURIComponent(
     `Konsultasi Proyek: ${service} - ${company.trim() || name.trim()}`
   );
-  const emailHref = `mailto:${COMPANY.projectsEmail}?subject=${emailSubject}&body=${encodeURIComponent(
+  const emailHref = `mailto:${COMPANY.email}?subject=${emailSubject}&body=${encodeURIComponent(
     submittedBrief
   )}`;
 

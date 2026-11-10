@@ -1,19 +1,19 @@
 export type Locale = 'id' | 'en';
 
-export type PageKey = 'home' | 'services' | 'portfolio' | 'about' | 'contact';
+export type PageKey = 'home' | 'services' | 'showcase' | 'about' | 'contact';
 
 export const ROUTES: Record<Locale, Record<PageKey, string>> = {
   id: {
     home: '/',
     services: '/layanan/',
-    portfolio: '/portofolio/',
+    showcase: '/showcase/',
     about: '/tentang/',
     contact: '/kontak/',
   },
   en: {
     home: '/en/',
     services: '/en/services/',
-    portfolio: '/en/portfolio/',
+    showcase: '/en/showcase/',
     about: '/en/about/',
     contact: '/en/contact/',
   },
@@ -30,4 +30,3 @@ export function getAlternateLocale(locale: Locale): Locale {
 export function getAlternatePath(locale: Locale, page: PageKey): string {
   return ROUTES[getAlternateLocale(locale)][page];
 }
-

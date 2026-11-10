@@ -30,14 +30,14 @@ import { cn } from '@/lib/utils';
 
 interface SiteHeaderProps {
   locale: Locale;
-  currentPage: PageKey;
+  currentPage?: PageKey;
 }
 
 export function SiteHeader({ locale, currentPage }: SiteHeaderProps) {
   const [open, setOpen] = useState(false);
   const dict = getDictionary(locale);
   const altLocale = getAlternateLocale(locale);
-  const altPath = getAlternatePath(locale, currentPage);
+  const altPath = getAlternatePath(locale, currentPage ?? 'home');
 
   const { scrollYProgress } = useScroll();
   const smoothProgress = useSpring(scrollYProgress, {
@@ -49,7 +49,7 @@ export function SiteHeader({ locale, currentPage }: SiteHeaderProps) {
   const navItems: { key: PageKey; label: string; href: string }[] = [
     { key: 'home', label: dict.nav.home, href: getLocalizedPath(locale, 'home') },
     { key: 'services', label: dict.nav.services, href: getLocalizedPath(locale, 'services') },
-    { key: 'portfolio', label: dict.nav.portfolio, href: getLocalizedPath(locale, 'portfolio') },
+    { key: 'showcase', label: dict.nav.showcase, href: getLocalizedPath(locale, 'showcase') },
     { key: 'about', label: dict.nav.about, href: getLocalizedPath(locale, 'about') },
     { key: 'contact', label: dict.nav.contact, href: getLocalizedPath(locale, 'contact') },
   ];

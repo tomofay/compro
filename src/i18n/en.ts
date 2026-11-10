@@ -9,9 +9,9 @@ export const en: Dictionary = {
     servicesTitle: 'Website, E-Commerce & Custom Software Pricing Packages',
     servicesDescription:
       'Landing pages from IDR 1.8M, company profiles IDR 2.5M, online stores IDR 8M, mobile apps & custom B2B web software with source code handover.',
-    portfolioTitle: 'Delivered Corporate Websites, Stores & Software Portfolio',
-    portfolioDescription:
-      'Production implementations of bilingual company profiles, multi-warehouse online stores, Android & iOS apps, and custom internal systems by HalamanKode.',
+    showcaseTitle: 'Client Websites & Software Solution Blueprints Showcase',
+    showcaseDescription:
+      'Live client websites (PT Muda Bangkit Indotama & PT Seikou Jagorawi Indonesia) plus QRIS e-commerce, mobile app & custom software blueprints by HalamanKode.',
     aboutTitle: 'About HalamanKode — Web & Software Studio Standards',
     aboutDescription:
       'Profile and standards of HalamanKode — building company profile websites, e-commerce stores, and custom business software with Quotations, POs, NDAs & BAST.',
@@ -22,7 +22,7 @@ export const en: Dictionary = {
   nav: {
     home: 'Home',
     services: 'Services',
-    portfolio: 'Portfolio',
+    showcase: 'Showcase',
     about: 'About Us',
     contact: 'Contact',
     ctaButton: 'Free Consultation',
@@ -164,17 +164,18 @@ export const en: Dictionary = {
       },
     ],
   },
-  portfolioSection: {
-    eyebrow: 'PORTFOLIO',
-    title: 'Delivered Corporate Systems & Websites',
-    subtitle: 'Filter by category or click the preview icon for project specs.',
-    viewAllLink: 'View All Projects',
-    searchPlaceholder: 'Search project or industry...',
+  showcaseSection: {
+    eyebrow: 'SHOWCASE',
+    title: 'Client Websites & Solution Blueprints',
+    subtitle: 'Live client deliveries plus customizable starter blueprints across every service category.',
+    viewAllLink: 'View All Showcase',
+    searchPlaceholder: 'Search project, blueprint or sector...',
     resetFilterTooltip: 'Reset filter',
     viewModeGridTooltip: 'Visual Card View',
     viewModeTableTooltip: 'Structured Table View',
-    inspectTooltip: 'Inspect project details',
-    emptyState: 'No projects match the current filter.',
+    inspectTooltip: 'Inspect solution details',
+    visitLiveTooltip: 'Visit live website',
+    emptyState: 'No showcase items match the current filter.',
     categories: {
       all: 'All',
       compro: 'Company Profile',
@@ -184,19 +185,18 @@ export const en: Dictionary = {
       mobile: 'Mobile Apps',
     },
     tableColumns: {
-      project: 'PROJECT NAME',
+      project: 'PROJECT / BLUEPRINT',
       sector: 'INDUSTRY SECTOR',
       solution: 'SOLUTION TYPE',
-      metric: 'KEY RESULT',
       status: 'STATUS',
       action: 'ACTION',
     },
     dialog: {
       solutionLabel: 'Solution Type',
       sectorLabel: 'Industry Sector',
-      metricLabel: 'Measured Result',
       capabilitiesLabel: 'Key Features',
-      deliverablesLabel: 'Deliverables',
+      deliverablesLabel: 'Scope & Deliverables',
+      visitLiveSite: 'Visit Live Website',
       closeLabel: 'Close',
       inquireSimilar: 'Build Similar System',
     },
@@ -238,10 +238,10 @@ export const en: Dictionary = {
     faqTitle: 'Frequently Asked Questions',
     faqSubtitle: 'Quick points covering source code, Managed Care, timelines & B2B.',
   },
-  portfolioPage: {
-    eyebrow: 'PORTFOLIO',
-    title: 'Delivered Projects & Blueprints',
-    subtitle: 'Filter by industry or switch to table comparison view.',
+  showcasePage: {
+    eyebrow: 'SOLUTION SHOWCASE',
+    title: 'Live Client Websites & Architecture Blueprints',
+    subtitle: 'Explore active client launches and customizable starter kits per industry.',
   },
   aboutPage: {
     eyebrow: 'ABOUT STUDIO',
@@ -277,8 +277,7 @@ export const en: Dictionary = {
     copyTooltip: 'Copy',
     copiedTooltip: 'Copied',
     channels: {
-      email: 'General Email',
-      projectsEmail: 'Proposals & RFP Email',
+      email: 'Official Email',
       whatsapp: 'Business WhatsApp',
       address: 'Company Address',
       hours: 'Business Hours',

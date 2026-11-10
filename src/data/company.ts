@@ -4,7 +4,6 @@ export const COMPANY = {
   establishedYear: '2024',
   domain: 'https://halamankode.cloud',
   email: 'hello@halamankode.cloud',
-  projectsEmail: 'projects@halamankode.cloud',
   whatsappNumber: '6287864952795',
   whatsappDisplay: '+62 878-6495-2795',
   city: {
@@ -20,4 +19,9 @@ export const COMPANY = {
     en: 'Monday - Friday, 09:00 - 18:00 WIB (UTC+7)',
   },
   formEndpoint: '',
+  analytics: {
+    gaMeasurementId: import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim() ?? '',
+    googleSiteVerification:
+      import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() ?? '',
+  },
 } as const;

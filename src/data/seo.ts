@@ -22,11 +22,11 @@ const OG_IMAGE_MAP: Record<PageKey, { path: string; alt: Record<Locale, string> 
       en: 'Website, E-Commerce & Custom Software Service Packages by HalamanKode',
     },
   },
-  portfolio: {
+  showcase: {
     path: '/images/showcase-software.jpg',
     alt: {
-      id: 'Portofolio Sistem Operasional, Toko Online & Website Perusahaan HalamanKode',
-      en: 'Portfolio of Enterprise Systems, Online Stores & Corporate Websites by HalamanKode',
+      id: 'Showcase Proyek Klien & Blueprint Sistem Web, Toko Online dan Aplikasi HalamanKode',
+      en: 'Showcase of Live Client Websites & Software Blueprints by HalamanKode',
     },
   },
   about: {

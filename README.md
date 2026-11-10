@@ -22,10 +22,13 @@ Konfigurasi container sengaja **tidak menggunakan port 80 maupun 443** agar tida
 docker compose up -d --build
 ```
 
-Untuk mengganti port eksternal default (`8090`), atur variabel `APP_PORT` (misal di file `.env` pada folder aplikasi di VPS):
+Untuk mengganti port eksternal default (`8090`) atau mengaktifkan pelacakan opsional saat build, atur variabel pada file `.env` di folder aplikasi VPS (lihat [`.env.example`](.env.example)):
 
 ```env
 APP_PORT=8091
+# Opsional: biarkan kosong jika tidak menggunakan tracking eksternal
+PUBLIC_GA_MEASUREMENT_ID=
+PUBLIC_GOOGLE_SITE_VERIFICATION=
 ```
 
 ## CI/CD Otomatis (GitHub Actions -> VPS)

@@ -47,14 +47,25 @@ jobs:
           sleep 2
           curl -fsS http://127.0.0.1:18090/ -o /tmp/ci-home.html
           grep -Fq "HalamanKode" /tmp/ci-home.html
+          grep -Fq "PT Muda Bangkit Indotama" /tmp/ci-home.html
+          grep -Fq "PT Seikou Jagorawi Indonesia" /tmp/ci-home.html
           ! grep -Fqi "Kirana" /tmp/ci-home.html
+          ! grep -Fqi "Nusantara Presisi" /tmp/ci-home.html
+          ! grep -Fqi "Sentosa Commerce" /tmp/ci-home.html
+          ! grep -Fqi "+34.5% Leads" /tmp/ci-home.html
+          ! grep -Fq "projects@halamankode.cloud" /tmp/ci-home.html
           curl -fsS http://127.0.0.1:18090/layanan/ -o /tmp/ci-services.html
           grep -Fq "Mulai Rp 1,8 Juta" /tmp/ci-services.html
           grep -Fq "Sesuai Kebutuhan" /tmp/ci-services.html
+          curl -fsS http://127.0.0.1:18090/showcase/ -o /tmp/ci-showcase.html
+          grep -Fq "https://mbindotama.com" /tmp/ci-showcase.html
+          grep -Fq "https://lpkseikoujagorawi.com" /tmp/ci-showcase.html
           grep -Fq '<link rel="canonical"' /tmp/ci-home.html
           grep -Fq 'application/ld+json' /tmp/ci-home.html
           curl -fsS http://127.0.0.1:18090/sitemap.xml -o /tmp/ci-sitemap.xml
           grep -Fq "https://halamankode.cloud/layanan/" /tmp/ci-sitemap.xml
+          grep -Fq "https://halamankode.cloud/showcase/" /tmp/ci-sitemap.xml
+          grep -Fq "https://halamankode.cloud/en/showcase/" /tmp/ci-sitemap.xml
           curl -fsS http://127.0.0.1:18090/robots.txt -o /tmp/ci-robots.txt
           grep -Fq "Sitemap: https://halamankode.cloud/sitemap.xml" /tmp/ci-robots.txt
           curl -fsS http://127.0.0.1:18090/site.webmanifest -o /tmp/ci-manifest.json
@@ -62,7 +73,12 @@ jobs:
           curl -fsS http://127.0.0.1:18090/en/ -o /tmp/ci-en.html
           grep -Fq "HalamanKode" /tmp/ci-en.html
           grep -Fq "Ready-to-Launch" /tmp/ci-en.html
-          for img in about-studio.jpg enterprise-meeting.jpg showcase-compro.jpg showcase-landing.jpg showcase-mobile.jpg showcase-software.jpg showcase-store.jpg; do
+          redirect_code="$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:18090/portofolio/)"
+          test "$redirect_code" = "301"
+          notfound_code="$(curl -s -o /tmp/ci-404.html -w '%{http_code}' http://127.0.0.1:18090/halaman-tidak-ada)"
+          test "$notfound_code" = "404"
+          grep -Fq "Halaman Tidak Ditemukan" /tmp/ci-404.html
+          for img in about-studio.jpg enterprise-meeting.jpg project-mbindotama.jpg project-seikou.jpg showcase-compro.jpg showcase-landing.jpg showcase-mobile.jpg showcase-software.jpg showcase-store.jpg; do
             curl -fsSI "http://127.0.0.1:18090/images/${img}" >/dev/null
           done
           for fav in favicon.svg favicon.ico favicon-32x32.png favicon-16x16.png apple-touch-icon.png; do

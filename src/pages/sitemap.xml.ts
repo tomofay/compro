@@ -7,7 +7,7 @@ export const prerender = true;
 const PRIORITY_BY_PAGE: Record<PageKey, { id: string; en: string; changefreq: string }> = {
   home: { id: '1.0', en: '0.9', changefreq: 'weekly' },
   services: { id: '0.9', en: '0.8', changefreq: 'weekly' },
-  portfolio: { id: '0.8', en: '0.7', changefreq: 'monthly' },
+  showcase: { id: '0.8', en: '0.7', changefreq: 'monthly' },
   about: { id: '0.7', en: '0.6', changefreq: 'monthly' },
   contact: { id: '0.8', en: '0.7', changefreq: 'monthly' },
 };
